@@ -1,4 +1,10 @@
-# Introduction
+- [1. Introduction](#1-introduction)
+- [2. Priorities](#2-priorities)
+- [3. Intentions](#3-intentions)
+  - [3.1 IPC](#3.1-IPC)
+  - [3.2 Configuration Syntax](#3.2configuration-syntax)
+
+# 1. Introduction
 
 In order to reduce commit noise in the main `labwc` repo, priorities
 and intentions are mangaged here.
@@ -13,12 +19,7 @@ and if it's the sort of compositor they wish to use.
 A [TODO list] exists as a live document to help define and sequence coding
 efforts.
 
-- [1. Priorities](#priorities)
-- [2. Intentions](#intentions)
-  - [IPC](#IPC)
-  - [Configuration Syntax](#configuration-syntax)
-
-# Priorities
+# 2. Priorities
 
 1. Stabilize current scope and fix issues and bugs. This is quite important.
    We do not want to spend time on an expanding scope with new features until
@@ -28,13 +29,13 @@ efforts.
    implement features such as:
    - workspaces
 
-# Intentions
+# 3. Intentions
 
 The AC make clear the intended scope to a point, but they are quite lengthy
 to read and are not always that clear on context and details. The sections
 below add some information in this regard.
 
-## IPC
+## 3.1 IPC
 
 IPC stands for inter-process communication and is important in building a
 complete desktop environment.
@@ -56,7 +57,7 @@ upstream and the wider eco-system to plug any gaps.
 
 See issues #128, #190
 
-## Configuration Syntax
+## 3.2 Configuration Syntax
 
 Occasionally we receive requests to support other configuration languages
 and syntaxes. This is out-of-scope.
