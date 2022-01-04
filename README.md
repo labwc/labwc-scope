@@ -1,8 +1,8 @@
 - [1. Introduction](#1-introduction)
 - [2. Priorities](#2-priorities)
 - [3. Intentions](#3-intentions)
-  - [3.1 IPC](#3.1-IPC)
-  - [3.2 Configuration Syntax](#3.2configuration-syntax)
+  - [3.1 IPC](#31-ipc)
+  - [3.2 Configuration Syntax](#32-configuration-syntax)
 
 # 1. Introduction
 
