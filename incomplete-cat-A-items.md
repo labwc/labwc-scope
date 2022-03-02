@@ -1,6 +1,5 @@
 | Status   | Reference | Category                        | Description                                             | Comment
 | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-| partial  | 1.10.2    | general                         | Support layer-shell 'exclusive' zone                    |
 |          | 3.5.4     | mouse event                     | `Release`                                               |
 |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |          | 6.1.3     | geometry                        | `menu.separator.width`                                  |

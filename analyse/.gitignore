@@ -1,3 +1,4 @@
 *.o
 graph.png
 analyse
+gnuplot-commands.txt
