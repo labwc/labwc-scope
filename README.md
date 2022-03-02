@@ -27,7 +27,7 @@ efforts.
 2. Implement Acceptance Criteria (AC) `Cat A` items.
 3. Review and re-evaulate the AC. At this point, the devs many choose to
    implement features such as:
-   - workspaces
+   - workspaces (#40)
 
 # 3. Intentions
 
