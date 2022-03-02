@@ -15,7 +15,7 @@ Acceptance criteria items are categorised as follows:
 - Sections 2-7 refer to the the openbox 3.4 specification. For further details
   of what each of these items refers to, read the respective openbox wiki page.
 
-1. General
+1. General and Protocols
 2. Configuration [http://openbox.org/wiki/Help:Configuration](http://openbox.org/wiki/Help:Configuration)
 3. Bindings [http://openbox.org/wiki/Help:Bindings](http://openbox.org/wiki/Help:Bindings)
 4. Global Actions [http://openbox.org/wiki/Help:Actions](http://openbox.org/wiki/Help:Actions)
@@ -27,24 +27,53 @@ Acceptance criteria items are categorised as follows:
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  A  | complete | 1.1       | general                         | Optionally support Xwayland                             |
-|  A  | complete | 1.2       | general                         | Parse `<config-dir>/rc.xml`                             |
-|  A  | complete | 1.3       | general                         | Parse `<config-dir>/environment`                        |
-|  A  | complete | 1.4       | general                         | Parse `<config-dir>/autostart`                          |
-|  A  | complete | 1.5       | general                         | Parse `<config-dir>/menu.xml`                           |
-|  A  | complete | 1.6       | general                         | Parse openbox themes files and associated xbm icons     |
-|  A  | complete | 1.7       | general                         | Catch SIGHUP to re-load config file and theme           |
-|  A  | complete | 1.8       | general                         | Support both CSD and SSD                                |
-|  A  | complete | 1.9       | general                         | Support maximize, iconify, close buttons                |
-|  A  | complete | 1.10.1    | general                         | Support layer-shell protocol applications               |
-|  A  | partial  | 1.10.2    | general                         | Support layer-shell 'exclusive' zone                    |
-|  A  | complete | 1.11      | general                         | Support damage tracking to reduce CPU usage             |
-|  A  | complete | 1.12      | general                         | Support wlr-output-management protocol                  |
-|  A  | complete | 1.13      | general                         | Support HiDPI                                           |
-|  A  | complete | 1.14      | general                         | Support on-screen display (osd)                         |
-|  A  | complete | 1.15      | general                         | Support libinput configuration                          |
-|  A  | complete | 1.16      | general                         | Support drag-n-drop                                     |
-|  A  | complete | 1.17      | general                         | Support foreign-toplevel protocol                       |
+|  A  | complete | 1.1.1     | general                         | Optionally support Xwayland                             |
+|  A  | complete | 1.1.2     | general                         | Parse `<config-dir>/rc.xml`                             |
+|  A  | complete | 1.1.3     | general                         | Parse `<config-dir>/environment`                        |
+|  A  | complete | 1.1.4     | general                         | Parse `<config-dir>/autostart`                          |
+|  A  | complete | 1.1.5     | general                         | Parse `<config-dir>/menu.xml`                           |
+|  A  | complete | 1.1.6     | general                         | Parse openbox themes files and associated xbm icons     |
+|  A  | complete | 1.1.7     | general                         | Catch SIGHUP to re-load config file and theme           |
+|  A  | complete | 1.1.8     | general                         | Support both CSD and SSD                                |
+|  A  | complete | 1.1.9     | general                         | Support maximize, iconify, close buttons                |
+|  A  | complete | 1.1.10    | general                         | Support damage tracking to reduce CPU usage             |
+|  A  | complete | 1.1.11    | general                         | Support HiDPI                                           |
+|  A  | complete | 1.1.12    | general                         | Support on-screen display (osd)                         |
+|  A  | complete | 1.1.13    | general                         | Support libinput configuration                          |
+|  A  | complete | 1.1.14    | general                         | Support drag-n-drop                                     |
+|  B  | complete | 1.2.1     | wayland-protocol                | [presentation-time]                                     |
+|  B  | complete | 1.2.2     | wayland-protocol                | [viewporter]                                            |
+|  A  | complete | 1.2.3     | wayland-protocol                | [xdg-shell]                                             |
+|  B  | complete | 1.2.4     | wayland-protocol                | fullscreen-shell-unstable-v1                            |
+|  B  | complete | 1.2.5     | wayland-protocol                | idle-inhibit-unstable-v1                                |
+|  B  |          | 1.2.6     | wayland-protocol                | input-method-unstable-v1                                |
+|  B  |          | 1.2.7     | wayland-protocol                | input-timestamps-unstable-v1                            |
+|  B  |          | 1.2.8     | wayland-protocol                | keyboard-shortcuts-inhibit-unstable-v1                  |
+|  B  |          | 1.2.9     | wayland-protocol                | linux-dmabuf-unstable-v1                                |
+|  B  |          | 1.2.10    | wayland-protocol                | linux-explicit-synchronization-unstable-v1              |
+|  B  | complete | 1.2.11    | wayland-protocol                | pointer-constraints-unstable-v1                         |
+|  B  |          | 1.2.12    | wayland-protocol                | pointer-gestures-unstable-v1                            |
+|  B  | complete | 1.2.13    | wayland-protocol                | primary-selection-unstable-v1                           |
+|  B  | complete | 1.2.14    | wayland-protocol                | relative-pointer-unstable-v1                            |
+|  B  |          | 1.2.15    | wayland-protocol                | tablet-unstable-v2                                      |
+|  B  |          | 1.2.16    | wayland-protocol                | text-input-unstable-v3                                  |
+|  B  | complete | 1.2.17    | wayland-protocol                | xdg-decoration-unstable-v1                              |
+|  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
+|  B  | complete | 1.2.19    | wayland-protocol                | xdg-output-unstable-v1                                  |
+|  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
+|  B  |          | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
+|  B  |          | 1.2.22    | wayland-protocol                | ext-session-lock-v1                                     | Supported by swaylock
+|  B  |          | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
+|  B  | complete | 1.3.1     | wlr-protocol                    | wlr-data-control-unstable-v1                            |
+|  B  | complete | 1.3.2     | wlr-protocol                    | wlr-export-dmabuf-unstable-v1                           |
+|  A  | complete | 1.3.3     | wlr-protocol                    | wlr-foreign-toplevel-management-unstable-v1             |
+|  B  | complete | 1.3.4     | wlr-protocol                    | wlr-gamma-control-unstable-v1                           |
+|  B  | complete | 1.3.5     | wlr-protocol                    | wlr-input-inhibitor-unstable-v1                         |
+|  A  | complete | 1.3.6     | wlr-protocol                    | wlr-layer-shell-unstable-v1                             |
+|  A  | complete | 1.3.7     | wlr-protocol                    | wlr-output-management-unstable-v1                       |
+|  B  |          | 1.3.8     | wlr-protocol                    | wlr-output-power-management-unstable-v1                 |
+|  B  | complete | 1.3.9     | wlr-protocol                    | wlr-screencopy-unstable-v1                              |
+|  B  |          | 1.3.10    | wlr-protocol                    | wlr-virtual-pointer-unstable-v1                         |
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              |
 |  A  | complete | 2.1.2     | resistance                      | `screen_edge_strength`                                  |
 |  C  |          | 2.2.1     | focus                           | `focusNew`                                              |
@@ -281,4 +310,10 @@ Acceptance criteria items are categorised as follows:
 |  A  | complete | 8.1       | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
 |  B  |          | 8.2       | extra                           | Support png buttons                                     |
 |  B  | complete | 8.3       | extra                           | `SnapToEdge` action                                     | Similar to 5.12 `GrowToEdge`
+
+
+[presentation-time]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/presentation-time
+[viewporter]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/viewporter
+[xdg-shell]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/xdg-shell
+
 
