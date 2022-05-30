@@ -192,8 +192,8 @@ Acceptance criteria items are categorised as follows:
 |  B  |          | 5.14      | window action                   | `Maximize`                                              |
 |  B  |          | 5.15      | window action                   | `Unmaximize`                                            |
 |  B  | complete | 5.16      | window action                   | `ToggleFullscreen`                                      |
-|  B  |          | 5.17      | window action                   | `Decorate`                                              |
-|  B  |          | 5.18      | window action                   | `Undecorate`                                            |
+|  B  | complete | 5.17      | window action                   | `Decorate`                                              |
+|  B  | complete | 5.18      | window action                   | `Undecorate`                                            |
 |  C  |          | 5.19      | window action                   | `SendToDesktop`                                         |
 |  A  | complete | 5.20      | window action                   | `Move`                                                  |
 |  A  | complete | 5.21      | window action                   | `Resize`                                                |
