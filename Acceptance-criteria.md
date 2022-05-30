@@ -85,7 +85,7 @@ Acceptance criteria items are categorised as follows:
 |  C  |          | 2.3.1     | placement                       | `policy`                                                |
 |  A  | complete | 2.3.2     | placement                       | `center`                                                | No config - just do it
 |  A  | complete | 2.4.1     | theme                           | `name`                                                  |
-|  B  |          | 2.4.2     | theme                           | `titleLayout`                                           |
+|  B+ |          | 2.4.2     | theme                           | `titleLayout`                                           |
 |  B  |          | 2.4.4     | theme                           | `keepBorder`                                            |
 |  C  |          | 2.4.5     | theme                           | `animateIconify`                                        |
 |  A  | complete | 2.4.6     | theme                           | `<font place="ActiveWindow">`                           |
@@ -93,7 +93,10 @@ Acceptance criteria items are categorised as follows:
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  | complete | 2.4.9     | theme                           | `<font place="MenuItem">`                               |
 |  B  |          | 2.4.10    | theme                           | `<font place="OnScreenDisplay">`                        |
-|  C  |          | 2.5.1     | desktop                         |                                                         |
+|  B  |          | 2.5.1     | desktop                         | `number`                                                |
+|  B  |          | 2.5.2     | desktop                         | `firstDesk`                                             |
+|  B  |          | 2.5.3     | desktop                         | `popupTime`                                             |
+|  B  |          | 2.5.4     | desktop                         | `names`                                                 |
 |  C  |          | 2.6.1     | resize                          |                                                         |
 |  B  |          | 2.7.1     | applications                    | `decor`                                                 |
 |  C  |          | 2.7.2     | applications                    | `shade`                                                 |
@@ -166,9 +169,9 @@ Acceptance criteria items are categorised as follows:
 |  C  |          | 4.4       | global action                   | `PreviousWindow`                                        |
 |  B  |          | 4.5       | global action                   | `DirectionalCycleWindows`                               |
 |  B  |          | 4.6       | global action                   | `DirectionalTargetWindows`                              |
-|  C  |          | 4.7       | global action                   | `GoToDesktop`                                           |
-|  C  |          | 4.8       | global action                   | `AddDesktop`                                            |
-|  C  |          | 4.9       | global action                   | `RemoveDesktop`                                         |
+|  B  |          | 4.7       | global action                   | `GoToDesktop`                                           |
+|  B  |          | 4.8       | global action                   | `AddDesktop`                                            |
+|  B  |          | 4.9       | global action                   | `RemoveDesktop`                                         |
 |  B  |          | 4.10      | global action                   | `ToggleShowDesktop`                                     |
 |  C  |          | 4.11      | global action                   | `ToggleDockAutohide`                                    |
 |  A  | complete | 4.12      | global action                   | `Reconfigure`                                           |
@@ -194,7 +197,7 @@ Acceptance criteria items are categorised as follows:
 |  B  | complete | 5.16      | window action                   | `ToggleFullscreen`                                      |
 |  B  | complete | 5.17      | window action                   | `Decorate`                                              |
 |  B  | complete | 5.18      | window action                   | `Undecorate`                                            |
-|  C  |          | 5.19      | window action                   | `SendToDesktop`                                         |
+|  B  |          | 5.19      | window action                   | `SendToDesktop`                                         |
 |  A  | complete | 5.20      | window action                   | `Move`                                                  |
 |  A  | complete | 5.21      | window action                   | `Resize`                                                |
 |  B  |          | 5.22      | window action                   | `MoveResizeTo`                                          |
@@ -286,11 +289,11 @@ Acceptance criteria items are categorised as follows:
 |  B  |          | 6.9.3     | menu textures                   | `menu.title.bg`                                         |
 |  A  | complete | 6.10.1    | osd textures                    | `osd.bg`                                                | we only set the color
 |  C  |          | 6.10.2    | osd textures                    | `osd.label.bg`                                          |
-|  C  |          | 6.10.3    | osd textures                    | `osd.hilight.bg`                                        | for desktop osd only
-|  C  |          | 6.10.4    | osd textures                    | `osd.unhilight.bg`                                      | for desktop osd only
+|  B  |          | 6.10.3    | osd textures                    | `osd.hilight.bg`                                        | for desktop osd only
+|  B  |          | 6.10.4    | osd textures                    | `osd.unhilight.bg`                                      | for desktop osd only
 |  A  | complete | 6.11.1    | osd colors                      | `osd.label.text.color`                                  |
-|  C  |          | 6.11.2    | osd colors                      | `osd.hilight.bg.color`                                  | for desktop osd only
-|  C  |          | 6.11.3    | osd colors                      | `osd.unhilight.bg.color`                                | for desktop osd only
+|  B  |          | 6.11.2    | osd colors                      | `osd.hilight.bg.color`                                  | for desktop osd only
+|  B  |          | 6.11.3    | osd colors                      | `osd.unhilight.bg.color`                                | for desktop osd only
 |  B  | complete | 6.12.1    | text justification              | `window.label.text.justify`                             |
 |  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
 |  C  |          | 6.13.1    | text shadows                    | `window.active.label.text.font`                         |
