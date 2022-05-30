@@ -74,7 +74,7 @@ Acceptance criteria items are categorised as follows:
 |  B  | complete | 1.3.8     | wlr-protocol                    | wlr-output-power-management-unstable-v1                 |
 |  B  | complete | 1.3.9     | wlr-protocol                    | wlr-screencopy-unstable-v1                              |
 |  B  |          | 1.3.10    | wlr-protocol                    | wlr-virtual-pointer-unstable-v1                         |
-|  B  |          | 2.1.1     | resistance                      | `strength`                                              |
+|  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
 |  A  | complete | 2.1.2     | resistance                      | `screen_edge_strength`                                  |
 |  C  |          | 2.2.1     | focus                           | `focusNew`                                              |
 |  C  |          | 2.2.2     | focus                           | `focusLast`                                             |
