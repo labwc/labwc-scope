@@ -1,3 +1,5 @@
+# Requirements Management
+
 - [1. Introduction](#1-introduction)
 - [2. Priorities](#2-priorities)
 - [3. Intentions](#3-intentions)
@@ -27,7 +29,6 @@ efforts.
 2. Implement Acceptance Criteria (AC) `Cat A` items.
 3. Review and re-evaulate the AC. At this point, the devs many choose to
    implement features such as:
-   - workspaces (#40)
 
 # 3. Intentions
 
