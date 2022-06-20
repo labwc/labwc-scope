@@ -95,8 +95,8 @@ Acceptance criteria items are categorised as follows:
 |  B  |          | 2.4.10    | theme                           | `<font place="OnScreenDisplay">`                        |
 |  B  |          | 2.5.1     | desktop                         | `number`                                                |
 |  B  |          | 2.5.2     | desktop                         | `firstDesk`                                             |
-|  B  |          | 2.5.3     | desktop                         | `popupTime`                                             |
-|  B  |          | 2.5.4     | desktop                         | `names`                                                 |
+|  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
+|  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
 |  C  |          | 2.6.1     | resize                          |                                                         |
 |  B  |          | 2.7.1     | applications                    | `decor`                                                 |
 |  C  |          | 2.7.2     | applications                    | `shade`                                                 |
