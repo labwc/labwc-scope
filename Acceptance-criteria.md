@@ -169,7 +169,21 @@ Acceptance criteria items are categorised as follows:
 |  C  |          | 4.4       | global action                   | `PreviousWindow`                                        |
 |  B  |          | 4.5       | global action                   | `DirectionalCycleWindows`                               |
 |  B  |          | 4.6       | global action                   | `DirectionalTargetWindows`                              |
-|  B  |          | 4.7       | global action                   | `GoToDesktop`                                           |
+|  B  | complete | 4.7       | global action                   | `GoToDesktop`                                           |
+|  B  | complete | 4.7.1     | global action                   | `GoToDesktop.to`                                        |
+|  B  | complete | 4.7.1.1   | global action                   | `GoToDesktop.to::last`                                  |
+|  B  | complete | 4.7.1.2   | global action                   | `GoToDesktop.to::right`                                 |
+|  B  | complete | 4.7.1.3   | global action                   | `GoToDesktop.to::left`                                  |
+|  C  |          | 4.7.1.4   | global action                   | `GoToDesktop.to::current`                               |
+|  C  |          | 4.7.1.5   | global action                   | `GoToDesktop.to::next`                                  |
+|  C  |          | 4.7.1.6   | global action                   | `GoToDesktop.to::previous`                              |
+|  C  |          | 4.7.1.7   | global action                   | `GoToDesktop.to::up`                                    |
+|  C  |          | 4.7.1.8   | global action                   | `GoToDesktop.to::down`                                  |
+|  C  |          | 4.7.1.9   | global action                   | `GoToDesktop.to::north`                                 |
+|  C  |          | 4.7.1.10  | global action                   | `GoToDesktop.to::south`                                 |
+|  C  |          | 4.7.1.11  | global action                   | `GoToDesktop.to::west`                                  |
+|  C  |          | 4.7.1.12  | global action                   | `GoToDesktop.to::east`                                  |
+|  C  |          | 4.7.2     | global action                   | `GoToDesktop.wrap`                                      |
 |  B  |          | 4.8       | global action                   | `AddDesktop`                                            |
 |  B  |          | 4.9       | global action                   | `RemoveDesktop`                                         |
 |  B  |          | 4.10      | global action                   | `ToggleShowDesktop`                                     |
