@@ -367,7 +367,7 @@ It depends on what happens with:
 |  A  | complete | 3.5.2     | mouse event                     | `Click`                                                 |
 |  A  | complete | 3.5.3     | mouse event                     | `DoubleClick`                                           |
 |  A  |          | 3.5.4     | mouse event                     | `Release`                                               |
-|  B  |          | 3.5.5     | mouse event                     | `Drag`                                                  | TODO: Do we not support this?
+|  B  | complete | 3.5.5     | mouse event                     | `Drag`                                                  |
 
 ## 4 Global Actions
 
