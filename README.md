@@ -4,9 +4,48 @@
 - [Requirements](#requirements)
   - [1.1 General](#11-general)
   - [1.2 Wayland Protocols](#12-wayland-protocols)
+  - [1.3 wlroots Protocols](#13-wlroots-protocols)
+  - Configuration
+    - [2.1 Resistance](#21-configuration-resistance)
+    - [2.2 Focus](#22-configuration-focus)
+    - [2.3 Placement](#23-configuration-placement)
+    - [2.4 Theme](#24-configuration-theme)
+    - [2.5 Desktop](#25-configuration-desktop)
+    - [2.6 Resize](#26-configuration-resize)
+    - [2.7 Applications](#27-configuration-applications)
+    - [2.8 Keyboard](#28-configuration-keyboard)
+    - [2.9 Mouse](#29-configuration-mouse)
+    - [2.10 Margins](#210-configuration-margins)
+    - [2.11 Menu](#211-configuration-menu)
+    - [2.12 Dock](#212-configuration-dock)
+  - Bindings
+    - [3.1 Keyboard](#31-configuration-keyboard-keybind)
+    - [3.2 Mouse](#32-configuration-mouse-binding)
+    - [3.3 Mouse Contexts](#33-configuration-mouse-context)
+    - [3.4 Mouse Buttons](#34-configuration-mouse-button)
+    - [3.5 Mouse Events](#35-configuration-mouse-event)
+  - Actions
+    - [4 Global Actions](#4-global-actions)
+    - [5 Window Actions](#5-window-actions)
+  - Theme
+    - [6.1 Geometry](#61-theme-geometry)
+    - [6.2 Border Colors](#62-theme-border-colors)
+    - [6.3 Titlebar Colors](#63-theme-titlebar-colors)
+    - [6.4 Active Window Textures](#64-theme-active-window-textures)
+    - [6.5 Inactive Window Textures](#65-theme-inactive-window-textures)
+    - [6.6 Active Window Button Textures](#66-theme-active-window-button-textures)
+    - [6.7 Inactive Window Button Textures](#67-theme-inactive-window-button-textures)
+    - [6.8 Menu Colors](#68-theme-menu-colors)
+    - [6.9 Menu Textures](#69-theme-menu-textures)
+    - [6.10 On-Screen-Display Textures](#610-theme-on-screen-display-textures)
+    - [6.11 On-Screen-Display Colors](#611-theme-on-screen-display-colors)
+    - [6.12 Text Justification](#612-theme-text-justification)
+    - [6.13 Text Shadows](#613-theme-text-shadows)
+  - [7 Menus](#7-menus)
+  - [8 Extra](#8-extras)
 - [Appendix A](#appendix-a)
-  - [A.1 IPC](#A1-ipc)
-  - [A.2 Configuration Syntax](#A2-configuration-syntax)
+  - [A.1 IPC](#a1-ipc)
+  - [A.2 Configuration Syntax](#a2-configuration-syntax)
 
 # Introduction
 
@@ -105,7 +144,7 @@ Acceptance criteria items are categorised as follows:
 |  B  |          | 1.2.22    | wayland-protocol                | ext-session-lock-v1                                     | Supported by swaylock
 |  B  |          | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
 
-## 1.3 wlroots protocols
+## 1.3 wlroots Protocols
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -168,7 +207,7 @@ Acceptance criteria items are categorised as follows:
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
 
-## 2.6 Configuration - Desktop
+## 2.6 Configuration - Resize
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -199,7 +238,7 @@ Acceptance criteria items are categorised as follows:
 |  C  |          | 2.8.2     | keyboard                        | `chainQuitKey`                                          |
 |  A  | complete | 2.8.3     | keyboard                        | `keybind`                                               |
 
-## 2.8 Configuration - Mouse
+## 2.9 Configuration - Mouse
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -274,7 +313,7 @@ Acceptance criteria items are categorised as follows:
 |  C  |          | 3.3.19    | mouse context                   | `Shade`                                                 |
 |  C  |          | 3.3.20    | mouse context                   | `Moveresize`                                            |
 
-## 3.4 Configuration - Mouse Context
+## 3.4 Configuration - Mouse Button
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -294,7 +333,7 @@ Acceptance criteria items are categorised as follows:
 |  A  |          | 3.5.4     | mouse event                     | `Release`                                               |
 |  B  |          | 3.5.5     | mouse event                     | `Drag`                                                  | TODO: Do we not support this?
 
-## 4 Actions - Global
+## 4 Global Actions
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -329,7 +368,7 @@ Acceptance criteria items are categorised as follows:
 |  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
 |  C  |          | 4.16      | global action                   | `Debug`                                                 |
 
-## 5 Actions - Window
+## 5 Window Actions
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -424,7 +463,7 @@ Acceptance criteria items are categorised as follows:
 |  B  |          | 6.3.17    | titlebar colors                 | `window.inactive.button.toggled.hover.image.color`      |
 |  B  |          | 6.3.18    | titlebar colors                 | `window.inactive.button.toggled.image.color`            |
 
-## 6.4 Theme - Active Window Colors
+## 6.4 Theme - Active Window Textures
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -433,7 +472,7 @@ Acceptance criteria items are categorised as follows:
 |  C  |          | 6.4.3     | active window textures          | `window.active.handle.bg`                               | We don't support handle.
 |  B  |          | 6.4.4     | active window textures          | `window.active.grip.bg`                                 |
 
-## 6.5 Theme - Inactive Window Colors
+## 6.5 Theme - Inactive Window Textures
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -442,7 +481,7 @@ Acceptance criteria items are categorised as follows:
 |  A  |          | 6.5.3     | inactive window textures        | `window.inactive.handle.bg`                             |
 |  B  |          | 6.5.4     | inactive window textures        | `window.inactive.grip.bg`                               |
 
-## 6.6 Theme - Active Button Colors
+## 6.6 Theme - Active Window Button Textures
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -455,7 +494,7 @@ Acceptance criteria items are categorised as follows:
 |  B  |          | 6.6.7     | active window button textures   | `window.active.button.toggled.hover.bg`                 |
 |  B  |          | 6.6.8     | active window button textures   | `window.active.button.toggled.bg`                       |
 
-## 6.7 Theme - Inactive Button Colors
+## 6.7 Theme - Inactive Window Button Textures
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -468,7 +507,7 @@ Acceptance criteria items are categorised as follows:
 |  B  |          | 6.7.7     | inactive window button textures | `window.inactive.button.toggled.hover.bg`               |
 |  B  |          | 6.7.8     | inactive window button textures | `window.inactive.button.toggled.bg`                     |
 
-## 6.8 & 6.9 Theme - Menu Colors
+## 6.8 Theme - Menu Colors
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -478,11 +517,14 @@ Acceptance criteria items are categorised as follows:
 |  A  | complete | 6.8.4     | menu colors                     | `menu.items.active.text.color`                          |
 |  B  |          | 6.8.5     | menu colors                     | `menu.items.active.disabled.text.color`                 |
 |  A  |          | 6.8.6     | menu colors                     | `menu.separator.color`                                  |
+
+## 6.8 Theme - Menu Textures
+
 |  A  | complete | 6.9.1     | menu textures                   | `menu.items.bg`                                         |
 |  A  | complete | 6.9.2     | menu textures                   | `menu.items.active.bg`                                  |
 |  B  |          | 6.9.3     | menu textures                   | `menu.title.bg`                                         |
 
-## 6.10 & 6.11 Theme - OSD Colors
+## 6.10 Theme - On-Screen-Display Textures
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
@@ -490,6 +532,9 @@ Acceptance criteria items are categorised as follows:
 |  C  |          | 6.10.2    | osd textures                    | `osd.label.bg`                                          |
 |  B  |          | 6.10.3    | osd textures                    | `osd.hilight.bg`                                        | for desktop osd only
 |  B  |          | 6.10.4    | osd textures                    | `osd.unhilight.bg`                                      | for desktop osd only
+
+## 6.11 Theme - On-Screen-Display Colors
+
 |  A  | complete | 6.11.1    | osd colors                      | `osd.label.text.color`                                  |
 |  B  |          | 6.11.2    | osd colors                      | `osd.hilight.bg.color`                                  | for desktop osd only
 |  B  |          | 6.11.3    | osd colors                      | `osd.unhilight.bg.color`                                | for desktop osd only
@@ -511,7 +556,7 @@ Acceptance criteria items are categorised as follows:
 |  C  |          | 6.13.4    | text shadows                    | `menu.title.text.font`                                  |
 |  C  |          | 6.13.5    | text shadows                    | `osd.label.text.font`                                   |
 
-## 7 Menu
+## 7 Menus
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
