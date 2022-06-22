@@ -1,5 +1,10 @@
 # Scope
 
+<h3 align="center">[<a
+href="incomplete-cat-A-items.md">Incomplete&nbsp;Cat&nbsp;A</a>] [<a
+href="all-cat-A-and-B-items.md">Cat&nbsp;A&nbsp;and&nbsp;B</a>] [<a
+href="stats.md">Stats</a>]</h3>
+
 - [Introduction](#introduction)
 - [Requirements](#requirements)
   - [1.1 General](#11-general)

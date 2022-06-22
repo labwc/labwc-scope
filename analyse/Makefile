@@ -4,7 +4,7 @@ analyse: analyse.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 test:
-	@./analyse --stats < ../README.md
+	@./analyse --stats < ../README.md > ../stats.md
 	@./analyse --print-header > ../incomplete-cat-A-items.md
 	@./analyse --incomplete-a < ../README.md >> ../incomplete-cat-A-items.md
 	@./analyse --print-header > ../all-cat-A-and-B-items.md

@@ -12,8 +12,13 @@ static bool print_cat_b;
 static void
 print_stats(void)
 {
-	int nr_cat_a_items = 0;
-	int nr_complete_cat_a_items = 0;
+	int nr_cat_a = 0;
+	int nr_complete_cat_a = 0;
+	int nr_cat_b = 0;
+	int nr_complete_cat_b = 0;
+	int nr_cat_c = 0;
+	int nr_complete_cat_c = 0;
+
 	char *line = NULL;
 	size_t len = 0;
 	while ((getline(&line, &len, stdin) != -1)) {
@@ -22,17 +27,34 @@ print_stats(void)
 			*p = '\0';
 		}
 		if (strncmp(line, "|  ", 3))
-			return;
+			continue;
 		if (!strncmp(line, "|  A", 4)) {
-			++nr_cat_a_items;
+			++nr_cat_a;
 			if (strstr(line, "complete")) {
-				++nr_complete_cat_a_items;
+				++nr_complete_cat_a;
+			}
+		}
+		if (!strncmp(line, "|  B", 4)) {
+			++nr_cat_b;
+			if (strstr(line, "complete")) {
+				++nr_complete_cat_b;
+			}
+		}
+		if (!strncmp(line, "|  C", 4)) {
+			++nr_cat_c;
+			if (strstr(line, "complete")) {
+				++nr_complete_cat_c;
 			}
 		}
 	}
 	free(line);
-	printf("Cat A total number: %d\n", nr_cat_a_items);
-	printf("Cat A complete:     %d\n", nr_complete_cat_a_items);
+	printf("# Requirements Breakdown\n\n");
+	printf("Cat A:  %d / %d complete\n", nr_complete_cat_a, nr_cat_a);
+	printf("Cat B:  %d / %d complete\n", nr_complete_cat_b, nr_cat_b);
+	printf("Cat C:  %d / %d complete\n", nr_complete_cat_c, nr_cat_c);
+	printf("TOTAL:  %d / %d complete\n",
+		nr_complete_cat_a + nr_complete_cat_b + nr_complete_cat_c,
+		nr_cat_a + nr_cat_b + nr_cat_c);
 }
 
 void
