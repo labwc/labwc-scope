@@ -49,10 +49,10 @@ print_stats(void)
 	}
 	free(line);
 	printf("# Requirements Breakdown\n\n");
-	printf("Cat A:  %d / %d complete\n", nr_complete_cat_a, nr_cat_a);
-	printf("Cat B:  %d / %d complete\n", nr_complete_cat_b, nr_cat_b);
-	printf("Cat C:  %d / %d complete\n", nr_complete_cat_c, nr_cat_c);
-	printf("TOTAL:  %d / %d complete\n",
+	printf("- Cat A:  %d / %d complete\n", nr_complete_cat_a, nr_cat_a);
+	printf("- Cat B:  %d / %d complete\n", nr_complete_cat_b, nr_cat_b);
+	printf("- Cat C:  %d / %d complete\n", nr_complete_cat_c, nr_cat_c);
+	printf("- TOTAL:  %d / %d complete\n",
 		nr_complete_cat_a + nr_complete_cat_b + nr_complete_cat_c,
 		nr_cat_a + nr_cat_b + nr_cat_c);
 }
