@@ -49,20 +49,35 @@
 
 # Introduction
 
-In order to reduce commit noise in the main `labwc` repo, scope
+In order to reduce commit noise in the main `labwc` repository, scope
 is managed here.
 
-A set of requirements have been developed defining what is in scope and
-what is out-of-scope. They also for a baseline against which progress
-can be measured, decisions recorded and the intent of the project declared.
-They also manage expectations and help devs produce proporitionate design
-solutions.
+A set of user & system requirements were documented early in the project
+(initially on the wiki then in this file) to form a baseline against which
+developers can:
 
-This document also help users understand what the project is about
-and if it's the sort of compositor they wish to use.
+- define what is in-scope and out-of-scope
+- measure progress
+- record decisions
+- declare the intent of the project
+- manage expectations
+- produce proporitionate design solutions
 
-Acceptance criteria for each requirement is in accordance with openbox
+This document also help users understand what the project is about and if it is
+the sort of compositor they wish to use.
+
+Acceptance criteria for each requirement is in accordance with openbox 3.6
 specification unless other wise stated.
+
+## Categorisation
+
+Requirements are categorised as follows:
+
+- `A`: in-scope: "must have" for minimum viable product
+- `B+`: in-scope: "should/could have" - likely to implemented at some point
+- `B`: discretionary: if devs feel like it and benefits are greater than
+       cost (burden) of maintenance and complexity
+- `C`: out-of-scope: not intended to be implemented
 
 ## Priorities
 
@@ -70,21 +85,15 @@ specification unless other wise stated.
    We do not want to spend time on an expanding scope with new features until
    the project is reliable at its current scope.
 2. Implement `Cat A` requirements.
-
-## Categories
-
-Acceptance criteria items are categorised as follows:
-
-- `A`: in-scope - mandatory for core product
-- `B`: discretionary
-- `C`: out-of-scope - not intended to be implemented
+2. Implement `Cat B+` requirements.
+2. Review `Cat B` requirements and try to demote as many as possible to C
 
 ## Sections
 
 - Requirements are organised into the sections listed below.
-- The first digit in the reference number refers to the section.
+- The first digit in the reference number relates to the section.
 - Sections 2-7 refer to the the openbox 3.6 specification. For further details
-  of what each of these items refers to, read the respective openbox wiki page.
+  read the respective openbox wiki page.
 
 1. General and Protocols
 2. Configuration [http://openbox.org/wiki/Help:Configuration](http://openbox.org/wiki/Help:Configuration)
