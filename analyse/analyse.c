@@ -5,50 +5,48 @@
 #include <stdlib.h>
 #include <string.h>
 
-static int nr_cat_a_items;
-static int nr_complete_cat_a_items;
-static bool arg_print_stats;
-static bool arg_print_incomplete_cat_a_items;
-static bool arg_print_complete_cat_a_items;
+static bool print_incomplete_cat_a;
+static bool print_cat_a;
+static bool print_cat_b;
 
-void
-print(char *line)
+static void
+print_stats(void)
 {
-	if (arg_print_stats)
-		return;
-	/* strip first column */
-	printf("%s\n", line + 6);
-}
-
-void
-process_cat_a_item(char *line)
-{
-	++nr_cat_a_items;
-	if (strstr(line, "complete")) {
-		++nr_complete_cat_a_items;
-		if (arg_print_complete_cat_a_items)
-			print(line);
-	} else {
-		if (arg_print_incomplete_cat_a_items)
-			print(line);
+	int nr_cat_a_items = 0;
+	int nr_complete_cat_a_items = 0;
+	char *line = NULL;
+	size_t len = 0;
+	while ((getline(&line, &len, stdin) != -1)) {
+		char *p = strrchr(line, '\n');
+		if (p) {
+			*p = '\0';
+		}
+		if (strncmp(line, "|  ", 3))
+			return;
+		if (!strncmp(line, "|  A", 4)) {
+			++nr_cat_a_items;
+			if (strstr(line, "complete")) {
+				++nr_complete_cat_a_items;
+			}
+		}
 	}
+	free(line);
+	printf("Cat A total number: %d\n", nr_cat_a_items);
+	printf("Cat A complete:     %d\n", nr_complete_cat_a_items);
 }
 
 void
 process_line(char *line)
 {
-	static bool have_printed_header;
-
-	if (line[0] != '|')
-		return;
-	if (!have_printed_header) {
-		print(line);
-		if (!strncmp(line, "| --- |", 7))
-			have_printed_header = true;
+	if (strncmp(line, "|  ", 3)) {
 		return;
 	}
-	if (!strncmp(line, "|  A", 4))
-		process_cat_a_item(line);
+	if (print_incomplete_cat_a && !strncmp(line, "|  A", 4) && !strstr(line, "complete"))
+		printf("%s\n", line);
+	if (print_cat_a && !strncmp(line, "|  A", 4))
+		printf("%s\n", line);
+	if (print_cat_b && !strncmp(line, "|  B", 4))
+		printf("%s\n", line);
 }
 
 int
@@ -60,11 +58,18 @@ main(int argc, char *argv[])
 	}
 	for (int i = 1; i < argc ; ++i) {
 		if (!strcmp(argv[i], "--stats")) {
-			arg_print_stats = true;
+			print_stats();
+			exit(0);
+		} else if (!strcmp(argv[i], "--print-header")) {
+			printf("| Cat | Status   | Reference | Category                        | Description                                             | Comment\n");
+			printf("| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------\n");
+			exit(0);
 		} else if (!strcmp(argv[i], "--incomplete-a")) {
-			arg_print_incomplete_cat_a_items = true;
-		} else if (!strcmp(argv[i], "--complete-a")) {
-			arg_print_complete_cat_a_items = true;
+			print_incomplete_cat_a = true;
+		} else if (!strcmp(argv[i], "--cata")) {
+			print_cat_a = true;
+		} else if (!strcmp(argv[i], "--catb")) {
+			print_cat_b = true;
 		}
 	}
 
@@ -78,10 +83,4 @@ main(int argc, char *argv[])
 		process_line(line);
 	}
 	free(line);
-
-	if (arg_print_stats) {
-		printf("Cat A total number: %d\n", nr_cat_a_items);
-		printf("Cat A complete:     %d\n", nr_complete_cat_a_items);
-		printf("Cat A %% complete:   %.0f\n", 100.0 * nr_complete_cat_a_items / (nr_complete_cat_a_items + nr_cat_a_items));
-	}
 }
