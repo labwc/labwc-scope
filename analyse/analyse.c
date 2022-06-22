@@ -48,6 +48,7 @@ print_stats(void)
 		}
 	}
 	free(line);
+	printf("This file has been auto-generated based on README.md. Do not edit it manually\n\n");
 	printf("# Requirements Breakdown\n\n");
 	printf("- Cat A:  %d / %d complete\n", nr_complete_cat_a, nr_cat_a);
 	printf("- Cat B:  %d / %d complete\n", nr_complete_cat_b, nr_cat_b);
@@ -83,6 +84,7 @@ main(int argc, char *argv[])
 			print_stats();
 			exit(0);
 		} else if (!strcmp(argv[i], "--print-header")) {
+			printf("This file has been auto-generated based on README.md. Do not edit it manually\n\n");
 			printf("| Cat | Status   | Reference | Category                        | Description                                             | Comment\n");
 			printf("| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------\n");
 			exit(0);

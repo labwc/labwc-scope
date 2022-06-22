@@ -1,3 +1,5 @@
+This file has been auto-generated based on README.md. Do not edit it manually
+
 # Requirements Breakdown
 
 - Cat A:  75 / 87 complete
