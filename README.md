@@ -604,7 +604,8 @@ It depends on what happens with:
 |  A  | complete | 7.2.1     | menu item                       | `label`                                                 |
 |  C  |          | 7.2.2     | menu item                       | `icon`                                                  |
 |  A  | complete | 7.2.3     | menu item                       | `action`                                                |
-|  A  |          | 7.3       | menu separator                  | `label`                                                 |
+|  A  |          | 7.3       | menu separator                  | `<separator />`                                         |
+|  B  |          | 7.3       | menu separator                  | `<separator label="" />`                                |
 
 ## 8 Extra
 
