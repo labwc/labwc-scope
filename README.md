@@ -209,10 +209,37 @@ Requirements are categorised as follows:
 
 ## 2.5 Configuration - Desktop
 
+The solution shall provide simple workspace setup as follows:
+
+- [x] a. A workspace covers all outputs
+- [x] b. The A-Tab OSD only shows windows from the active workspace
+- [x] c. A window can only be in a single workspace at any given point in time
+         (no tags)
+- [x] d. External panels will show all windows.
+- [x] e. When activating a window which is on a different workspace the
+         compositor shall switch to that workspace automatically
+- [x] f. Configure workspaces as shown in example below.
+
+```
+<desktop>
+  <popupTime>1000</popupTime>
+  <names>
+    <name>foo</name>
+    <name>bar</name>
+  </names>
+<desktop>
+```
+
+UNDECIDED: Workspace control by clients, for example panels.
+It depends on what happens with:
+- https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/40
+- https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/59
+- https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/60
+
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  C  |          | 2.5.1     | desktop                         | `number`                                                |
-|  C  |          | 2.5.2     | desktop                         | `firstDesk`                                             |
+|  C  |          | 2.5.1     | desktop                         | `number`                                                | Obvious from number of `<name>`
+|  C  |          | 2.5.2     | desktop                         | `firstDesk`                                             | Use first `<name>`
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
 
