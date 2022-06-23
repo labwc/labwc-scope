@@ -559,8 +559,10 @@ It depends on what happens with:
 |  B  |          | 6.8.5     | menu colors                     | `menu.items.active.disabled.text.color`                 |
 |  A  |          | 6.8.6     | menu colors                     | `menu.separator.color`                                  |
 
-## 6.8 Theme - Menu Textures
+## 6.9 Theme - Menu Textures
 
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 6.9.1     | menu textures                   | `menu.items.bg`                                         |
 |  A  | complete | 6.9.2     | menu textures                   | `menu.items.active.bg`                                  |
 |  B  |          | 6.9.3     | menu textures                   | `menu.title.bg`                                         |
@@ -576,6 +578,8 @@ It depends on what happens with:
 
 ## 6.11 Theme - On-Screen-Display Colors
 
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 6.11.1    | osd colors                      | `osd.label.text.color`                                  |
 |  B  |          | 6.11.2    | osd colors                      | `osd.hilight.bg.color`                                  | for desktop osd only
 |  B  |          | 6.11.3    | osd colors                      | `osd.unhilight.bg.color`                                | for desktop osd only
