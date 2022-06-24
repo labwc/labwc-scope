@@ -58,7 +58,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 5.21      | window action                   | `Resize`                                                |
 |  A  | complete | 6.1.1     | geometry                        | `border.width`                                          |
 |  A  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
-|  A  |          | 6.1.3     | geometry                        | `menu.separator.width`                                  |
+|  A  | complete | 6.1.3     | geometry                        | `menu.separator.width`                                  |
 |  A  | complete | 6.1.6     | geometry                        | `osd.border.width`                                      |
 |  A  |          | 6.1.9     | geometry                        | `window.handle.width`                                   |
 |  A  | complete | 6.2.1     | border colors                   | `window.active.border.color`                            |
@@ -79,7 +79,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  |          | 6.8.1     | menu colors                     | `menu.title.text.color`                                 |
 |  A  | complete | 6.8.2     | menu colors                     | `menu.items.text.color`                                 |
 |  A  | complete | 6.8.4     | menu colors                     | `menu.items.active.text.color`                          |
-|  A  |          | 6.8.6     | menu colors                     | `menu.separator.color`                                  |
+|  A  | complete | 6.8.6     | menu colors                     | `menu.separator.color`                                  |
 |  A  | complete | 6.9.1     | menu textures                   | `menu.items.bg`                                         |
 |  A  | complete | 6.9.2     | menu textures                   | `menu.items.active.bg`                                  |
 |  A  | complete | 6.10.1    | osd textures                    | `osd.bg`                                                | we only set the color
@@ -87,7 +87,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 7.1.1     | menu                            | `id`                                                    |
 |  A  | complete | 7.2.1     | menu item                       | `label`                                                 |
 |  A  | complete | 7.2.3     | menu item                       | `action`                                                |
-|  A  |          | 7.3       | menu separator                  | `<separator />`                                         |
+|  A  | complete | 7.3       | menu separator                  | `<separator />`                                         |
 |  A  | complete | 8.1       | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
 |  B  | complete | 1.2.1     | wayland-protocol                | [presentation-time]                                     |
 |  B  | complete | 1.2.2     | wayland-protocol                | [viewporter]                                            |
@@ -184,8 +184,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.26      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.27      | window action                   | `GrowToFill`                                            |
 |  B  |          | 5.28      | window action                   | `ShrinkToEdge`                                          |
-|  B  |          | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
-|  B  |          | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
+|  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
+|  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
 |  B  |          | 6.1.11    | geometry                        | `padding.height`                                        |
 |  B  | complete | 6.1.12    | geometry                        | `menu.overlap.x`                                        |

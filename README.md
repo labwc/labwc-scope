@@ -454,9 +454,9 @@ It depends on what happens with:
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 6.1.1     | geometry                        | `border.width`                                          |
 |  A  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
-|  A  |          | 6.1.3     | geometry                        | `menu.separator.width`                                  |
-|  B  |          | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
-|  B  |          | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
+|  A  | complete | 6.1.3     | geometry                        | `menu.separator.width`                                  |
+|  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
+|  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
 |  A  | complete | 6.1.6     | geometry                        | `osd.border.width`                                      |
 |  C  |          | 6.1.7     | geometry                        | `window.client.padding.width`                           | No need to pad between client surface and title/handle/border
 |  C  |          | 6.1.8     | geometry                        | `window.client.padding.height`                          | Ditto
@@ -557,7 +557,7 @@ It depends on what happens with:
 |  B  |          | 6.8.3     | menu colors                     | `menu.items.disabled.text.color`                        |
 |  A  | complete | 6.8.4     | menu colors                     | `menu.items.active.text.color`                          |
 |  B  |          | 6.8.5     | menu colors                     | `menu.items.active.disabled.text.color`                 |
-|  A  |          | 6.8.6     | menu colors                     | `menu.separator.color`                                  |
+|  A  | complete | 6.8.6     | menu colors                     | `menu.separator.color`                                  |
 
 ## 6.9 Theme - Menu Textures
 
@@ -613,7 +613,7 @@ It depends on what happens with:
 |  A  | complete | 7.2.1     | menu item                       | `label`                                                 |
 |  C  |          | 7.2.2     | menu item                       | `icon`                                                  |
 |  A  | complete | 7.2.3     | menu item                       | `action`                                                |
-|  A  |          | 7.3       | menu separator                  | `<separator />`                                         |
+|  A  | complete | 7.3       | menu separator                  | `<separator />`                                         |
 |  B  |          | 7.3       | menu separator                  | `<separator label="" />`                                |
 
 ## 8 Extra
