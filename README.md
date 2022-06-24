@@ -371,7 +371,7 @@ It depends on what happens with:
 |  A  | complete | 3.5.1     | mouse event                     | `Press`                                                 |
 |  A  | complete | 3.5.2     | mouse event                     | `Click`                                                 |
 |  A  | complete | 3.5.3     | mouse event                     | `DoubleClick`                                           |
-|  A  |          | 3.5.4     | mouse event                     | `Release`                                               |
+|  B  |          | 3.5.4     | mouse event                     | `Release`                                               |
 |  B  | complete | 3.5.5     | mouse event                     | `Drag`                                                  |
 
 ## 4 Global Actions
@@ -453,14 +453,14 @@ It depends on what happens with:
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 6.1.1     | geometry                        | `border.width`                                          |
-|  A  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
+|  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  A  | complete | 6.1.3     | geometry                        | `menu.separator.width`                                  |
 |  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
 |  A  | complete | 6.1.6     | geometry                        | `osd.border.width`                                      |
 |  C  |          | 6.1.7     | geometry                        | `window.client.padding.width`                           | No need to pad between client surface and title/handle/border
 |  C  |          | 6.1.8     | geometry                        | `window.client.padding.height`                          | Ditto
-|  A  |          | 6.1.9     | geometry                        | `window.handle.width`                                   |
+|  B  |          | 6.1.9     | geometry                        | `window.handle.width`                                   |
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
 |  B  |          | 6.1.11    | geometry                        | `padding.height`                                        |
 |  B  | complete | 6.1.12    | geometry                        | `menu.overlap.x`                                        |
@@ -488,17 +488,17 @@ It depends on what happens with:
 |  A  | complete | 6.3.1     | titlebar colors                 | `window.active.label.text.color`                        |
 |  A  | complete | 6.3.2     | titlebar colors                 | `window.inactive.label.text.color`                      |
 |  A  | complete | 6.3.3     | titlebar colors                 | `window.active.button.unpressed.image.color`            |
-|  A  |          | 6.3.4     | titlebar colors                 | `window.active.button.pressed.image.color`              |
+|  B  |          | 6.3.4     | titlebar colors                 | `window.active.button.pressed.image.color`              |
 |  B  |          | 6.3.5     | titlebar colors                 | `window.active.button.disabled.image.color`             |
-|  A  |          | 6.3.6     | titlebar colors                 | `window.active.button.hover.image.color`                |
+|  B  |          | 6.3.6     | titlebar colors                 | `window.active.button.hover.image.color`                |
 |  B  |          | 6.3.7     | titlebar colors                 | `window.active.button.toggled.unpressed.image.color`    |
 |  B  |          | 6.3.8     | titlebar colors                 | `window.active.button.toggled.pressed.image.color`      |
 |  B  |          | 6.3.9     | titlebar colors                 | `window.active.button.toggled.hover.image.color`        |
 |  B  |          | 6.3.10    | titlebar colors                 | `window.active.button.toggled.image.color`              |
 |  A  | complete | 6.3.11    | titlebar colors                 | `window.inactive.button.unpressed.image.color`          |
-|  A  |          | 6.3.12    | titlebar colors                 | `window.inactive.button.pressed.image.color`            |
+|  B  |          | 6.3.12    | titlebar colors                 | `window.inactive.button.pressed.image.color`            |
 |  B  |          | 6.3.13    | titlebar colors                 | `window.inactive.button.disabled.image.color`           |
-|  A  |          | 6.3.14    | titlebar colors                 | `window.inactive.button.hover.image.color`              |
+|  B  |          | 6.3.14    | titlebar colors                 | `window.inactive.button.hover.image.color`              |
 |  B  |          | 6.3.15    | titlebar colors                 | `window.inactive.button.toggled.unpressed.image.color`  |
 |  B  |          | 6.3.16    | titlebar colors                 | `window.inactive.button.toggled.pressed.image.color`    |
 |  B  |          | 6.3.17    | titlebar colors                 | `window.inactive.button.toggled.hover.image.color`      |
@@ -519,7 +519,7 @@ It depends on what happens with:
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 6.5.1     | inactive window textures        | `window.inactive.title.bg`                              |
 |  B  |          | 6.5.2     | inactive window textures        | `window.inactive.label.bg`                              |
-|  A  |          | 6.5.3     | inactive window textures        | `window.inactive.handle.bg`                             |
+|  B  |          | 6.5.3     | inactive window textures        | `window.inactive.handle.bg`                             |
 |  B  |          | 6.5.4     | inactive window textures        | `window.inactive.grip.bg`                               |
 
 ## 6.6 Theme - Active Window Button Textures
@@ -552,7 +552,7 @@ It depends on what happens with:
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  A  |          | 6.8.1     | menu colors                     | `menu.title.text.color`                                 |
+|  B  |          | 6.8.1     | menu colors                     | `menu.title.text.color`                                 |
 |  A  | complete | 6.8.2     | menu colors                     | `menu.items.text.color`                                 |
 |  B  |          | 6.8.3     | menu colors                     | `menu.items.disabled.text.color`                        |
 |  A  | complete | 6.8.4     | menu colors                     | `menu.items.active.text.color`                          |
