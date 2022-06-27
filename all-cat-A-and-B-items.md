@@ -43,7 +43,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 3.5.1     | mouse event                     | `Press`                                                 |
 |  A  | complete | 3.5.2     | mouse event                     | `Click`                                                 |
 |  A  | complete | 3.5.3     | mouse event                     | `DoubleClick`                                           |
-|  A  |          | 3.5.4     | mouse event                     | `Release`                                               |
 |  A  | complete | 4.1       | global action                   | `Execute`                                               |
 |  A  | complete | 4.2       | global action                   | `ShowMenu`                                              |
 |  A  | complete | 4.3       | global action                   | `NextWindow`                                            |
@@ -57,10 +56,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 5.20      | window action                   | `Move`                                                  |
 |  A  | complete | 5.21      | window action                   | `Resize`                                                |
 |  A  | complete | 6.1.1     | geometry                        | `border.width`                                          |
-|  A  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  A  | complete | 6.1.3     | geometry                        | `menu.separator.width`                                  |
 |  A  | complete | 6.1.6     | geometry                        | `osd.border.width`                                      |
-|  A  |          | 6.1.9     | geometry                        | `window.handle.width`                                   |
 |  A  | complete | 6.2.1     | border colors                   | `window.active.border.color`                            |
 |  A  | complete | 6.2.3     | border colors                   | `window.inactive.border.color`                          |
 |  A  | complete | 6.2.5     | border colors                   | `border.color`                                          |
@@ -68,15 +65,9 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 6.3.1     | titlebar colors                 | `window.active.label.text.color`                        |
 |  A  | complete | 6.3.2     | titlebar colors                 | `window.inactive.label.text.color`                      |
 |  A  | complete | 6.3.3     | titlebar colors                 | `window.active.button.unpressed.image.color`            |
-|  A  |          | 6.3.4     | titlebar colors                 | `window.active.button.pressed.image.color`              |
-|  A  |          | 6.3.6     | titlebar colors                 | `window.active.button.hover.image.color`                |
 |  A  | complete | 6.3.11    | titlebar colors                 | `window.inactive.button.unpressed.image.color`          |
-|  A  |          | 6.3.12    | titlebar colors                 | `window.inactive.button.pressed.image.color`            |
-|  A  |          | 6.3.14    | titlebar colors                 | `window.inactive.button.hover.image.color`              |
 |  A  | complete | 6.4.1     | active window textures          | `window.active.title.bg`                                |
 |  A  | complete | 6.5.1     | inactive window textures        | `window.inactive.title.bg`                              |
-|  A  |          | 6.5.3     | inactive window textures        | `window.inactive.handle.bg`                             |
-|  A  |          | 6.8.1     | menu colors                     | `menu.title.text.color`                                 |
 |  A  | complete | 6.8.2     | menu colors                     | `menu.items.text.color`                                 |
 |  A  | complete | 6.8.4     | menu colors                     | `menu.items.active.text.color`                          |
 |  A  | complete | 6.8.6     | menu colors                     | `menu.separator.color`                                  |
@@ -151,6 +142,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 3.4.1     | mouse button                    | `Middle`                                                |
 |  B  |          | 3.4.1     | mouse button                    | `Up` (scroll)                                           |
 |  B  |          | 3.4.1     | mouse button                    | `Down` (scroll)                                         |
+|  B  |          | 3.5.4     | mouse event                     | `Release`                                               |
 |  B  | complete | 3.5.5     | mouse event                     | `Drag`                                                  |
 |  B  |          | 4.5       | global action                   | `DirectionalCycleWindows`                               |
 |  B  |          | 4.6       | global action                   | `DirectionalTargetWindows`                              |
@@ -184,8 +176,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.26      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.27      | window action                   | `GrowToFill`                                            |
 |  B  |          | 5.28      | window action                   | `ShrinkToEdge`                                          |
+|  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
+|  B  |          | 6.1.9     | geometry                        | `window.handle.width`                                   |
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
 |  B  |          | 6.1.11    | geometry                        | `padding.height`                                        |
 |  B  | complete | 6.1.12    | geometry                        | `menu.overlap.x`                                        |
@@ -196,12 +190,16 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.2.6     | border colors                   | `window.active.client.color`                            |
 |  B  |          | 6.2.7     | border colors                   | `window.inactive.client.color`                          |
 |  B  |          | 6.2.8     | border colors                   | `menu.border.color`                                     |
+|  B  |          | 6.3.4     | titlebar colors                 | `window.active.button.pressed.image.color`              |
 |  B  |          | 6.3.5     | titlebar colors                 | `window.active.button.disabled.image.color`             |
+|  B  |          | 6.3.6     | titlebar colors                 | `window.active.button.hover.image.color`                |
 |  B  |          | 6.3.7     | titlebar colors                 | `window.active.button.toggled.unpressed.image.color`    |
 |  B  |          | 6.3.8     | titlebar colors                 | `window.active.button.toggled.pressed.image.color`      |
 |  B  |          | 6.3.9     | titlebar colors                 | `window.active.button.toggled.hover.image.color`        |
 |  B  |          | 6.3.10    | titlebar colors                 | `window.active.button.toggled.image.color`              |
+|  B  |          | 6.3.12    | titlebar colors                 | `window.inactive.button.pressed.image.color`            |
 |  B  |          | 6.3.13    | titlebar colors                 | `window.inactive.button.disabled.image.color`           |
+|  B  |          | 6.3.14    | titlebar colors                 | `window.inactive.button.hover.image.color`              |
 |  B  |          | 6.3.15    | titlebar colors                 | `window.inactive.button.toggled.unpressed.image.color`  |
 |  B  |          | 6.3.16    | titlebar colors                 | `window.inactive.button.toggled.pressed.image.color`    |
 |  B  |          | 6.3.17    | titlebar colors                 | `window.inactive.button.toggled.hover.image.color`      |
@@ -209,6 +207,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.4.2     | active window textures          | `window.active.label.bg`                                |
 |  B  |          | 6.4.4     | active window textures          | `window.active.grip.bg`                                 |
 |  B  |          | 6.5.2     | inactive window textures        | `window.inactive.label.bg`                              |
+|  B  |          | 6.5.3     | inactive window textures        | `window.inactive.handle.bg`                             |
 |  B  |          | 6.5.4     | inactive window textures        | `window.inactive.grip.bg`                               |
 |  B  |          | 6.6.1     | active window button textures   | `window.active.button.unpressed.bg`                     |
 |  B  |          | 6.6.2     | active window button textures   | `window.active.button.pressed.bg`                       |
@@ -226,6 +225,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.7.6     | inactive window button textures | `window.inactive.button.toggled.pressed.bg`             |
 |  B  |          | 6.7.7     | inactive window button textures | `window.inactive.button.toggled.hover.bg`               |
 |  B  |          | 6.7.8     | inactive window button textures | `window.inactive.button.toggled.bg`                     |
+|  B  |          | 6.8.1     | menu colors                     | `menu.title.text.color`                                 |
 |  B  |          | 6.8.3     | menu colors                     | `menu.items.disabled.text.color`                        |
 |  B  |          | 6.8.5     | menu colors                     | `menu.items.active.disabled.text.color`                 |
 |  B  |          | 6.9.3     | menu textures                   | `menu.title.bg`                                         |
