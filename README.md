@@ -460,7 +460,7 @@ It depends on what happens with:
 |  A  | complete | 6.1.6     | geometry                        | `osd.border.width`                                      |
 |  C  |          | 6.1.7     | geometry                        | `window.client.padding.width`                           | No need to pad between client surface and title/handle/border
 |  C  |          | 6.1.8     | geometry                        | `window.client.padding.height`                          | Ditto
-|  B  |          | 6.1.9     | geometry                        | `window.handle.width`                                   |
+|  C  |          | 6.1.9     | geometry                        | `window.handle.width`                                   | Handle not supported
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
 |  B  |          | 6.1.11    | geometry                        | `padding.height`                                        |
 |  B  | complete | 6.1.12    | geometry                        | `menu.overlap.x`                                        |
