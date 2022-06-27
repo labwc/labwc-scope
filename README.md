@@ -47,10 +47,10 @@ href="stats.md">Stats</a>]</h3>
     - [6.12 Text Justification](#612-theme---text-justification)
     - [6.13 Text Shadows](#613-theme---text-shadows)
   - [7 Menus](#7-menus)
-  - [8 Extra](#8-extras)
-- [Appendix A](#appendix-a)
-  - [A.1 IPC](#a1-ipc)
-  - [A.2 Configuration Syntax](#a2-configuration-syntax)
+  - [8 Extra](#8-extra)
+- [Appendix A - Terminology](#appendix-a---terminology)
+- [Appendix B - IPC](#appendix-b---ipc)
+- [Appendix C - Configuration Syntax](#appendix-c---configuration-syntax)
 
 # Introduction
 
@@ -625,9 +625,11 @@ It depends on what happens with:
 |  B  | complete | 8.3       | extra                           | `SnapToEdge` action                                     | Similar to 5.12 `GrowToEdge`
 
 
-# Appendix A
+# Appendix A - Terminology
 
-## A.1 IPC
+`handle`: The window handle is the piece of decorations on the bottom of windows
+
+# Appendix B - IPC
 
 IPC stands for inter-process communication and is important in building a
 complete desktop environment.
@@ -649,7 +651,7 @@ upstream and the wider eco-system to plug any gaps.
 
 See issues #128, #190
 
-## A.2 Configuration Syntax
+# Appendix C - Configuration Syntax
 
 Occasionally we receive requests to support other configuration languages
 and syntaxes. This is out-of-scope.
@@ -658,6 +660,7 @@ If this is high priority for anyone, I suggest helping to achieve prioirty
 one and two; then split `labwc` in a wlstem library and a compositor.
 At this point new compositors with alternative config files should be easy
 to implement.
+
 
 [wayland-protocols]: https://gitlab.freedesktop.org/wayland/wayland-protocols
 [wlr-protocols]: https://gitlab.freedesktop.org/wlroots/wlr-protocols
