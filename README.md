@@ -462,7 +462,7 @@ It depends on what happens with:
 |  C  |          | 6.1.8     | geometry                        | `window.client.padding.height`                          | Ditto
 |  C  |          | 6.1.9     | geometry                        | `window.handle.width`                                   | Handle not supported
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
-|  B  |          | 6.1.11    | geometry                        | `padding.height`                                        |
+|  B  | complete | 6.1.11    | geometry                        | `padding.height`                                        |
 |  B  | complete | 6.1.12    | geometry                        | `menu.overlap.x`                                        |
 |  B  | complete | 6.1.13    | geometry                        | `menu.overlap.y`                                        |
 |  B  |          | 6.1.14    | geometry                        | `menu.overlap`                                          |
