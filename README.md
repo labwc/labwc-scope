@@ -264,7 +264,7 @@ It depends on what happens with:
 |  B  |          | 2.7.4     | applications                    | `size`                                                  |
 |  C  |          | 2.7.5     | applications                    | `focus`                                                 |
 |  B  |          | 2.7.6     | applications                    | `desktop`                                               |
-|  B  |          | 2.7.7     | applications                    | `layer`                                                 |
+|  B  |          | 2.7.7     | applications                    | `layer`                                                 | If we implement, consider better name
 |  C  |          | 2.7.8     | applications                    | `iconic`                                                |
 |  C  |          | 2.7.9     | applications                    | `skip_pager`                                            |
 |  C  |          | 2.7.10    | applications                    | `skip_taskbar`                                          |
