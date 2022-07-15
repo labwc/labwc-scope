@@ -263,13 +263,13 @@ It depends on what happens with:
 |  B  |          | 2.7.3     | applications                    | `position`                                              |
 |  B  |          | 2.7.4     | applications                    | `size`                                                  |
 |  C  |          | 2.7.5     | applications                    | `focus`                                                 |
-|  C  |          | 2.7.6     | applications                    | `desktop`                                               |
+|  B  |          | 2.7.6     | applications                    | `desktop`                                               |
 |  C  |          | 2.7.7     | applications                    | `layer`                                                 |
 |  C  |          | 2.7.8     | applications                    | `iconic`                                                |
 |  C  |          | 2.7.9     | applications                    | `skip_pager`                                            |
 |  C  |          | 2.7.10    | applications                    | `skip_taskbar`                                          |
 |  C  |          | 2.7.11    | applications                    | `fullscreen`                                            |
-|  C  |          | 2.7.12    | applications                    | `maximized`                                             |
+|  B  |          | 2.7.12    | applications                    | `maximized`                                             |
 
 ## 2.8 Configuration - Keyboard
 
