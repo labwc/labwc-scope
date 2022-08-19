@@ -616,14 +616,19 @@ It depends on what happens with:
 |  A  | complete | 7.3       | menu separator                  | `<separator />`                                         |
 |  B  |          | 7.3       | menu separator                  | `<separator label="" />`                                |
 
-## 8 Extra
+## 8.1 Extra - General
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  A  | complete | 8.1       | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
-|  B  |          | 8.2       | extra                           | Support png buttons                                     |
-|  B  | complete | 8.3       | extra                           | `SnapToEdge` action                                     | Similar to 5.12 `GrowToEdge`
+|  A  | complete | 8.1.1     | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
+|  B  |          | 8.1.2     | extra                           | Support png buttons                                     |
+|  B  | complete | 8.1.3     | extra                           | `SnapToEdge` action                                     | Similar to 5.12 `GrowToEdge`
 
+## 8.2 Extra - Theme
+
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  B  |          | 8.2.1     | extra                           | Read menu.xbm if it exists                              |
 
 # Appendix A - Terminology
 
