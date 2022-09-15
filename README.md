@@ -1,7 +1,7 @@
 # Scope
 
 <h3 align="center">[<a
-href="incomplete-cat-A-items.md">Incomplete&nbsp;Cat&nbsp;A</a>] [<a
+href="incomplete-cat-B+-items.md">Incomplete&nbsp;Cat&nbsp;B+</a>] [<a
 href="all-cat-A-and-B-items.md">Cat&nbsp;A&nbsp;and&nbsp;B</a>] [<a
 href="stats.md">Stats</a>]</h3>
 

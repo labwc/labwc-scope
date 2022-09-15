@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-static bool print_incomplete_cat_a;
+static bool print_incomplete_cat_b_plus;
 static bool print_cat_a;
 static bool print_cat_b;
 
@@ -64,7 +64,7 @@ process_line(char *line)
 	if (strncmp(line, "|  ", 3)) {
 		return;
 	}
-	if (print_incomplete_cat_a && !strncmp(line, "|  A", 4) && !strstr(line, "complete"))
+	if (print_incomplete_cat_b_plus && !strncmp(line, "|  B+", 5) && !strstr(line, "complete"))
 		printf("%s\n", line);
 	if (print_cat_a && !strncmp(line, "|  A", 4))
 		printf("%s\n", line);
@@ -88,8 +88,8 @@ main(int argc, char *argv[])
 			printf("| Cat | Status   | Reference | Category                        | Description                                             | Comment\n");
 			printf("| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------\n");
 			exit(0);
-		} else if (!strcmp(argv[i], "--incomplete-a")) {
-			print_incomplete_cat_a = true;
+		} else if (!strcmp(argv[i], "--incomplete-b-plus")) {
+			print_incomplete_cat_b_plus = true;
 		} else if (!strcmp(argv[i], "--cata")) {
 			print_cat_a = true;
 		} else if (!strcmp(argv[i], "--catb")) {

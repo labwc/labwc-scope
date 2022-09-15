@@ -79,7 +79,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 7.2.1     | menu item                       | `label`                                                 |
 |  A  | complete | 7.2.3     | menu item                       | `action`                                                |
 |  A  | complete | 7.3       | menu separator                  | `<separator />`                                         |
-|  A  | complete | 8.1       | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
+|  A  | complete | 8.1.1     | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
 |  B  | complete | 1.2.1     | wayland-protocol                | [presentation-time]                                     |
 |  B  | complete | 1.2.2     | wayland-protocol                | [viewporter]                                            |
 |  B  | complete | 1.2.4     | wayland-protocol                | fullscreen-shell-unstable-v1                            |
@@ -100,7 +100,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.2.19    | wayland-protocol                | xdg-output-unstable-v1                                  |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  |          | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
-|  B  |          | 1.2.22    | wayland-protocol                | ext-session-lock-v1                                     | Supported by swaylock
+|  B  |          | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
 |  B  |          | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
 |  B  | complete | 1.3.1     | wlr-protocol                    | wlr-data-control-unstable-v1                            |
 |  B  | complete | 1.3.2     | wlr-protocol                    | wlr-export-dmabuf-unstable-v1                           |
@@ -117,12 +117,19 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  | complete | 2.4.9     | theme                           | `<font place="MenuItem">`                               |
-|  B  |          | 2.4.10    | theme                           | `<font place="OnScreenDisplay">`                        |
+|  B  | complete | 2.4.10    | theme                           | `<font place="OnScreenDisplay">`                        |
+|  B  | complete | 2.4.11    | theme                           | `<font place=""><name>`                                 |
+|  B  | complete | 2.4.12    | theme                           | `<font place=""><size>`                                 |
+|  B  | complete | 2.4.13    | theme                           | `<font place=""><weight>`                               |
+|  B  | complete | 2.4.14    | theme                           | `<font place=""><slant>`                                |
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
 |  B  |          | 2.7.1     | applications                    | `decor`                                                 |
 |  B  |          | 2.7.3     | applications                    | `position`                                              |
 |  B  |          | 2.7.4     | applications                    | `size`                                                  |
+|  B  |          | 2.7.6     | applications                    | `desktop`                                               |
+|  B  |          | 2.7.7     | applications                    | `layer`                                                 | If we implement, consider better name
+|  B  |          | 2.7.12    | applications                    | `maximized`                                             |
 |  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
 |  B  |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
@@ -139,6 +146,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | compete  | 3.3.12    | mouse context                   | `BLCorner`                                              |
 |  B  | complete | 3.3.13    | mouse context                   | `BRCorner`                                              |
 |  B  |          | 3.3.14    | mouse context                   | `Icon`                                                  |
+|  B  | complete | 3.3.21    | mouse context                   | `Title`                                                 | EXTRA
 |  B  |          | 3.4.1     | mouse button                    | `Middle`                                                |
 |  B  |          | 3.4.1     | mouse button                    | `Up` (scroll)                                           |
 |  B  |          | 3.4.1     | mouse button                    | `Down` (scroll)                                         |
@@ -156,6 +164,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 4.10      | global action                   | `ToggleShowDesktop`                                     |
 |  B  |          | 4.13      | global action                   | `Restart`                                               |
 |  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
+|  B  | complete | 4.16      | global action                   | `Debug`                                                 | EXTRA
 |  B  |          | 5.3       | window action                   | `Lower`                                                 |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
 |  B  |          | 5.5       | window action                   | `UnFocus`                                               |
@@ -179,9 +188,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
-|  B  |          | 6.1.9     | geometry                        | `window.handle.width`                                   |
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
-|  B  |          | 6.1.11    | geometry                        | `padding.height`                                        |
+|  B  | complete | 6.1.11    | geometry                        | `padding.height`                                        |
 |  B  | complete | 6.1.12    | geometry                        | `menu.overlap.x`                                        |
 |  B  | complete | 6.1.13    | geometry                        | `menu.overlap.y`                                        |
 |  B  |          | 6.1.14    | geometry                        | `menu.overlap`                                          |
@@ -238,5 +246,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 7.1.2     | menu                            | `label`                                                 |
 |  B  |          | 7.1.4     | menu                            | `execute`                                               |
 |  B  |          | 7.3       | menu separator                  | `<separator label="" />`                                |
-|  B  |          | 8.2       | extra                           | Support png buttons                                     |
-|  B  | complete | 8.3       | extra                           | `SnapToEdge` action                                     | Similar to 5.12 `GrowToEdge`
+|  B  |          | 8.1.2     | extra                           | Support png buttons                                     |
+|  B  | complete | 8.1.3     | extra                           | `SnapToEdge` action                                     | Similar to 5.12 `GrowToEdge`
+|  B  |          | 8.2.1     | extra                           | Read menu.xbm if it exists                              |
