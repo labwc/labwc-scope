@@ -155,7 +155,7 @@ Requirements are categorised as follows:
 |  B  | complete | 1.2.19    | wayland-protocol                | xdg-output-unstable-v1                                  |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  |          | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
-|  B  |          | 1.2.22    | wayland-protocol                | ext-session-lock-v1                                     | Supported by swaylock
+|  B  |          | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
 |  B  |          | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
 
 ## 1.3 wlroots Protocols
@@ -671,9 +671,13 @@ At this point new compositors with alternative config files should be easy
 to implement.
 
 
+[^1]: See swaywm/swaylock@3e84316. This is more secure than
+      wlr-input-inhibitor. It will not leak information on output hotplug nor
+      unlock the session when the screen locker crashes.
+
 [wayland-protocols]: https://gitlab.freedesktop.org/wayland/wayland-protocols
 [wlr-protocols]: https://gitlab.freedesktop.org/wlroots/wlr-protocols
 [presentation-time]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/presentation-time
 [viewporter]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/viewporter
 [xdg-shell]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/xdg-shell
-
+[ext-session-lock-v1]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/staging/ext-session-lock
