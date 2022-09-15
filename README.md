@@ -210,7 +210,7 @@ Requirements are categorised as follows:
 |  B  |          | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  | complete | 2.4.9     | theme                           | `<font place="MenuItem">`                               |
-|  B  |          | 2.4.10    | theme                           | `<font place="OnScreenDisplay">`                        |
+|  B  | complete | 2.4.10    | theme                           | `<font place="OnScreenDisplay">`                        |
 |  B  | complete | 2.4.11    | theme                           | `<font place=""><name>`                                 |
 |  B  | complete | 2.4.12    | theme                           | `<font place=""><size>`                                 |
 |  B  | complete | 2.4.13    | theme                           | `<font place=""><weight>`                               |
