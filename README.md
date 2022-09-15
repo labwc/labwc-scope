@@ -357,6 +357,7 @@ It depends on what happens with:
 |  C  |          | 3.3.18    | mouse context                   | `AllDesktops`                                           |
 |  C  |          | 3.3.19    | mouse context                   | `Shade`                                                 |
 |  C  |          | 3.3.20    | mouse context                   | `Moveresize`                                            |
+|  B  | complete | 3.3.21    | mouse context                   | `Title`                                                 | EXTRA
 
 ## 3.4 Configuration - Mouse Button
 
@@ -411,7 +412,7 @@ It depends on what happens with:
 |  B  |          | 4.13      | global action                   | `Restart`                                               |
 |  A  | complete | 4.14      | global action                   | `Exit`                                                  |
 |  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
-|  C  |          | 4.16      | global action                   | `Debug`                                                 |
+|  B  | complete | 4.16      | global action                   | `Debug`                                                 | EXTRA
 
 ## 5 Window Actions
 
