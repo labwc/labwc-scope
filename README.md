@@ -342,7 +342,7 @@ It depends on what happens with:
 |  B  | complete | 3.3.1     | mouse context                   | `Frame`                                                 |
 |  B  | complete | 3.3.2     | mouse context                   | `Client`                                                |
 |  B  | complete | 3.3.3     | mouse context                   | `Desktop`                                               |
-|  B  | complete | 3.3.4     | mouse context                   | `Root`                                                  |
+|  B  | complete | 3.3.4     | mouse context                   | `Root`                                                  | DEVIATION [^2]
 |  A  | complete | 3.3.5     | mouse context                   | `Titlebar`                                              |
 |  B  | complete | 3.3.6     | mouse context                   | `Top`                                                   |
 |  B  | complete | 3.3.7     | mouse context                   | `Bottom`                                                |
@@ -677,6 +677,18 @@ to implement.
 [^1]: See swaywm/swaylock@3e84316. This is more secure than
       wlr-input-inhibitor. It will not leak information on output hotplug nor
       unlock the session when the screen locker crashes.
+
+[^2]: For mouse-contexts 'Root' is used as a synonum for 'Desktop' which is
+      a deviation from Openbox spec where they are defined as follows:
+      'Desktop': The desktop or background, regardless of if you use a program
+      to place icons on your desktop or not (such as in KDE and GNOME). This is
+      also called the "root window" frequently.
+      'Root': This works similarly to the Desktop context. However, this is a
+      special context for bindings you only want to work only when you don't
+      have a program running to place icons on your desktop. Generally this is
+      only used for the root menus, so that they won't override the menus
+      provided by your desktop icons.
+      See: http://openbox.org/wiki/Help:Bindings#Context
 
 [wayland-protocols]: https://gitlab.freedesktop.org/wayland/wayland-protocols
 [wlr-protocols]: https://gitlab.freedesktop.org/wlroots/wlr-protocols
