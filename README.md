@@ -415,6 +415,7 @@ It depends on what happens with:
 |  A  | complete | 4.14      | global action                   | `Exit`                                                  |
 |  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
 |  B  | complete | 4.16      | global action                   | `Debug`                                                 | EXTRA
+|  B  | complete | 4.17      | global action                   | `None`                                                  | EXTRA Removes other actions within mouse bindings
 
 ## 5 Window Actions
 
