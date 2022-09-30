@@ -324,6 +324,7 @@ It depends on what happens with:
 |  A  | complete | 3.1.3     | keyboard keybind                | `action.menu`                                           |
 |  A  | complete | 3.1.4     | keyboard keybind                | Support modifier keys                                   |
 |  C  |          | 3.1.5     | keyboard keybind                | Support key chains                                      |
+|  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
 
 ## 3.2 Configuration - Mouse Binding
 
@@ -332,6 +333,7 @@ It depends on what happens with:
 |  A  | complete | 3.2.1     | mouse binding                   | `context.name`                                          |
 |  A  | complete | 3.2.2     | mouse binding                   | `mousebind.button`                                      |
 |  A  | complete | 3.2.3     | mouse binding                   | `mousebind.action`                                      |
+|  B  | complete | 3.2.4     | mouse binding                   | `default`                                               | EXTRA
 
 ## 3.3 Configuration - Mouse Context
 
