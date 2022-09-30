@@ -133,10 +133,12 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
 |  B  |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
+|  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
+|  B  | complete | 3.2.4     | mouse binding                   | `default`                                               | EXTRA
 |  B  | complete | 3.3.1     | mouse context                   | `Frame`                                                 |
 |  B  | complete | 3.3.2     | mouse context                   | `Client`                                                |
 |  B  | complete | 3.3.3     | mouse context                   | `Desktop`                                               |
-|  B  | complete | 3.3.4     | mouse context                   | `Root`                                                  |
+|  B  | complete | 3.3.4     | mouse context                   | `Root`                                                  | DEVIATION [^2]
 |  B  | complete | 3.3.6     | mouse context                   | `Top`                                                   |
 |  B  | complete | 3.3.7     | mouse context                   | `Bottom`                                                |
 |  B  | complete | 3.3.8     | mouse context                   | `Left`                                                  |
@@ -165,6 +167,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 4.13      | global action                   | `Restart`                                               |
 |  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
 |  B  | complete | 4.16      | global action                   | `Debug`                                                 | EXTRA
+|  B  | complete | 4.17      | global action                   | `None`                                                  | EXTRA Removes other actions within mouse bindings
 |  B  |          | 5.3       | window action                   | `Lower`                                                 |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
 |  B  |          | 5.5       | window action                   | `UnFocus`                                               |
