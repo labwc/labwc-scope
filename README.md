@@ -679,7 +679,7 @@ to implement.
       wlr-input-inhibitor. It will not leak information on output hotplug nor
       unlock the session when the screen locker crashes.
 
-[^2]: For mouse-contexts 'Root' is used as a synonum for 'Desktop' which is
+[^2]: For mouse-contexts 'Root' is used as a synonym for 'Desktop' which is
       a deviation from Openbox spec where they are defined as follows:
       'Desktop': The desktop or background, regardless of if you use a program
       to place icons on your desktop or not (such as in KDE and GNOME). This is
