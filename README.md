@@ -621,8 +621,8 @@ It depends on what happens with:
 |  A  | complete | 7.2.1     | menu item                       | `label`                                                 |
 |  C  |          | 7.2.2     | menu item                       | `icon`                                                  |
 |  A  | complete | 7.2.3     | menu item                       | `action`                                                |
-|  A  | complete | 7.3       | menu separator                  | `<separator />`                                         |
-|  B  |          | 7.3       | menu separator                  | `<separator label="" />`                                |
+|  A  | complete | 7.3.1     | menu separator                  | `<separator />`                                         | For separator line only
+|  B  |          | 7.3.2     | menu separator                  | `<separator label="" />`                                | For separator with text
 
 ## 8.1 Extra - General
 
