@@ -171,7 +171,7 @@ Requirements are categorised as follows:
 |  A  | complete | 1.3.7     | wlr-protocol                    | wlr-output-management-unstable-v1                       |
 |  B  | complete | 1.3.8     | wlr-protocol                    | wlr-output-power-management-unstable-v1                 |
 |  B  | complete | 1.3.9     | wlr-protocol                    | wlr-screencopy-unstable-v1                              |
-|  B  |          | 1.3.10    | wlr-protocol                    | wlr-virtual-pointer-unstable-v1                         |
+|  B  | complete | 1.3.10    | wlr-protocol                    | wlr-virtual-pointer-unstable-v1                         |
 
 ## 2.1 Configuration - Resistance
 
@@ -452,7 +452,7 @@ It depends on what happens with:
 |  C  |          | 5.29      | window action                   | `If`                                                    |
 |  C  |          | 5.30      | window action                   | `ForEach`                                               |
 |  C  |          | 5.31      | window action                   | `Stop`                                                  |
-|  C  |          | 5.32      | window action                   | `ToggleAlwaysOnTop`                                     |
+|  B  | complete | 5.32      | window action                   | `ToggleAlwaysOnTop`                                     |
 |  C  |          | 5.33      | window action                   | `ToggleAlwaysOnBottom`                                  |
 |  C  |          | 5.34      | window action                   | `SendToLayer`                                           |
 

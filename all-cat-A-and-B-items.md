@@ -108,7 +108,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.3.5     | wlr-protocol                    | wlr-input-inhibitor-unstable-v1                         |
 |  B  | complete | 1.3.8     | wlr-protocol                    | wlr-output-power-management-unstable-v1                 |
 |  B  | complete | 1.3.9     | wlr-protocol                    | wlr-screencopy-unstable-v1                              |
-|  B  |          | 1.3.10    | wlr-protocol                    | wlr-virtual-pointer-unstable-v1                         |
+|  B  | complete | 1.3.10    | wlr-protocol                    | wlr-virtual-pointer-unstable-v1                         |
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
 |  B  | complete | 2.2.3     | focus                           | `followMouse`                                           |
 |  B  | complete | 2.2.6     | focus                           | `raiseOnFocus`                                          |
@@ -188,6 +188,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.26      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.27      | window action                   | `GrowToFill`                                            |
 |  B  |          | 5.28      | window action                   | `ShrinkToEdge`                                          |
+|  B  | complete | 5.32      | window action                   | `ToggleAlwaysOnTop`                                     |
 |  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
