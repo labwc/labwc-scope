@@ -350,7 +350,7 @@ It depends on what happens with:
 |  B  | complete | 3.3.9     | mouse context                   | `Right`                                                 |
 |  B  | complete | 3.3.10    | mouse context                   | `TLCorner`                                              |
 |  B  | complete | 3.3.11    | mouse context                   | `TRCorner`                                              |
-|  B  | compete  | 3.3.12    | mouse context                   | `BLCorner`                                              |
+|  B  | complete | 3.3.12    | mouse context                   | `BLCorner`                                              |
 |  B  | complete | 3.3.13    | mouse context                   | `BRCorner`                                              |
 |  B  |          | 3.3.14    | mouse context                   | `Icon`                                                  |
 |  A  | complete | 3.3.15    | mouse context                   | `Iconfiy`                                               |
