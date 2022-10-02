@@ -145,7 +145,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 3.3.9     | mouse context                   | `Right`                                                 |
 |  B  | complete | 3.3.10    | mouse context                   | `TLCorner`                                              |
 |  B  | complete | 3.3.11    | mouse context                   | `TRCorner`                                              |
-|  B  | compete  | 3.3.12    | mouse context                   | `BLCorner`                                              |
+|  B  | complete | 3.3.12    | mouse context                   | `BLCorner`                                              |
 |  B  | complete | 3.3.13    | mouse context                   | `BRCorner`                                              |
 |  B  |          | 3.3.14    | mouse context                   | `Icon`                                                  |
 |  B  | complete | 3.3.21    | mouse context                   | `Title`                                                 | EXTRA
