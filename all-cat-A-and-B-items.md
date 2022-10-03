@@ -53,8 +53,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 5.7       | window action                   | `Iconify`                                               |
 |  A  | complete | 5.8       | window action                   | `Close`                                                 |
 |  A  | complete | 5.13      | window action                   | `ToggleMaximize`                                        |
-|  A  | complete | 5.20      | window action                   | `Move`                                                  |
-|  A  | complete | 5.21      | window action                   | `Resize`                                                |
+|  A  | complete | 5.21      | window action                   | `Move`                                                  |
+|  A  | complete | 5.22      | window action                   | `Resize`                                                |
 |  A  | complete | 6.1.1     | geometry                        | `border.width`                                          |
 |  A  | complete | 6.1.3     | geometry                        | `menu.separator.width`                                  |
 |  A  | complete | 6.1.6     | geometry                        | `osd.border.width`                                      |
@@ -78,7 +78,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 7.1.1     | menu                            | `id`                                                    |
 |  A  | complete | 7.2.1     | menu item                       | `label`                                                 |
 |  A  | complete | 7.2.3     | menu item                       | `action`                                                |
-|  A  | complete | 7.3       | menu separator                  | `<separator />`                                         |
+|  A  | complete | 7.3.1     | menu separator                  | `<separator />`                                         | For separator line only
 |  A  | complete | 8.1.1     | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
 |  B  | complete | 1.2.1     | wayland-protocol                | [presentation-time]                                     |
 |  B  | complete | 1.2.2     | wayland-protocol                | [viewporter]                                            |
@@ -86,7 +86,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.2.5     | wayland-protocol                | idle-inhibit-unstable-v1                                |
 |  B  |          | 1.2.6     | wayland-protocol                | input-method-unstable-v1                                |
 |  B  |          | 1.2.7     | wayland-protocol                | input-timestamps-unstable-v1                            |
-|  B  |          | 1.2.8     | wayland-protocol                | keyboard-shortcuts-inhibit-unstable-v1                  |
+|  B  |          | 1.2.8     | wayland-protocol                | keyboard-shortcuts-inhibit-unstable-v1                  | This is controversial [^3]
 |  B  |          | 1.2.9     | wayland-protocol                | linux-dmabuf-unstable-v1                                |
 |  B  |          | 1.2.10    | wayland-protocol                | linux-explicit-synchronization-unstable-v1              |
 |  B  | complete | 1.2.11    | wayland-protocol                | pointer-constraints-unstable-v1                         |
@@ -99,7 +99,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  | complete | 1.2.19    | wayland-protocol                | xdg-output-unstable-v1                                  |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
-|  B  |          | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
+|  B  | complete | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
 |  B  |          | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
 |  B  |          | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
 |  B  | complete | 1.3.1     | wlr-protocol                    | wlr-data-control-unstable-v1                            |
@@ -175,20 +175,21 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.9       | window action                   | `ToggleShade`                                           |
 |  B  |          | 5.10      | window action                   | `Shade`                                                 |
 |  B  |          | 5.11      | window action                   | `Unshade`                                               |
-|  B  |          | 5.14      | window action                   | `Maximize`                                              |
-|  B  |          | 5.15      | window action                   | `Unmaximize`                                            |
+|  B  |          | 5.14      | window action                   | `Maximize`                                              | Needed if we implement 2.7 `<applications>`
+|  B  |          | 5.15      | window action                   | `Unmaximize`                                            | Needed if we implement 2.7 `<applications>`
 |  B  | complete | 5.16      | window action                   | `ToggleFullscreen`                                      |
-|  B  | complete | 5.17      | window action                   | `Decorate`                                              |
-|  B  | complete | 5.18      | window action                   | `Undecorate`                                            |
-|  B  |          | 5.19      | window action                   | `SendToDesktop`                                         |
-|  B  |          | 5.22      | window action                   | `MoveResizeTo`                                          |
-|  B  |          | 5.23      | window action                   | `MoveRelative`                                          |
-|  B  |          | 5.24      | window action                   | `ResizeRelative`                                        |
-|  B  | complete | 5.25      | window action                   | `MoveToEdge`                                            |
-|  B  |          | 5.26      | window action                   | `GrowToEdge`                                            |
-|  B  |          | 5.27      | window action                   | `GrowToFill`                                            |
-|  B  |          | 5.28      | window action                   | `ShrinkToEdge`                                          |
-|  B  | complete | 5.32      | window action                   | `ToggleAlwaysOnTop`                                     |
+|  B  | complete | 5.17      | window action                   | `ToggleDecorations`                                     |
+|  B  |          | 5.18      | window action                   | `Decorate`                                              | Needed if we implement 2.7 `<applications>`
+|  B  |          | 5.19      | window action                   | `Undecorate`                                            | Needed if we implement 2.7 `<applications>`
+|  B  | complete | 5.20      | window action                   | `SendToDesktop`                                         |
+|  B  |          | 5.23      | window action                   | `MoveResizeTo`                                          |
+|  B  |          | 5.24      | window action                   | `MoveRelative`                                          |
+|  B  |          | 5.25      | window action                   | `ResizeRelative`                                        |
+|  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            |
+|  B  |          | 5.27      | window action                   | `GrowToEdge`                                            |
+|  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
+|  B  |          | 5.29      | window action                   | `ShrinkToEdge`                                          |
+|  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
 |  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
@@ -249,7 +250,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
 |  B  |          | 7.1.2     | menu                            | `label`                                                 |
 |  B  |          | 7.1.4     | menu                            | `execute`                                               |
-|  B  |          | 7.3       | menu separator                  | `<separator label="" />`                                |
+|  B  |          | 7.3.2     | menu separator                  | `<separator label="" />`                                | For separator with text
 |  B  |          | 8.1.2     | extra                           | Support png buttons                                     |
 |  B  | complete | 8.1.3     | extra                           | `SnapToEdge` action                                     | Similar to 5.12 `GrowToEdge`
-|  B  |          | 8.2.1     | extra                           | Read menu.xbm if it exists                              |
+|  B  | complete | 8.2.1     | extra                           | `<snapping>`                                            |
+|  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
+|  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |
+|  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              |
