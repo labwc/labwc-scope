@@ -434,27 +434,28 @@ It depends on what happens with:
 |  B  |          | 5.11      | window action                   | `Unshade`                                               |
 |  C  |          | 5.12      | window action                   | `ToggleOmnipresent`                                     |
 |  A  | complete | 5.13      | window action                   | `ToggleMaximize`                                        |
-|  B  |          | 5.14      | window action                   | `Maximize`                                              |
-|  B  |          | 5.15      | window action                   | `Unmaximize`                                            |
+|  B  |          | 5.14      | window action                   | `Maximize`                                              | Needed if we implement 2.7 `<applications>`
+|  B  |          | 5.15      | window action                   | `Unmaximize`                                            | Needed if we implement 2.7 `<applications>`
 |  B  | complete | 5.16      | window action                   | `ToggleFullscreen`                                      |
-|  B  | complete | 5.17      | window action                   | `Decorate`                                              |
-|  B  | complete | 5.18      | window action                   | `Undecorate`                                            |
-|  B  |          | 5.19      | window action                   | `SendToDesktop`                                         |
-|  A  | complete | 5.20      | window action                   | `Move`                                                  |
-|  A  | complete | 5.21      | window action                   | `Resize`                                                |
-|  B  |          | 5.22      | window action                   | `MoveResizeTo`                                          |
-|  B  |          | 5.23      | window action                   | `MoveRelative`                                          |
-|  B  |          | 5.24      | window action                   | `ResizeRelative`                                        |
-|  B  | complete | 5.25      | window action                   | `MoveToEdge`                                            |
-|  B  |          | 5.26      | window action                   | `GrowToEdge`                                            |
-|  B  |          | 5.27      | window action                   | `GrowToFill`                                            |
-|  B  |          | 5.28      | window action                   | `ShrinkToEdge`                                          |
-|  C  |          | 5.29      | window action                   | `If`                                                    |
-|  C  |          | 5.30      | window action                   | `ForEach`                                               |
-|  C  |          | 5.31      | window action                   | `Stop`                                                  |
-|  B  | complete | 5.32      | window action                   | `ToggleAlwaysOnTop`                                     |
-|  C  |          | 5.33      | window action                   | `ToggleAlwaysOnBottom`                                  |
-|  C  |          | 5.34      | window action                   | `SendToLayer`                                           |
+|  B  | complete | 5.17      | window action                   | `ToggleDecorations`                                     |
+|  B  |          | 5.18      | window action                   | `Decorate`                                              | Needed if we implement 2.7 `<applications>`
+|  B  |          | 5.19      | window action                   | `Undecorate`                                            | Needed if we implement 2.7 `<applications>`
+|  B  |          | 5.20      | window action                   | `SendToDesktop`                                         |
+|  A  | complete | 5.21      | window action                   | `Move`                                                  |
+|  A  | complete | 5.22      | window action                   | `Resize`                                                |
+|  B  |          | 5.23      | window action                   | `MoveResizeTo`                                          |
+|  B  |          | 5.24      | window action                   | `MoveRelative`                                          |
+|  B  |          | 5.25      | window action                   | `ResizeRelative`                                        |
+|  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            |
+|  B  |          | 5.27      | window action                   | `GrowToEdge`                                            |
+|  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
+|  B  |          | 5.29      | window action                   | `ShrinkToEdge`                                          |
+|  C  |          | 5.30      | window action                   | `If`                                                    |
+|  C  |          | 5.31      | window action                   | `ForEach`                                               |
+|  C  |          | 5.32      | window action                   | `Stop`                                                  |
+|  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
+|  C  |          | 5.34      | window action                   | `ToggleAlwaysOnBottom`                                  |
+|  C  |          | 5.35      | window action                   | `SendToLayer`                                           |
 
 ## 6.1 Theme - Geometry
 
