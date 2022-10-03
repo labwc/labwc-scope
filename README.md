@@ -440,7 +440,7 @@ It depends on what happens with:
 |  B  | complete | 5.17      | window action                   | `ToggleDecorations`                                     |
 |  B  |          | 5.18      | window action                   | `Decorate`                                              | Needed if we implement 2.7 `<applications>`
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            | Needed if we implement 2.7 `<applications>`
-|  B  |          | 5.20      | window action                   | `SendToDesktop`                                         |
+|  B  | complete | 5.20      | window action                   | `SendToDesktop`                                         |
 |  A  | complete | 5.21      | window action                   | `Move`                                                  |
 |  A  | complete | 5.22      | window action                   | `Resize`                                                |
 |  B  |          | 5.23      | window action                   | `MoveResizeTo`                                          |
@@ -640,7 +640,7 @@ It depends on what happens with:
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  |          | 8.2.1     | extra                           | Read menu.xbm if it exists                              |
+|  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              |
 
 # Appendix A - Terminology
 
