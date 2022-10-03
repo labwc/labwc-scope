@@ -141,7 +141,7 @@ Requirements are categorised as follows:
 |  B  | complete | 1.2.5     | wayland-protocol                | idle-inhibit-unstable-v1                                |
 |  B  |          | 1.2.6     | wayland-protocol                | input-method-unstable-v1                                |
 |  B  |          | 1.2.7     | wayland-protocol                | input-timestamps-unstable-v1                            |
-|  B  |          | 1.2.8     | wayland-protocol                | keyboard-shortcuts-inhibit-unstable-v1                  |
+|  B  |          | 1.2.8     | wayland-protocol                | keyboard-shortcuts-inhibit-unstable-v1                  | This is controversial [^3]
 |  B  |          | 1.2.9     | wayland-protocol                | linux-dmabuf-unstable-v1                                |
 |  B  |          | 1.2.10    | wayland-protocol                | linux-explicit-synchronization-unstable-v1              |
 |  B  | complete | 1.2.11    | wayland-protocol                | pointer-constraints-unstable-v1                         |
@@ -694,6 +694,21 @@ to implement.
       only used for the root menus, so that they won't override the menus
       provided by your desktop icons.
       See: http://openbox.org/wiki/Help:Bindings#Context
+
+[^3]: This protocol might actually annoy users. It is used by Chromium to
+      prevent *any* compositor keybinds to work as long as it has keyboard
+      focus. So if we decide to implement it we should likely combine it with
+      at least a global config option to disable it completely or even
+      integrate it with the policy framework so users can prevent applications
+      like Chromium to take advantage of it. It seems only to happen when using
+      Chromium in `--app` mode (possibly including Electron, not sure). But any
+      application being able to prevent compositor keybinds to work should
+      likely be whitelisted in some way. Some links regarding the chromium
+      behavior:
+      https://www.reddit.com/r/swaywm/comments/vuhr75/why_does_chromium_with_app_now_grab_complete/.compact
+      https://www.reddit.com/r/swaywm/comments/vkgfza/chromium_v103_application_mode_app_and_weird/.compact
+      https://www.reddit.com/r/swaywm/comments/vlvpws/chromeium_app_flag_spawns_windows_with_shortcut/.compact
+      chromium/chromium@ac0160a
 
 [wayland-protocols]: https://gitlab.freedesktop.org/wayland/wayland-protocols
 [wlr-protocols]: https://gitlab.freedesktop.org/wlroots/wlr-protocols
