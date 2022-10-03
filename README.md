@@ -154,7 +154,7 @@ Requirements are categorised as follows:
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  | complete | 1.2.19    | wayland-protocol                | xdg-output-unstable-v1                                  |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
-|  B  |          | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
+|  B  | complete | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
 |  B  |          | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
 |  B  |          | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
 
