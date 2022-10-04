@@ -93,6 +93,9 @@ Requirements are categorised as follows:
 2. Implement `Cat B+` requirements.
 2. Review `Cat B` requirements and try to demote as many as possible to C
 
+## Current status
+![graph](graph.png)
+
 ## Sections
 
 - Requirements are organised into the sections listed below.

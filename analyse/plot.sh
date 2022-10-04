@@ -1,19 +1,19 @@
-#!/bin/bash
+#!/bin/bash -e
 
-cmds="gnuplot-commands.txt"
-cat >$cmds <<'EOF'
+cat << EOF | gnuplot
 set title "Lab Wayland Compositor User Requirements"
 set xdata time
 set term png
 set timefmt "%Y-%m-%d"
-set format x "%d/%m"
-set xlabel "Time"
-set ylabel "Cat A Requirements"
-set xrange ["2021-04-17":"2022-07-31"]
-set yrange ["35":"100"]
-set output 'graph.png'
-plot 'graph-data.txt' u 1:3 w lp t 'Minimum viable product', \
-	'graph-data.txt' u 1:2 w lp t 'Completed'
+set format x "%m/%y"
+set xlabel "Date"
+set ylabel "Requirements"
+set xrange ["2021-04-17":"$(date "+%Y-%m-%d")"]
+set yrange ["0":"255"]
+set output '../graph.png'
+plot \
+	'graph-data.txt' u 1:2 w lp t 'Completed Cat A', \
+	'graph-data.txt' u 1:3 w lp t 'Total Cat A', \
+	'graph-data.txt' u 1:4 w lp t 'Completed Cat B', \
+	'graph-data.txt' u 1:5 w lp t 'Total Cat B'
 EOF
-
-gnuplot <$cmds

@@ -11,6 +11,7 @@ test:
 	@./analyse --print-header > ../all-cat-A-and-B-items.md
 	@./analyse --cata < ../README.md >> ../all-cat-A-and-B-items.md
 	@./analyse --catb < ../README.md >> ../all-cat-A-and-B-items.md
+	@./generate_graph.sh
 
 clean:
 	@rm -f analyse *.o
