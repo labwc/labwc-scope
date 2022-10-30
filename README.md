@@ -368,8 +368,8 @@ It depends on what happens with:
 |  A  | complete | 3.4.1     | mouse button                    | `Left`                                                  |
 |  A  | complete | 3.4.1     | mouse button                    | `Right`                                                 |
 |  B  |          | 3.4.1     | mouse button                    | `Middle`                                                |
-|  B  |          | 3.4.1     | mouse button                    | `Up` (scroll)                                           |
-|  B  |          | 3.4.1     | mouse button                    | `Down` (scroll)                                         |
+|  B  | complete | 3.4.1     | mouse button                    | `Up` (scroll)                                           |
+|  B  | complete | 3.4.1     | mouse button                    | `Down` (scroll)                                         |
 
 ## 3.5 Configuration - Mouse Event
 
@@ -380,6 +380,7 @@ It depends on what happens with:
 |  A  | complete | 3.5.3     | mouse event                     | `DoubleClick`                                           |
 |  B  |          | 3.5.4     | mouse event                     | `Release`                                               |
 |  B  | complete | 3.5.5     | mouse event                     | `Drag`                                                  |
+|  B  | complete | 3.5.6     | mouse event                     | `Scroll`                                                | DEVIATION: Scroll is used instead of Click for mouse-buttons Up/Down
 
 ## 4 Global Actions
 
