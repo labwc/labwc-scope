@@ -480,6 +480,10 @@ It depends on what happens with:
 |  B  | complete | 6.1.12    | geometry                        | `menu.overlap.x`                                        |
 |  B  | complete | 6.1.13    | geometry                        | `menu.overlap.y`                                        |
 |  B  |          | 6.1.14    | geometry                        | `menu.overlap`                                          |
+|  B  | complete | 6.1.15    | geometry                        | `menu.width.min`                                        | EXTRA
+|  B  | complete | 6.1.16    | geometry                        | `menu.width.max`                                        | EXTRA
+|  B  | complete | 6.1.17    | geometry                        | `menu.items.padding.x`                                  | EXTRA
+|  B  | complete | 6.1.18    | geometry                        | `menu.items.padding.y`                                  | EXTRA
 
 ## 6.2 Theme - Border Colors
 

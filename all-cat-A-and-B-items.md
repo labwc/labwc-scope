@@ -200,6 +200,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 6.1.12    | geometry                        | `menu.overlap.x`                                        |
 |  B  | complete | 6.1.13    | geometry                        | `menu.overlap.y`                                        |
 |  B  |          | 6.1.14    | geometry                        | `menu.overlap`                                          |
+|  B  | complete | 6.1.15    | geometry                        | `menu.width.min`                                        | EXTRA
+|  B  | complete | 6.1.16    | geometry                        | `menu.width.max`                                        | EXTRA
+|  B  | complete | 6.1.17    | geometry                        | `menu.items.padding.x`                                  | EXTRA
+|  B  | complete | 6.1.18    | geometry                        | `menu.items.padding.y`                                  | EXTRA
 |  B  |          | 6.2.2     | border colors                   | `window.active.title.separator.color`                   |
 |  B  |          | 6.2.4     | border colors                   | `window.inactive.title.separator.color`                 |
 |  B  |          | 6.2.6     | border colors                   | `window.active.client.color`                            |
