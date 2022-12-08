@@ -420,6 +420,7 @@ It depends on what happens with:
 |  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
 |  B  | complete | 4.16      | global action                   | `Debug`                                                 | EXTRA
 |  B  | complete | 4.17      | global action                   | `None`                                                  | EXTRA Removes other actions within mouse bindings
+|  B  | complete | 4.18      | global action                   | `Kill`                                                  | EXTRA Send SIGTERM
 
 ## 5 Window Actions
 

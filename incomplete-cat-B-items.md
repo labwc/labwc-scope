@@ -30,8 +30,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
 |  B  |          | 3.3.14    | mouse context                   | `Icon`                                                  |
 |  B  |          | 3.4.1     | mouse button                    | `Middle`                                                |
-|  B  |          | 3.4.1     | mouse button                    | `Up` (scroll)                                           |
-|  B  |          | 3.4.1     | mouse button                    | `Down` (scroll)                                         |
 |  B  |          | 3.5.4     | mouse event                     | `Release`                                               |
 |  B  |          | 4.5       | global action                   | `DirectionalCycleWindows`                               |
 |  B  |          | 4.6       | global action                   | `DirectionalTargetWindows`                              |

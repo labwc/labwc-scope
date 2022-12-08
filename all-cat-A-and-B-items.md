@@ -150,10 +150,11 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 3.3.14    | mouse context                   | `Icon`                                                  |
 |  B  | complete | 3.3.21    | mouse context                   | `Title`                                                 | EXTRA
 |  B  |          | 3.4.1     | mouse button                    | `Middle`                                                |
-|  B  |          | 3.4.1     | mouse button                    | `Up` (scroll)                                           |
-|  B  |          | 3.4.1     | mouse button                    | `Down` (scroll)                                         |
+|  B  | complete | 3.4.1     | mouse button                    | `Up` (scroll)                                           |
+|  B  | complete | 3.4.1     | mouse button                    | `Down` (scroll)                                         |
 |  B  |          | 3.5.4     | mouse event                     | `Release`                                               |
 |  B  | complete | 3.5.5     | mouse event                     | `Drag`                                                  |
+|  B  | complete | 3.5.6     | mouse event                     | `Scroll`                                                | DEVIATION: Scroll is used instead of Click for mouse-buttons Up/Down
 |  B  |          | 4.5       | global action                   | `DirectionalCycleWindows`                               |
 |  B  |          | 4.6       | global action                   | `DirectionalTargetWindows`                              |
 |  B  | complete | 4.7       | global action                   | `GoToDesktop`                                           |
@@ -168,6 +169,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
 |  B  | complete | 4.16      | global action                   | `Debug`                                                 | EXTRA
 |  B  | complete | 4.17      | global action                   | `None`                                                  | EXTRA Removes other actions within mouse bindings
+|  B  | complete | 4.18      | global action                   | `Kill`                                                  | EXTRA Send SIGTERM
 |  B  |          | 5.3       | window action                   | `Lower`                                                 |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
 |  B  |          | 5.5       | window action                   | `UnFocus`                                               |
