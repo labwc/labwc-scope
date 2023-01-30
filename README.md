@@ -160,6 +160,7 @@ Requirements are categorised as follows:
 |  B  | complete | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
 |  B  |          | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
 |  B  |          | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
+|  B  | complete | 1.2.24    | wayland-protocol                | single-pixel-buffer-v1                                  |
 
 ## 1.3 wlroots Protocols
 
