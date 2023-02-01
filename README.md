@@ -462,6 +462,7 @@ It depends on what happens with:
 |  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
 |  C  |          | 5.34      | window action                   | `ToggleAlwaysOnBottom`                                  |
 |  C  |          | 5.35      | window action                   | `SendToLayer`                                           |
+|  B  | complete | 5.36      | window action                   | `SnapToRegion`                                          | EXTRA
 
 ## 6.1 Theme - Geometry
 
@@ -655,6 +656,33 @@ It depends on what happens with:
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              |
+
+## 9 Regions
+
+Provide a means of specifying regions as a percentage of output geometry as
+follows:
+
+```
+<regions>
+  <region name="top-left" x="0%" y="0%" width="50%" height="50%" />
+</regions>
+```
+
+The compositor shall support the following with respect to defined regions:
+
+- [x] Allow windows to snap to a region by dragging a window with a pointer
+      while pressing a modifier key.
+- [x] During such a dragging operation, a rectangle shall be rendered
+      indicating where the window will be placed.
+- [x] Live config updates meaning that windows snapped to regions will
+      update on `rc.xml` change and `labwc --reconfigure`
+- [x] Respect core.gap setting
+- [x] Support action `<SnapToRegion>` to snap (move+tile) a window to a
+      specified region.
+
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  B  | complete | 9.1.1     | Regions                         | `<regions><region>`                                     |
 
 # Appendix A - Terminology
 
