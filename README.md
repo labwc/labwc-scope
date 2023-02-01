@@ -622,12 +622,16 @@ It depends on what happens with:
 
 ## 7 Menus
 
+- [x] Parse `~/.config/labwc/menu.xml` in accordance with openbox 3.6 specification.
+- [x] Handle pointer input
+- [ ] Handle keyboard input
+
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 7.1.1     | menu                            | `id`                                                    |
 |  B  |          | 7.1.2     | menu                            | `label`                                                 |
 |  C  |          | 7.1.3     | menu                            | `icon`                                                  |
-|  B  |          | 7.1.4     | menu                            | `execute`                                               |
+|  B  |          | 7.1.4     | menu                            | `execute`                                               | aka pipe-menus
 |  C  |          | 7.1.5     | menu                            | Support menu shortcuts                                  |
 |  A  | complete | 7.2.1     | menu item                       | `label`                                                 |
 |  C  |          | 7.2.2     | menu item                       | `icon`                                                  |
