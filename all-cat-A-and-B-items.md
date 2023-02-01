@@ -102,6 +102,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
 |  B  |          | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
 |  B  |          | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
+|  B  | complete | 1.2.24    | wayland-protocol                | single-pixel-buffer-v1                                  |
 |  B  | complete | 1.3.1     | wlr-protocol                    | wlr-data-control-unstable-v1                            |
 |  B  | complete | 1.3.2     | wlr-protocol                    | wlr-export-dmabuf-unstable-v1                           |
 |  B  | complete | 1.3.4     | wlr-protocol                    | wlr-gamma-control-unstable-v1                           |
@@ -192,6 +193,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
 |  B  |          | 5.29      | window action                   | `ShrinkToEdge`                                          |
 |  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
+|  B  | complete | 5.36      | window action                   | `SnapToRegion`                                          | EXTRA
 |  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
@@ -255,7 +257,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 6.12.1    | text justification              | `window.label.text.justify`                             |
 |  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
 |  B  |          | 7.1.2     | menu                            | `label`                                                 |
-|  B  |          | 7.1.4     | menu                            | `execute`                                               |
+|  B  |          | 7.1.4     | menu                            | `execute`                                               | aka pipe-menus
 |  B  |          | 7.3.2     | menu separator                  | `<separator label="" />`                                | For separator with text
 |  B  |          | 8.1.2     | extra                           | Support png buttons                                     |
 |  B  | complete | 8.1.3     | extra                           | `SnapToEdge` action                                     | Similar to 5.12 `GrowToEdge`
@@ -263,3 +265,4 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |
 |  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              |
+|  B  | complete | 9.1.1     | Regions                         | `<regions><region>`                                     |

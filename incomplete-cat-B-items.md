@@ -108,6 +108,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.11.3    | osd colors                      | `osd.unhilight.bg.color`                                | for desktop osd only
 |  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
 |  B  |          | 7.1.2     | menu                            | `label`                                                 |
-|  B  |          | 7.1.4     | menu                            | `execute`                                               |
+|  B  |          | 7.1.4     | menu                            | `execute`                                               | aka pipe-menus
 |  B  |          | 7.3.2     | menu separator                  | `<separator label="" />`                                | For separator with text
 |  B  |          | 8.1.2     | extra                           | Support png buttons                                     |
