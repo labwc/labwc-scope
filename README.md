@@ -462,7 +462,8 @@ It depends on what happens with:
 |  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
 |  C  |          | 5.34      | window action                   | `ToggleAlwaysOnBottom`                                  |
 |  C  |          | 5.35      | window action                   | `SendToLayer`                                           |
-|  B  | complete | 5.36      | window action                   | `SnapToRegion`                                          | EXTRA
+|  B  | complete | 5.36      | window action                   | `SnapToEdge`                                            | EXTRA
+|  B  | complete | 5.37      | window action                   | `SnapToRegion`                                          | EXTRA
 
 ## 6.1 Theme - Geometry
 
@@ -646,7 +647,6 @@ It depends on what happens with:
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 8.1.1     | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
 |  B  |          | 8.1.2     | extra                           | Support png buttons                                     |
-|  B  | complete | 8.1.3     | extra                           | `SnapToEdge` action                                     | Similar to 5.12 `GrowToEdge`
 |  B  | complete | 8.2.1     | extra                           | `<snapping>`                                            |
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |
