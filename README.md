@@ -635,16 +635,16 @@ It depends on what happens with:
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  A  | complete | 7.1.1     | menu                            | `id`                                                    |
-|  B  |          | 7.1.2     | menu                            | `label`                                                 |
-|  C  |          | 7.1.3     | menu                            | `icon`                                                  |
-|  B  |          | 7.1.4     | menu                            | `execute`                                               | aka pipe-menus
-|  C  |          | 7.1.5     | menu                            | Support menu shortcuts                                  |
-|  A  | complete | 7.2.1     | menu item                       | `label`                                                 |
-|  C  |          | 7.2.2     | menu item                       | `icon`                                                  |
-|  A  | complete | 7.2.3     | menu item                       | `action`                                                |
-|  A  | complete | 7.3.1     | menu separator                  | `<separator />`                                         | For separator line only
-|  B  |          | 7.3.2     | menu separator                  | `<separator label="" />`                                | For separator with text
+|  A  | complete | 7.1.1     | menu syntax general             | `id`                                                    |
+|  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
+|  C  |          | 7.1.3     | menu syntax general             | `icon`                                                  |
+|  B  |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
+|  C  |          | 7.1.5     | menu syntax general             | Menu keyboard shortcuts                                 |
+|  A  | complete | 7.2.1     | menu syntax item                | `label`                                                 |
+|  C  |          | 7.2.2     | menu syntax item                | `icon`                                                  |
+|  A  | complete | 7.2.3     | menu syntax item                | `action`                                                |
+|  A  | complete | 7.3.1     | menu syntax separator           | `<separator />`                                         | For separator line only
+|  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text
 
 ## 8.1 Extra - General
 
