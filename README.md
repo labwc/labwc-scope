@@ -7,9 +7,10 @@ href="stats.md">Stats</a>]</h3>
 
 - [Introduction](#introduction)
 - [Requirements](#requirements)
-  - [1.1 General](#11-general)
-  - [1.2 Wayland Protocols](#12-wayland-protocols)
-  - [1.3 wlroots Protocols](#13-wlroots-protocols)
+  - General and Protocols
+    - [1.1 General](#11-general)
+    - [1.2 Wayland Protocols](#12-wayland-protocols)
+    - [1.3 wlroots Protocols](#13-wlroots-protocols)
   - Configuration
     - [2.1 Resistance](#21-configuration---resistance)
     - [2.2 Focus](#22-configuration---focus)
