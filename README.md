@@ -623,6 +623,10 @@ It depends on what happens with:
 |  C  |          | 6.13.4    | text shadows                    | `menu.title.text.font`                                  |
 |  C  |          | 6.13.5    | text shadows                    | `osd.label.text.font`                                   |
 
+## 6.14 Theme - Button Images
+
+|  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              | EXTRA
+
 ## 7 Menus
 
 - [x] Parse `~/.config/labwc/menu.xml` in accordance with openbox 3.6 specification.
@@ -652,11 +656,6 @@ It depends on what happens with:
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |
 
-## 8.2 Extra - Theme
-
-| Cat | Status   | Reference | Category                        | Description                                             | Comment
-| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              |
 
 ## 9 Regions
 
