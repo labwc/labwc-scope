@@ -107,7 +107,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.11.2    | osd colors                      | `osd.hilight.bg.color`                                  | for desktop osd only
 |  B  |          | 6.11.3    | osd colors                      | `osd.unhilight.bg.color`                                | for desktop osd only
 |  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
-|  B  |          | 7.1.2     | menu                            | `label`                                                 |
-|  B  |          | 7.1.4     | menu                            | `execute`                                               | aka pipe-menus
-|  B  |          | 7.3.2     | menu separator                  | `<separator label="" />`                                | For separator with text
+|  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
+|  B  |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
+|  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text
 |  B  |          | 8.1.2     | extra                           | Support png buttons                                     |

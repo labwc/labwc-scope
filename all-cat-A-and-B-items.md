@@ -75,10 +75,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 6.9.2     | menu textures                   | `menu.items.active.bg`                                  |
 |  A  | complete | 6.10.1    | osd textures                    | `osd.bg`                                                | we only set the color
 |  A  | complete | 6.11.1    | osd colors                      | `osd.label.text.color`                                  |
-|  A  | complete | 7.1.1     | menu                            | `id`                                                    |
-|  A  | complete | 7.2.1     | menu item                       | `label`                                                 |
-|  A  | complete | 7.2.3     | menu item                       | `action`                                                |
-|  A  | complete | 7.3.1     | menu separator                  | `<separator />`                                         | For separator line only
+|  A  | complete | 7.1.1     | menu syntax general             | `id`                                                    |
+|  A  | complete | 7.2.1     | menu syntax item                | `label`                                                 |
+|  A  | complete | 7.2.3     | menu syntax item                | `action`                                                |
+|  A  | complete | 7.3.1     | menu syntax separator           | `<separator />`                                         | For separator line only
 |  A  | complete | 8.1.1     | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
 |  B  | complete | 1.2.1     | wayland-protocol                | [presentation-time]                                     |
 |  B  | complete | 1.2.2     | wayland-protocol                | [viewporter]                                            |
@@ -171,6 +171,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 4.16      | global action                   | `Debug`                                                 | EXTRA
 |  B  | complete | 4.17      | global action                   | `None`                                                  | EXTRA Removes other actions within mouse bindings
 |  B  | complete | 4.18      | global action                   | `Kill`                                                  | EXTRA Send SIGTERM
+|  B  | complete | 4.19      | global action                   | `FocusOutput`                                           | EXTRA
 |  B  |          | 5.3       | window action                   | `Lower`                                                 |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
 |  B  |          | 5.5       | window action                   | `UnFocus`                                               |
@@ -193,7 +194,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
 |  B  |          | 5.29      | window action                   | `ShrinkToEdge`                                          |
 |  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
-|  B  | complete | 5.36      | window action                   | `SnapToRegion`                                          | EXTRA
+|  B  | complete | 5.36      | window action                   | `SnapToEdge`                                            | EXTRA
+|  B  | complete | 5.37      | window action                   | `SnapToRegion`                                          | EXTRA
 |  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
@@ -256,13 +258,12 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.11.3    | osd colors                      | `osd.unhilight.bg.color`                                | for desktop osd only
 |  B  | complete | 6.12.1    | text justification              | `window.label.text.justify`                             |
 |  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
-|  B  |          | 7.1.2     | menu                            | `label`                                                 |
-|  B  |          | 7.1.4     | menu                            | `execute`                                               | aka pipe-menus
-|  B  |          | 7.3.2     | menu separator                  | `<separator label="" />`                                | For separator with text
+|  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              | EXTRA
+|  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
+|  B  |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
+|  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text
 |  B  |          | 8.1.2     | extra                           | Support png buttons                                     |
-|  B  | complete | 8.1.3     | extra                           | `SnapToEdge` action                                     | Similar to 5.12 `GrowToEdge`
 |  B  | complete | 8.2.1     | extra                           | `<snapping>`                                            |
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |
-|  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              |
 |  B  | complete | 9.1.1     | Regions                         | `<regions><region>`                                     |

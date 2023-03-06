@@ -423,6 +423,7 @@ It depends on what happens with:
 |  B  | complete | 4.16      | global action                   | `Debug`                                                 | EXTRA
 |  B  | complete | 4.17      | global action                   | `None`                                                  | EXTRA Removes other actions within mouse bindings
 |  B  | complete | 4.18      | global action                   | `Kill`                                                  | EXTRA Send SIGTERM
+|  B  | complete | 4.19      | global action                   | `FocusOutput`                                           | EXTRA
 
 ## 5 Window Actions
 
