@@ -14,7 +14,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  |          | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
-|  B  |          | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
+|  B  |          | 1.3.11    | wlr-protocol                    | [kde-server-decoration]                                 | xdg-decoration is preferable, but we support this until GTK move across
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
 |  B  |          | 2.4.4     | theme                           | `keepBorder`                                            |
 |  B  |          | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |

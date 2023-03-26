@@ -101,7 +101,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  | complete | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
 |  B  |          | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
-|  B  |          | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
+|  B  | complete | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
 |  B  | complete | 1.2.24    | wayland-protocol                | single-pixel-buffer-v1                                  |
 |  B  | complete | 1.3.1     | wlr-protocol                    | wlr-data-control-unstable-v1                            |
 |  B  | complete | 1.3.2     | wlr-protocol                    | wlr-export-dmabuf-unstable-v1                           |
@@ -110,6 +110,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.3.8     | wlr-protocol                    | wlr-output-power-management-unstable-v1                 |
 |  B  | complete | 1.3.9     | wlr-protocol                    | wlr-screencopy-unstable-v1                              |
 |  B  | complete | 1.3.10    | wlr-protocol                    | wlr-virtual-pointer-unstable-v1                         |
+|  B  |          | 1.3.11    | wlr-protocol                    | [kde-server-decoration]                                 | xdg-decoration is preferable, but we support this until GTK move across
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
 |  B  | complete | 2.2.3     | focus                           | `followMouse`                                           |
 |  B  | complete | 2.2.6     | focus                           | `raiseOnFocus`                                          |
@@ -134,6 +135,13 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
 |  B  |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
+|  B  | complete | 2.13.1    | core                            | `decoration`                                            | EXTRA
+|  B  | complete | 2.13.1    | core                            | `gap`                                                   | EXTRA
+|  B  | complete | 2.13.1    | core                            | `adaptiveSync`                                          | EXTRA
+|  B  | complete | 2.13.1    | core                            | `reuseOutputMode`                                       | EXTRA
+|  B  | complete | 2.13.1    | core                            | `windowSwitcher.show`                                   | EXTRA
+|  B  | complete | 2.13.1    | core                            | `windowSwitcher.preview`                                | EXTRA
+|  B  | complete | 2.13.1    | core                            | `windowSwitcher.outlines`                               | EXTRA
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
 |  B  | complete | 3.2.4     | mouse binding                   | `default`                                               | EXTRA
 |  B  | complete | 3.3.1     | mouse context                   | `Frame`                                                 |
@@ -186,6 +194,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.18      | window action                   | `Decorate`                                              | Needed if we implement 2.7 `<applications>`
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            | Needed if we implement 2.7 `<applications>`
 |  B  | complete | 5.20      | window action                   | `SendToDesktop`                                         |
+|  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      |
+|  B  | complete | 5.20.2    | window action                   | `SendToDesktop.follow`                                  |
 |  B  |          | 5.23      | window action                   | `MoveResizeTo`                                          |
 |  B  |          | 5.24      | window action                   | `MoveRelative`                                          |
 |  B  |          | 5.25      | window action                   | `ResizeRelative`                                        |
