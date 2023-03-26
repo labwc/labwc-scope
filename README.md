@@ -164,6 +164,13 @@ Requirements are categorised as follows:
 |  B  | complete | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
 |  B  | complete | 1.2.24    | wayland-protocol                | single-pixel-buffer-v1                                  |
 
+[wayland-protocols]: https://gitlab.freedesktop.org/wayland/wayland-protocols
+[wlr-protocols]: https://gitlab.freedesktop.org/wlroots/wlr-protocols
+[presentation-time]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/presentation-time
+[viewporter]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/viewporter
+[xdg-shell]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/xdg-shell
+[ext-session-lock-v1]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/staging/ext-session-lock
+
 ## 1.3 wlroots Protocols
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
@@ -178,6 +185,9 @@ Requirements are categorised as follows:
 |  B  | complete | 1.3.8     | wlr-protocol                    | wlr-output-power-management-unstable-v1                 |
 |  B  | complete | 1.3.9     | wlr-protocol                    | wlr-screencopy-unstable-v1                              |
 |  B  | complete | 1.3.10    | wlr-protocol                    | wlr-virtual-pointer-unstable-v1                         |
+|  B  |          | 1.3.11    | wlr-protocol                    | [kde-server-decoration]                                 | xdg-decoration is preferable, but we support this until GTK move across
+
+[kde-server-decoration]: https://wayland.app/protocols/kde-server-decoration
 
 ## 2.1 Configuration - Resistance
 
@@ -768,9 +778,3 @@ to implement.
       https://www.reddit.com/r/swaywm/comments/vlvpws/chromeium_app_flag_spawns_windows_with_shortcut/.compact
       chromium/chromium@ac0160a
 
-[wayland-protocols]: https://gitlab.freedesktop.org/wayland/wayland-protocols
-[wlr-protocols]: https://gitlab.freedesktop.org/wlroots/wlr-protocols
-[presentation-time]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/presentation-time
-[viewporter]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/viewporter
-[xdg-shell]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/xdg-shell
-[ext-session-lock-v1]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/staging/ext-session-lock
