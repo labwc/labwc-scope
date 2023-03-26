@@ -651,6 +651,8 @@ The `<core>` section is additional to openbox 3.6 spec.
 
 ## 6.14 Theme - Button Images
 
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              | EXTRA
 
 ## 7 Menus
