@@ -474,6 +474,8 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  |          | 5.18      | window action                   | `Decorate`                                              | Needed if we implement 2.7 `<applications>`
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            | Needed if we implement 2.7 `<applications>`
 |  B  | complete | 5.20      | window action                   | `SendToDesktop`                                         |
+|  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      |
+|  B  | complete | 5.20.2    | window action                   | `SendToDesktop.follow`                                  |
 |  A  | complete | 5.21      | window action                   | `Move`                                                  |
 |  A  | complete | 5.22      | window action                   | `Resize`                                                |
 |  B  |          | 5.23      | window action                   | `MoveResizeTo`                                          |
