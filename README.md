@@ -24,6 +24,7 @@ href="stats.md">Stats</a>]</h3>
     - [2.10 Margins](#210-configuration---margins)
     - [2.11 Menu](#211-configuration---menu)
     - [2.12 Dock](#212-configuration---dock)
+    - [2.13 Core](#213-configuration---core)
   - Bindings
     - [3.1 Keyboard](#31-configuration---keyboard-keybind)
     - [3.2 Mouse](#32-configuration---mouse-binding)
@@ -319,6 +320,20 @@ It depends on what happens with:
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  C  |          | 2.12.1    | dock                            |                                                         |
+
+## 2.13 Configuration - Core
+
+The `<core>` section is additional to openbox 3.6 spec.
+
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  B  | complete | 2.13.1    | core                            | `decoration`                                            | EXTRA
+|  B  | complete | 2.13.1    | core                            | `gap`                                                   | EXTRA
+|  B  | complete | 2.13.1    | core                            | `adaptiveSync`                                          | EXTRA
+|  B  | complete | 2.13.1    | core                            | `reuseOutputMode`                                       | EXTRA
+|  B  | complete | 2.13.1    | core                            | `windowSwitcher.show`                                   | EXTRA
+|  B  | complete | 2.13.1    | core                            | `windowSwitcher.preview`                                | EXTRA
+|  B  | complete | 2.13.1    | core                            | `windowSwitcher.outlines`                               | EXTRA
 
 ## 3.1 Configuration - Keyboard Keybind
 
