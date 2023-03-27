@@ -180,7 +180,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 4.17      | global action                   | `None`                                                  | EXTRA Removes other actions within mouse bindings
 |  B  | complete | 4.18      | global action                   | `Kill`                                                  | EXTRA Send SIGTERM
 |  B  | complete | 4.19      | global action                   | `FocusOutput`                                           | EXTRA
-|  B  |          | 5.3       | window action                   | `Lower`                                                 |
+|  B  | complete | 5.3       | window action                   | `Lower`                                                 |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
 |  B  |          | 5.5       | window action                   | `UnFocus`                                               |
 |  B  |          | 5.6       | window action                   | `FocusToBottom`                                         |
