@@ -160,12 +160,10 @@ Requirements are categorised as follows:
 |  B  | complete | 1.2.19    | wayland-protocol                | xdg-output-unstable-v1                                  |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  | complete | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
-|  B  |          | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
+|  B  | complete | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
 |  B  | complete | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
 |  B  | complete | 1.2.24    | wayland-protocol                | single-pixel-buffer-v1                                  |
 
-[wayland-protocols]: https://gitlab.freedesktop.org/wayland/wayland-protocols
-[wlr-protocols]: https://gitlab.freedesktop.org/wlroots/wlr-protocols
 [presentation-time]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/presentation-time
 [viewporter]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/viewporter
 [xdg-shell]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/xdg-shell
@@ -737,6 +735,9 @@ protocols create a fragmentation that hinders general Wayland adoption.
 
 Where current protocols are not sufficient, we would rather work with
 upstream and the wider eco-system to plug any gaps.
+
+[wayland-protocols]: https://gitlab.freedesktop.org/wayland/wayland-protocols
+[wlr-protocols]: https://gitlab.freedesktop.org/wlroots/wlr-protocols
 
 See issues #128, #190
 
