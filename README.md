@@ -454,7 +454,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 5.1       | window action                   | `Focus`                                                 |
 |  A  | complete | 5.2       | window action                   | `Raise`                                                 |
-|  B  |          | 5.3       | window action                   | `Lower`                                                 |
+|  B  | complete | 5.3       | window action                   | `Lower`                                                 |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
 |  B  |          | 5.5       | window action                   | `UnFocus`                                               |
 |  B  |          | 5.6       | window action                   | `FocusToBottom`                                         |

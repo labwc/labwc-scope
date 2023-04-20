@@ -38,7 +38,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 4.10      | global action                   | `ToggleShowDesktop`                                     |
 |  B  |          | 4.13      | global action                   | `Restart`                                               |
 |  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
-|  B  |          | 5.3       | window action                   | `Lower`                                                 |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
 |  B  |          | 5.5       | window action                   | `UnFocus`                                               |
 |  B  |          | 5.6       | window action                   | `FocusToBottom`                                         |

@@ -3,6 +3,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 # Requirements Breakdown
 
 - Cat A:  78 / 78 complete
-- Cat B:  88 / 197 complete
+- Cat B:  89 / 197 complete
 - Cat C:  0 / 59 complete
-- TOTAL:  166 / 334 complete
+- TOTAL:  167 / 334 complete
