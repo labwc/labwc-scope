@@ -657,12 +657,11 @@ The `<core>` section is additional to openbox 3.6 spec.
 
 ## 7 Menus
 
-- [x] Parse `~/.config/labwc/menu.xml` in accordance with openbox 3.6 specification.
-- [x] Handle pointer input
-- [ ] Handle keyboard input
-
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  B  | complete | 7.0.1     | menu general                    | Parse menu.xml in accordance with Openbox 3.6 spec      |
+|  B  | complete | 7.0.2     | menu general                    | Handle pointer input                                    |
+|  B+ |          | 7.0.3     | menu general                    | Handle keyboard input                                   |
 |  A  | complete | 7.1.1     | menu syntax general             | `id`                                                    |
 |  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
 |  C  |          | 7.1.3     | menu syntax general             | `icon`                                                  |
