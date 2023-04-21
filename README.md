@@ -678,7 +678,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 8.1.1     | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
-|  B  |          | 8.1.2     | extra                           | Support png buttons                                     |
+|  B+ |          | 8.1.2     | extra                           | Support png buttons                                     |
 |  B  | complete | 8.2.1     | extra                           | `<snapping>`                                            |
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |
