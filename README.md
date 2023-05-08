@@ -339,9 +339,17 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 2.13.1    | core                            | `gap`                                                   | EXTRA
 |  B  | complete | 2.13.1    | core                            | `adaptiveSync`                                          | EXTRA
 |  B  | complete | 2.13.1    | core                            | `reuseOutputMode`                                       | EXTRA
-|  B  | complete | 2.13.1    | core                            | `windowSwitcher.show`                                   | EXTRA
-|  B  | complete | 2.13.1    | core                            | `windowSwitcher.preview`                                | EXTRA
-|  B  | complete | 2.13.1    | core                            | `windowSwitcher.outlines`                               | EXTRA
+
+## 2.14 Configuration - Window Switcher
+
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  B  | complete | 2.13.1    | window switcher                 | `show`                                                  | EXTRA
+|  B  | complete | 2.13.2    | window switcher                 | `preview`                                               | EXTRA
+|  B  | complete | 2.13.3    | window switcher                 | `outlines`                                              | EXTRA
+|  B  | complete | 2.13.4    | window switcher                 | `fields.field`                                          | EXTRA
+|  B  | complete | 2.13.5    | window switcher                 | `fields.field.content`                                  | EXTRA
+|  B  | complete | 2.13.6    | window switcher                 | `fields.field.width`                                    | EXTRA
 
 ## 3.1 Configuration - Keyboard Keybind
 
