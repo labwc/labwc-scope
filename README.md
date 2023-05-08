@@ -202,7 +202,7 @@ Requirements are categorised as follows:
 |  C  |          | 2.2.2     | focus                           | `focusLast`                                             |
 |  B  | complete | 2.2.3     | focus                           | `followMouse`                                           |
 |  C  |          | 2.2.4     | focus                           | `focusDelay`                                            |
-|  C  |          | 2.2.5     | focus                           | `underMouse`                                            |
+|  B  | complete | 2.2.5     | focus                           | `followMouseRequiresMovement`                           | DEVIATION It is called `underMouse` in Openbox
 |  B  | complete | 2.2.6     | focus                           | `raiseOnFocus`                                          |
 
 ## 2.3 Configuration - Placement
