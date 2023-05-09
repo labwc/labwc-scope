@@ -18,13 +18,14 @@ href="stats.md">Stats</a>]</h3>
     - [2.4 Theme](#24-configuration---theme)
     - [2.5 Desktop](#25-configuration---desktop)
     - [2.6 Resize](#26-configuration---resize)
-    - [2.7 Applications](#27-configuration---applications)
+    - [2.7 Window Rules](#27-configuration---window-rules)
     - [2.8 Keyboard](#28-configuration---keyboard)
     - [2.9 Mouse](#29-configuration---mouse)
     - [2.10 Margins](#210-configuration---margins)
     - [2.11 Menu](#211-configuration---menu)
     - [2.12 Dock](#212-configuration---dock)
     - [2.13 Core](#213-configuration---core)
+    - [2.14 Window Switcher](#214-configuration---window-switcher)
   - Bindings
     - [3.1 Keyboard](#31-configuration---keyboard-keybind)
     - [3.2 Mouse](#32-configuration---mouse-binding)
@@ -272,22 +273,26 @@ It depends on what happens with:
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  C  |          | 2.6.1     | resize                          |                                                         |
 
-## 2.7 Configuration - Applications
+## 2.7 Configuration - Window Rules
+
+Note: In Openbox this section is called `<applications>` (per window settings)
+and covers the following settings: `decor` `shade` `position` `size` `focus`
+`desktop` `layer` `iconic` `skip_pager` `skip_taskbar` `fullscreen` `maximized`
+
+```
+<windowRules>
+  <windowRule identifier="alacritty"><action name="Maximize"/></windowRule>
+  <windowRule identifier="foo*" serverDecoration="yes|no"/>
+</windowRules>
+```
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  |          | 2.7.1     | applications                    | `decor`                                                 |
-|  C  |          | 2.7.2     | applications                    | `shade`                                                 |
-|  B  |          | 2.7.3     | applications                    | `position`                                              |
-|  B  |          | 2.7.4     | applications                    | `size`                                                  |
-|  C  |          | 2.7.5     | applications                    | `focus`                                                 |
-|  B  |          | 2.7.6     | applications                    | `desktop`                                               |
-|  B  |          | 2.7.7     | applications                    | `layer`                                                 | If we implement, consider better name
-|  C  |          | 2.7.8     | applications                    | `iconic`                                                |
-|  C  |          | 2.7.9     | applications                    | `skip_pager`                                            |
-|  C  |          | 2.7.10    | applications                    | `skip_taskbar`                                          |
-|  C  |          | 2.7.11    | applications                    | `fullscreen`                                            |
-|  B  |          | 2.7.12    | applications                    | `maximized`                                             |
+|  B  | complete | 2.7.1     | window rules                    | `windowRule`                                            | EXTRA
+|  B  | complete | 2.7.2     | window rules                    | `windowRule.identifier`                                 | EXTRA
+|  B  |          | 2.7.3     | window rules                    | `windowRule.title`                                      | EXTRA
+|  B  | complete | 2.7.4     | window rules                    | `windowRule.serverDecoration`                           | EXTRA
+|  B  |          | 2.7.5     | window rules                    | `windowRule.allowFocusRequest`                          | EXTRA
 
 ## 2.8 Configuration - Keyboard
 
