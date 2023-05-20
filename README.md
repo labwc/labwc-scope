@@ -447,7 +447,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  C  |          | 4.7.1.10  | global action                   | `GoToDesktop.to::south`                                 |
 |  C  |          | 4.7.1.11  | global action                   | `GoToDesktop.to::west`                                  |
 |  C  |          | 4.7.1.12  | global action                   | `GoToDesktop.to::east`                                  |
-|  C  |          | 4.7.2     | global action                   | `GoToDesktop.wrap`                                      |
+|  B  |          | 4.7.2     | global action                   | `GoToDesktop.wrap`                                      |
 |  B  |          | 4.8       | global action                   | `AddDesktop`                                            |
 |  B  |          | 4.9       | global action                   | `RemoveDesktop`                                         |
 |  B  |          | 4.10      | global action                   | `ToggleShowDesktop`                                     |
