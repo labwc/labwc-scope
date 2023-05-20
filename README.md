@@ -290,7 +290,7 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  | complete | 2.7.1     | window rules                    | `windowRule`                                            | EXTRA
 |  B  | complete | 2.7.2     | window rules                    | `windowRule.identifier`                                 | EXTRA
-|  B  |          | 2.7.3     | window rules                    | `windowRule.title`                                      | EXTRA
+|  B  | complete | 2.7.3     | window rules                    | `windowRule.title`                                      | EXTRA
 |  B  | complete | 2.7.4     | window rules                    | `windowRule.serverDecoration`                           | EXTRA
 |  B  |          | 2.7.5     | window rules                    | `windowRule.allowFocusRequest`                          | EXTRA
 
