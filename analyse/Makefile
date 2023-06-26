@@ -11,6 +11,10 @@ test:
 	@./analyse --print-header > ../all-cat-A-and-B-items.md
 	@./analyse --cata < ../README.md >> ../all-cat-A-and-B-items.md
 	@./analyse --catb < ../README.md >> ../all-cat-A-and-B-items.md
+	@./analyse --print-header > ../extra.md
+	@grep EXTRA ../README.md >> ../extra.md
+	@./analyse --print-header > ../deviations.md
+	@grep DEVIA ../README.md >> ../deviations.md
 	@./generate_graph.sh
 
 clean:

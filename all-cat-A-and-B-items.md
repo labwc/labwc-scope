@@ -100,7 +100,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.2.19    | wayland-protocol                | xdg-output-unstable-v1                                  |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  | complete | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |
-|  B  |          | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
+|  B  | complete | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
 |  B  | complete | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
 |  B  | complete | 1.2.24    | wayland-protocol                | single-pixel-buffer-v1                                  |
 |  B  | complete | 1.3.1     | wlr-protocol                    | wlr-data-control-unstable-v1                            |
@@ -110,9 +110,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.3.8     | wlr-protocol                    | wlr-output-power-management-unstable-v1                 |
 |  B  | complete | 1.3.9     | wlr-protocol                    | wlr-screencopy-unstable-v1                              |
 |  B  | complete | 1.3.10    | wlr-protocol                    | wlr-virtual-pointer-unstable-v1                         |
-|  B  |          | 1.3.11    | wlr-protocol                    | [kde-server-decoration]                                 | xdg-decoration is preferable, but we support this until GTK move across
+|  B  | complete | 1.3.11    | wlr-protocol                    | [kde-server-decoration]                                 | xdg-decoration is preferable, but we support this until GTK move across
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
 |  B  | complete | 2.2.3     | focus                           | `followMouse`                                           |
+|  B  | complete | 2.2.5     | focus                           | `followMouseRequiresMovement`                           | DEVIATION It is called `underMouse` in Openbox
 |  B  | complete | 2.2.6     | focus                           | `raiseOnFocus`                                          |
 |  B+ |          | 2.4.2     | theme                           | `titleLayout`                                           |
 |  B  |          | 2.4.4     | theme                           | `keepBorder`                                            |
@@ -124,14 +125,18 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.4.12    | theme                           | `<font place=""><size>`                                 |
 |  B  | complete | 2.4.13    | theme                           | `<font place=""><weight>`                               |
 |  B  | complete | 2.4.14    | theme                           | `<font place=""><slant>`                                |
+|  B  | complete | 2.5.1     | desktop                         | `number`                                                |
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
-|  B  |          | 2.7.1     | applications                    | `decor`                                                 |
-|  B  |          | 2.7.3     | applications                    | `position`                                              |
-|  B  |          | 2.7.4     | applications                    | `size`                                                  |
-|  B  |          | 2.7.6     | applications                    | `desktop`                                               |
-|  B  |          | 2.7.7     | applications                    | `layer`                                                 | If we implement, consider better name
-|  B  |          | 2.7.12    | applications                    | `maximized`                                             |
+|  B  | complete | 2.7.1     | window rules                    | `windowRule`                                            | EXTRA
+|  B  | complete | 2.7.2.1   | window rule criteria            | `windowRule.identifier`                                 | EXTRA
+|  B  | complete | 2.7.2.2   | window rule criteria            | `windowRule.title`                                      | EXTRA
+|  B  | complete | 2.7.2.3   | window rule criteria            | `windowRule.matchOnce`                                  | EXTRA
+|  B  | complete | 2.7.3.1   | window rules                    | `windowRule.serverDecoration`                           | EXTRA
+|  B  | complete | 2.7.3.2   | window rules                    | `windowRule.skipTaskbar`                                | EXTRA
+|  B  | complete | 2.7.3.3   | window rules                    | `windowRule.skipWindowSwitcher`                         | EXTRA
+|  B  |          | 2.7.3.4   | window rules                    | `windowRule.allowFocusRequest`                          | EXTRA
+|  B  | complete | 2.10.1    | margins                         | `<margin>`                                              |
 |  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
 |  B  |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
@@ -139,9 +144,12 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.13.1    | core                            | `gap`                                                   | EXTRA
 |  B  | complete | 2.13.1    | core                            | `adaptiveSync`                                          | EXTRA
 |  B  | complete | 2.13.1    | core                            | `reuseOutputMode`                                       | EXTRA
-|  B  | complete | 2.13.1    | core                            | `windowSwitcher.show`                                   | EXTRA
-|  B  | complete | 2.13.1    | core                            | `windowSwitcher.preview`                                | EXTRA
-|  B  | complete | 2.13.1    | core                            | `windowSwitcher.outlines`                               | EXTRA
+|  B  | complete | 2.13.1    | window switcher                 | `show`                                                  | EXTRA
+|  B  | complete | 2.13.2    | window switcher                 | `preview`                                               | EXTRA
+|  B  | complete | 2.13.3    | window switcher                 | `outlines`                                              | EXTRA
+|  B  | complete | 2.13.4    | window switcher                 | `fields.field`                                          | EXTRA
+|  B  | complete | 2.13.5    | window switcher                 | `fields.field.content`                                  | EXTRA
+|  B  | complete | 2.13.6    | window switcher                 | `fields.field.width`                                    | EXTRA
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
 |  B  | complete | 3.2.4     | mouse binding                   | `default`                                               | EXTRA
 |  B  | complete | 3.3.1     | mouse context                   | `Frame`                                                 |
@@ -171,6 +179,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 4.7.1.1   | global action                   | `GoToDesktop.to::last`                                  |
 |  B  | complete | 4.7.1.2   | global action                   | `GoToDesktop.to::right`                                 |
 |  B  | complete | 4.7.1.3   | global action                   | `GoToDesktop.to::left`                                  |
+|  B  | complete | 4.7.2     | global action                   | `GoToDesktop.wrap`                                      |
 |  B  |          | 4.8       | global action                   | `AddDesktop`                                            |
 |  B  |          | 4.9       | global action                   | `RemoveDesktop`                                         |
 |  B  |          | 4.10      | global action                   | `ToggleShowDesktop`                                     |
@@ -196,14 +205,17 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 5.20      | window action                   | `SendToDesktop`                                         |
 |  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      |
 |  B  | complete | 5.20.2    | window action                   | `SendToDesktop.follow`                                  |
-|  B  |          | 5.23      | window action                   | `MoveResizeTo`                                          |
-|  B  |          | 5.24      | window action                   | `MoveRelative`                                          |
+|  B  | complete | 5.20.3    | window action                   | `SendToDesktop.wrap`                                    |
+|  B  | complete | 5.23.1    | window action                   | `MoveTo`                                                | DEVIATION: `MoveResizeTo` in Openbox
+|  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
+|  B  | complete | 5.24      | window action                   | `MoveRelative`                                          |
 |  B  |          | 5.25      | window action                   | `ResizeRelative`                                        |
 |  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            |
 |  B  |          | 5.27      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
 |  B  |          | 5.29      | window action                   | `ShrinkToEdge`                                          |
 |  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
+|  B  | complete | 5.34      | window action                   | `ToggleAlwaysOnBottom`                                  |
 |  B  | complete | 5.36      | window action                   | `SnapToEdge`                                            | EXTRA
 |  B  | complete | 5.37      | window action                   | `SnapToRegion`                                          | EXTRA
 |  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
@@ -269,10 +281,13 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 6.12.1    | text justification              | `window.label.text.justify`                             |
 |  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
 |  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              | EXTRA
+|  B  | complete | 7.0.1     | menu general                    | Parse menu.xml in accordance with Openbox 3.6 spec      |
+|  B  | complete | 7.0.2     | menu general                    | Handle pointer input                                    |
+|  B+ |          | 7.0.3     | menu general                    | Handle keyboard input                                   |
 |  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
 |  B  |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
 |  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text
-|  B  |          | 8.1.2     | extra                           | Support png buttons                                     |
+|  B+ |          | 8.1.2     | extra                           | Support png buttons                                     |
 |  B  | complete | 8.2.1     | extra                           | `<snapping>`                                            |
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |

@@ -3,6 +3,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B+ |          | 2.4.2     | theme                           | `titleLayout`                                           |
+|  B+ |          | 7.0.3     | menu general                    | Handle keyboard input                                   |
+|  B+ |          | 8.1.2     | extra                           | Support png buttons                                     |
 |  B  |          | 1.2.6     | wayland-protocol                | input-method-unstable-v1                                |
 |  B  |          | 1.2.7     | wayland-protocol                | input-timestamps-unstable-v1                            |
 |  B  |          | 1.2.8     | wayland-protocol                | keyboard-shortcuts-inhibit-unstable-v1                  | This is controversial [^3]
@@ -13,18 +15,11 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.16    | wayland-protocol                | text-input-unstable-v3                                  |
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
-|  B  |          | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
-|  B  |          | 1.3.11    | wlr-protocol                    | [kde-server-decoration]                                 | xdg-decoration is preferable, but we support this until GTK move across
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
 |  B  |          | 2.4.4     | theme                           | `keepBorder`                                            |
 |  B  |          | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
-|  B  |          | 2.7.1     | applications                    | `decor`                                                 |
-|  B  |          | 2.7.3     | applications                    | `position`                                              |
-|  B  |          | 2.7.4     | applications                    | `size`                                                  |
-|  B  |          | 2.7.6     | applications                    | `desktop`                                               |
-|  B  |          | 2.7.7     | applications                    | `layer`                                                 | If we implement, consider better name
-|  B  |          | 2.7.12    | applications                    | `maximized`                                             |
+|  B  |          | 2.7.3.4   | window rules                    | `windowRule.allowFocusRequest`                          | EXTRA
 |  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
 |  B  |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
@@ -48,8 +43,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.15      | window action                   | `Unmaximize`                                            | Needed if we implement 2.7 `<applications>`
 |  B  |          | 5.18      | window action                   | `Decorate`                                              | Needed if we implement 2.7 `<applications>`
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            | Needed if we implement 2.7 `<applications>`
-|  B  |          | 5.23      | window action                   | `MoveResizeTo`                                          |
-|  B  |          | 5.24      | window action                   | `MoveRelative`                                          |
+|  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
 |  B  |          | 5.25      | window action                   | `ResizeRelative`                                        |
 |  B  |          | 5.27      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
@@ -109,4 +103,3 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
 |  B  |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
 |  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text
-|  B  |          | 8.1.2     | extra                           | Support png buttons                                     |
