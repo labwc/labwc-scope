@@ -447,7 +447,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  C  |          | 4.7.1.10  | global action                   | `GoToDesktop.to::south`                                 |
 |  C  |          | 4.7.1.11  | global action                   | `GoToDesktop.to::west`                                  |
 |  C  |          | 4.7.1.12  | global action                   | `GoToDesktop.to::east`                                  |
-|  B  |          | 4.7.2     | global action                   | `GoToDesktop.wrap`                                      |
+|  B  | complete | 4.7.2     | global action                   | `GoToDesktop.wrap`                                      |
 |  B  |          | 4.8       | global action                   | `AddDesktop`                                            |
 |  B  |          | 4.9       | global action                   | `RemoveDesktop`                                         |
 |  B  |          | 4.10      | global action                   | `ToggleShowDesktop`                                     |
@@ -487,6 +487,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 5.20      | window action                   | `SendToDesktop`                                         |
 |  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      |
 |  B  | complete | 5.20.2    | window action                   | `SendToDesktop.follow`                                  |
+|  B  | complete | 5.20.3    | window action                   | `SendToDesktop.wrap`                                    |
 |  A  | complete | 5.21      | window action                   | `Move`                                                  |
 |  A  | complete | 5.22      | window action                   | `Resize`                                                |
 |  B  | complete | 5.23.1    | window action                   | `MoveTo`                                                | DEVIATION: `MoveResizeTo` in Openbox
