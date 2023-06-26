@@ -313,9 +313,11 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 
 ## 2.10 Configuration - Margins
 
+`<margin top="" bottom="" left="" right="" output="" />`
+
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  C  |          | 2.10.1    | margins                         |                                                         |
+|  B  | complete | 2.10.1    | margins                         | `<margin>`                                              |
 
 ## 2.11 Configuration - Menu
 
