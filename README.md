@@ -501,7 +501,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  C  |          | 5.31      | window action                   | `ForEach`                                               |
 |  C  |          | 5.32      | window action                   | `Stop`                                                  |
 |  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
-|  C  |          | 5.34      | window action                   | `ToggleAlwaysOnBottom`                                  |
+|  B  | complete | 5.34      | window action                   | `ToggleAlwaysOnBottom`                                  |
 |  C  |          | 5.35      | window action                   | `SendToLayer`                                           |
 |  B  | complete | 5.36      | window action                   | `SnapToEdge`                                            | EXTRA
 |  B  | complete | 5.37      | window action                   | `SnapToRegion`                                          | EXTRA
