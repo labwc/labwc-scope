@@ -245,13 +245,13 @@ The solution shall provide simple workspace setup as follows:
 - [x] f. Configure workspaces as shown in example below.
 
 ```
-<desktop>
+<desktops number="">
   <popupTime>1000</popupTime>
   <names>
     <name>foo</name>
     <name>bar</name>
   </names>
-<desktop>
+<desktops>
 ```
 
 UNDECIDED: Workspace control by clients, for example panels.
@@ -262,7 +262,7 @@ It depends on what happens with:
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  C  |          | 2.5.1     | desktop                         | `number`                                                | Obvious from number of `<name>`
+|  B  | complete | 2.5.1     | desktop                         | `number`                                                |
 |  C  |          | 2.5.2     | desktop                         | `firstDesk`                                             | Use first `<name>`
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
