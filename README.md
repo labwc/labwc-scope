@@ -489,8 +489,9 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 5.20.2    | window action                   | `SendToDesktop.follow`                                  |
 |  A  | complete | 5.21      | window action                   | `Move`                                                  |
 |  A  | complete | 5.22      | window action                   | `Resize`                                                |
-|  B  |          | 5.23      | window action                   | `MoveResizeTo`                                          |
-|  B  |          | 5.24      | window action                   | `MoveRelative`                                          |
+|  B  | complete | 5.23.1    | window action                   | `MoveTo`                                                | DEVIATION: `MoveResizeTo` in Openbox
+|  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
+|  B  | complete | 5.24      | window action                   | `MoveRelative`                                          |
 |  B  |          | 5.25      | window action                   | `ResizeRelative`                                        |
 |  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            |
 |  B  |          | 5.27      | window action                   | `GrowToEdge`                                            |
