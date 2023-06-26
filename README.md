@@ -281,7 +281,9 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 
 ```
 <windowRules>
-  <windowRule identifier="alacritty"><action name="Maximize"/></windowRule>
+  <windowRule identifier="alacritty">
+    <action name="Maximize"/>
+  </windowRule>
   <windowRule identifier="foo*" serverDecoration="yes|no"/>
 </windowRules>
 ```
@@ -289,10 +291,13 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  | complete | 2.7.1     | window rules                    | `windowRule`                                            | EXTRA
-|  B  | complete | 2.7.2     | window rules                    | `windowRule.identifier`                                 | EXTRA
-|  B  | complete | 2.7.3     | window rules                    | `windowRule.title`                                      | EXTRA
-|  B  | complete | 2.7.4     | window rules                    | `windowRule.serverDecoration`                           | EXTRA
-|  B  |          | 2.7.5     | window rules                    | `windowRule.allowFocusRequest`                          | EXTRA
+|  B  | complete | 2.7.2.1   | window rule criteria            | `windowRule.identifier`                                 | EXTRA
+|  B  | complete | 2.7.2.2   | window rule criteria            | `windowRule.title`                                      | EXTRA
+|  B  | complete | 2.7.2.3   | window rule criteria            | `windowRule.matchOnce`                                  | EXTRA
+|  B  | complete | 2.7.3.1   | window rules                    | `windowRule.serverDecoration`                           | EXTRA
+|  B  | complete | 2.7.3.2   | window rules                    | `windowRule.skipTaskbar`                                | EXTRA
+|  B  | complete | 2.7.3.3   | window rules                    | `windowRule.skipWindowSwitcher`                         | EXTRA
+|  B  |          | 2.7.3.4   | window rules                    | `windowRule.allowFocusRequest`                          | EXTRA
 
 ## 2.8 Configuration - Keyboard
 
