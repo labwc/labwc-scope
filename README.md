@@ -1,13 +1,10 @@
 # Scope
 
-<h3 align="center">[<a
-href="incomplete-cat-B-items.md">Incomplete&nbsp;Cat&nbsp;B</a>] [<a
-href="all-cat-A-and-B-items.md">Cat&nbsp;A&nbsp;and&nbsp;B</a>] [<a
-href="deviations.md">Deviations</a>] [<a
-href="extra.md">Extra</a>] [<a
-href="stats.md">Stats</a>]</h3>
-
 - [Introduction](#introduction)
+- [Categorisation](#categorisation)
+- [Priorities](#priorities)
+- [Sections](#sections)
+- [Filtered Views](#filtered-views)
 - [Requirements](#requirements)
   - General and Protocols
     - [1.1 General](#11-general)
@@ -79,7 +76,7 @@ the sort of compositor they wish to use.
 Acceptance criteria for each requirement is in accordance with openbox 3.6
 specification unless other wise stated.
 
-## Categorisation
+# Categorisation
 
 Requirements are categorised as follows:
 
@@ -89,19 +86,19 @@ Requirements are categorised as follows:
        cost (burden) of maintenance and complexity
 - `C`: out-of-scope: not intended to be implemented
 
-## Priorities
+# Priorities
 
 1. Stabilize current scope and fix issues and bugs. This is quite important.
    We do not want to spend time on an expanding scope with new features until
    the project is reliable at its current scope.
-2. Implement `Cat A` requirements.
-2. Implement `Cat B+` requirements.
-2. Review `Cat B` requirements and try to demote as many as possible to C
+2. Implement `Cat A` requirements (COMPLETE).
+3. Implement `Cat B+` requirements.
+4. Review `Cat B` requirements and try to demote as many as possible to C
 
-## Current status
+The graph below shows the current status of cat A and B requirements.
 ![graph](graph.png)
 
-## Sections
+# Sections
 
 - Requirements are organised into the sections listed below.
 - The first digit in the reference number relates to the section.
@@ -116,6 +113,16 @@ Requirements are categorised as follows:
 6. Theme [http://openbox.org/wiki/Help:Themes](http://openbox.org/wiki/Help:Themes)
 7. Menus [http://openbox.org/wiki/Help:Menus](http://openbox.org/wiki/Help:Menus)
 8. Extra
+
+# Filtered Views
+
+The following filtered views are auto-generated based on the tables in the
+Requirements section below.
+
+- [Deviations](deviations.md): Differences relative to Openbox 3.6 specification
+- [Extra](extra.md): Additional features relative to Openbox 3.6 specification
+- [Incomplete Cat B items](incomplete-cat-B-items.md)
+- [Cat A and B only](all-cat-A-and-B-items.md)
 
 # Requirements
 
