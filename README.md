@@ -317,6 +317,7 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 |  A  | complete | 2.9.2     | mouse                           | `doubleClickTime`                                       |
 |  C  |          | 2.9.3     | mouse                           | `screenEdgeWarpTime`                                    |
 |  A  | complete | 2.9.3     | mouse                           | `context`                                               |
+|  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
 
 ## 2.10 Configuration - Margins
 
@@ -469,6 +470,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 4.17      | global action                   | `None`                                                  | EXTRA Removes other actions within mouse bindings
 |  B  | complete | 4.18      | global action                   | `Kill`                                                  | EXTRA Send SIGTERM
 |  B  | complete | 4.19      | global action                   | `FocusOutput`                                           | EXTRA
+|  B  | complete | 4.20      | global action                   | `ToggleKeybinds`                                        | EXTRA
 
 ## 5 Window Actions
 
@@ -487,12 +489,12 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  |          | 5.11      | window action                   | `Unshade`                                               |
 |  C  |          | 5.12      | window action                   | `ToggleOmnipresent`                                     |
 |  A  | complete | 5.13      | window action                   | `ToggleMaximize`                                        |
-|  B  |          | 5.14      | window action                   | `Maximize`                                              | Needed if we implement 2.7 `<applications>`
-|  B  |          | 5.15      | window action                   | `Unmaximize`                                            | Needed if we implement 2.7 `<applications>`
+|  B  | complete | 5.14      | window action                   | `Maximize`                                              |
+|  B  |          | 5.15      | window action                   | `Unmaximize`                                            |
 |  B  | complete | 5.16      | window action                   | `ToggleFullscreen`                                      |
 |  B  | complete | 5.17      | window action                   | `ToggleDecorations`                                     |
-|  B  |          | 5.18      | window action                   | `Decorate`                                              | Needed if we implement 2.7 `<applications>`
-|  B  |          | 5.19      | window action                   | `Undecorate`                                            | Needed if we implement 2.7 `<applications>`
+|  B  |          | 5.18      | window action                   | `Decorate`                                              |
+|  B  |          | 5.19      | window action                   | `Undecorate`                                            |
 |  B  | complete | 5.20      | window action                   | `SendToDesktop`                                         |
 |  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      |
 |  B  | complete | 5.20.2    | window action                   | `SendToDesktop.follow`                                  |
@@ -502,7 +504,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 5.23.1    | window action                   | `MoveTo`                                                | DEVIATION: `MoveResizeTo` in Openbox
 |  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
 |  B  | complete | 5.24      | window action                   | `MoveRelative`                                          |
-|  B  |          | 5.25      | window action                   | `ResizeRelative`                                        |
+|  B  | complete | 5.25      | window action                   | `ResizeRelative`                                        |
 |  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            |
 |  B  |          | 5.27      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
@@ -538,6 +540,9 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 6.1.16    | geometry                        | `menu.width.max`                                        | EXTRA
 |  B  | complete | 6.1.17    | geometry                        | `menu.items.padding.x`                                  | EXTRA
 |  B  | complete | 6.1.18    | geometry                        | `menu.items.padding.y`                                  | EXTRA
+|  B  | complete | 6.1.19    | geometry                        | `osd.window-switcher.width`                             | EXTRA
+|  B  | complete | 6.1.20    | geometry                        | `osd.window-switcher.item.padding.x`                    | EXTRA
+|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.padding.y`                    | EXTRA
 
 ## 6.2 Theme - Border Colors
 

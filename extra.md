@@ -10,6 +10,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.7.3.2   | window rules                    | `windowRule.skipTaskbar`                                | EXTRA
 |  B  | complete | 2.7.3.3   | window rules                    | `windowRule.skipWindowSwitcher`                         | EXTRA
 |  B  |          | 2.7.3.4   | window rules                    | `windowRule.allowFocusRequest`                          | EXTRA
+|  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
 |  B  | complete | 2.13.1    | core                            | `decoration`                                            | EXTRA
 |  B  | complete | 2.13.1    | core                            | `gap`                                                   | EXTRA
 |  B  | complete | 2.13.1    | core                            | `adaptiveSync`                                          | EXTRA
@@ -27,10 +28,14 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 4.17      | global action                   | `None`                                                  | EXTRA Removes other actions within mouse bindings
 |  B  | complete | 4.18      | global action                   | `Kill`                                                  | EXTRA Send SIGTERM
 |  B  | complete | 4.19      | global action                   | `FocusOutput`                                           | EXTRA
+|  B  | complete | 4.20      | global action                   | `ToggleKeybinds`                                        | EXTRA
 |  B  | complete | 5.36      | window action                   | `SnapToEdge`                                            | EXTRA
 |  B  | complete | 5.37      | window action                   | `SnapToRegion`                                          | EXTRA
 |  B  | complete | 6.1.15    | geometry                        | `menu.width.min`                                        | EXTRA
 |  B  | complete | 6.1.16    | geometry                        | `menu.width.max`                                        | EXTRA
 |  B  | complete | 6.1.17    | geometry                        | `menu.items.padding.x`                                  | EXTRA
 |  B  | complete | 6.1.18    | geometry                        | `menu.items.padding.y`                                  | EXTRA
+|  B  | complete | 6.1.19    | geometry                        | `osd.window-switcher.width`                             | EXTRA
+|  B  | complete | 6.1.20    | geometry                        | `osd.window-switcher.item.padding.x`                    | EXTRA
+|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.padding.y`                    | EXTRA
 |  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              | EXTRA

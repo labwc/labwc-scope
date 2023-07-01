@@ -39,12 +39,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.9       | window action                   | `ToggleShade`                                           |
 |  B  |          | 5.10      | window action                   | `Shade`                                                 |
 |  B  |          | 5.11      | window action                   | `Unshade`                                               |
-|  B  |          | 5.14      | window action                   | `Maximize`                                              | Needed if we implement 2.7 `<applications>`
-|  B  |          | 5.15      | window action                   | `Unmaximize`                                            | Needed if we implement 2.7 `<applications>`
-|  B  |          | 5.18      | window action                   | `Decorate`                                              | Needed if we implement 2.7 `<applications>`
-|  B  |          | 5.19      | window action                   | `Undecorate`                                            | Needed if we implement 2.7 `<applications>`
+|  B  |          | 5.15      | window action                   | `Unmaximize`                                            |
+|  B  |          | 5.18      | window action                   | `Decorate`                                              |
+|  B  |          | 5.19      | window action                   | `Undecorate`                                            |
 |  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
-|  B  |          | 5.25      | window action                   | `ResizeRelative`                                        |
 |  B  |          | 5.27      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
 |  B  |          | 5.29      | window action                   | `ShrinkToEdge`                                          |
