@@ -38,4 +38,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 6.1.19    | geometry                        | `osd.window-switcher.width`                             | EXTRA
 |  B  | complete | 6.1.20    | geometry                        | `osd.window-switcher.item.padding.x`                    | EXTRA
 |  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.padding.y`                    | EXTRA
+|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.padding`                           | EXTRA
+|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.active.border.width`          | EXTRA
 |  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              | EXTRA

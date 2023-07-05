@@ -235,6 +235,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 6.1.19    | geometry                        | `osd.window-switcher.width`                             | EXTRA
 |  B  | complete | 6.1.20    | geometry                        | `osd.window-switcher.item.padding.x`                    | EXTRA
 |  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.padding.y`                    | EXTRA
+|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.padding`                           | EXTRA
+|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.active.border.width`          | EXTRA
 |  B  |          | 6.2.2     | border colors                   | `window.active.title.separator.color`                   |
 |  B  |          | 6.2.4     | border colors                   | `window.inactive.title.separator.color`                 |
 |  B  |          | 6.2.6     | border colors                   | `window.active.client.color`                            |

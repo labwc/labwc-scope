@@ -550,6 +550,8 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 6.1.19    | geometry                        | `osd.window-switcher.width`                             | EXTRA
 |  B  | complete | 6.1.20    | geometry                        | `osd.window-switcher.item.padding.x`                    | EXTRA
 |  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.padding.y`                    | EXTRA
+|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.padding`                           | EXTRA
+|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.active.border.width`          | EXTRA
 
 ## 6.2 Theme - Border Colors
 
