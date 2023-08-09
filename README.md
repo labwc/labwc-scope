@@ -276,11 +276,11 @@ It depends on what happens with:
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
 
-## 2.6 Configuration - Resize
+## 2.6 Configuration - Resize (and Move)
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  C  |          | 2.6.1     | resize                          |                                                         |
+|  B  |          | 2.6.1     | resize                          |                                                         |
 
 ## 2.7 Configuration - Window Rules
 
