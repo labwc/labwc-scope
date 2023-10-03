@@ -25,6 +25,7 @@
     - [2.12 Dock](#212-configuration---dock)
     - [2.13 Core](#213-configuration---core)
     - [2.14 Window Switcher](#214-configuration---window-switcher)
+    - [2.15 Libinput](#215-configuration---libinput)
   - Bindings
     - [3.1 Keyboard](#31-configuration---keyboard-keybind)
     - [3.2 Mouse](#32-configuration---mouse-binding)
@@ -228,7 +229,7 @@ Requirements section below.
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 2.4.1     | theme                           | `name`                                                  |
 |  B+ |          | 2.4.2     | theme                           | `titleLayout`                                           |
-|  B  |          | 2.4.4     | theme                           | `keepBorder`                                            |
+|  B  | complete | 2.4.4     | theme                           | `keepBorder`                                            | DEVIATION: gives ToggleDeocration 3 states
 |  C  |          | 2.4.5     | theme                           | `animateIconify`                                        |
 |  A  | complete | 2.4.6     | theme                           | `<font place="ActiveWindow">`                           |
 |  B  |          | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
@@ -276,11 +277,26 @@ It depends on what happens with:
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
 
-## 2.6 Configuration - Resize (and Move)
+## 2.6 Configuration - Resize
+
+```
+<resize>
+  <drawContents>no</drawContents>
+  <popupShow>Always</popupShow>
+  <popupPosition>Fixed</popupPosition>
+  <popupFixedposition>
+    <x>400</x>
+    <y>center</y>
+  </popupFixedPosition>
+</resize>
+```
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  |          | 2.6.1     | resize                          |                                                         |
+|  B  |          | 2.6.1     | resize                          | drawContents                                            |
+|  B  | complete | 2.6.2     | resize                          | popupShow                                               |
+|  B  |          | 2.6.3     | resize                          | popupPosition                                           |
+|  B  |          | 2.6.4     | resize                          | popupFixedposition                                      |
 
 ## 2.7 Configuration - Window Rules
 
@@ -303,10 +319,10 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 |  B  | complete | 2.7.2.1   | window rule criteria            | `windowRule.identifier`                                 | EXTRA
 |  B  | complete | 2.7.2.2   | window rule criteria            | `windowRule.title`                                      | EXTRA
 |  B  | complete | 2.7.2.3   | window rule criteria            | `windowRule.matchOnce`                                  | EXTRA
-|  B  | complete | 2.7.3.1   | window rules                    | `windowRule.serverDecoration`                           | EXTRA
-|  B  | complete | 2.7.3.2   | window rules                    | `windowRule.skipTaskbar`                                | EXTRA
-|  B  | complete | 2.7.3.3   | window rules                    | `windowRule.skipWindowSwitcher`                         | EXTRA
-|  B  |          | 2.7.3.4   | window rules                    | `windowRule.allowFocusRequest`                          | EXTRA
+|  B  | complete | 2.7.3.1   | window rule property            | `windowRule.serverDecoration`                           | EXTRA
+|  B  | complete | 2.7.3.2   | window rule property            | `windowRule.skipTaskbar`                                | EXTRA
+|  B  | complete | 2.7.3.3   | window rule property            | `windowRule.skipWindowSwitcher`                         | EXTRA
+|  B  | complete | 2.7.3.4   | window rule property            | `windowRule.ignoreFocusRequest`                         | EXTRA
 
 ## 2.8 Configuration - Keyboard
 
@@ -315,6 +331,7 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 |  C  |          | 2.8.1     | keyboard                        | `rebindOnMappingNotify`                                 |
 |  C  |          | 2.8.2     | keyboard                        | `chainQuitKey`                                          |
 |  A  | complete | 2.8.3     | keyboard                        | `keybind`                                               |
+|  B  | complete | 2.8.3.1   | keyboard                        | `keybind.layoutDependent`                               | EXTRA
 
 ## 2.9 Configuration - Mouse
 
@@ -340,7 +357,7 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
 |  C  |          | 2.11.2    | menu                            | `middle`                                                |
-|  B  |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
+|  B+ |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
 |  C  |          | 2.11.4    | menu                            | `applicationIcons`                                      |
 |  C  |          | 2.11.5    | menu                            | `manageDesktops`                                        |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
@@ -372,6 +389,12 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 2.13.4    | window switcher                 | `fields.field`                                          | EXTRA
 |  B  | complete | 2.13.5    | window switcher                 | `fields.field.content`                                  | EXTRA
 |  B  | complete | 2.13.6    | window switcher                 | `fields.field.width`                                    | EXTRA
+
+## 2.15 Configuration - Libinput
+
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  B  | complete | 3.6.1     | libinput                        |                                                         | EXTRA
 
 ## 3.1 Configuration - Keyboard Keybind
 
@@ -519,8 +542,8 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  |          | 5.27      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
 |  B  |          | 5.29      | window action                   | `ShrinkToEdge`                                          |
-|  C  |          | 5.30      | window action                   | `If`                                                    |
-|  C  |          | 5.31      | window action                   | `ForEach`                                               |
+|  B  | complete | 5.30      | window action                   | `If`                                                    |
+|  B  | complete | 5.31      | window action                   | `ForEach`                                               |
 |  C  |          | 5.32      | window action                   | `Stop`                                                  |
 |  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
 |  B  | complete | 5.34      | window action                   | `ToggleAlwaysOnBottom`                                  |
@@ -702,11 +725,11 @@ The `<core>` section is additional to openbox 3.6 spec.
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  | complete | 7.0.1     | menu general                    | Parse menu.xml in accordance with Openbox 3.6 spec      |
 |  B  | complete | 7.0.2     | menu general                    | Handle pointer input                                    |
-|  B+ |          | 7.0.3     | menu general                    | Handle keyboard input                                   |
+|  B+ | complete | 7.0.3     | menu general                    | Handle keyboard input                                   |
 |  A  | complete | 7.1.1     | menu syntax general             | `id`                                                    |
 |  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
 |  C  |          | 7.1.3     | menu syntax general             | `icon`                                                  |
-|  B  |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
+|  B+ |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
 |  C  |          | 7.1.5     | menu syntax general             | Menu keyboard shortcuts                                 |
 |  A  | complete | 7.2.1     | menu syntax item                | `label`                                                 |
 |  C  |          | 7.2.2     | menu syntax item                | `icon`                                                  |
@@ -716,10 +739,14 @@ The `<core>` section is additional to openbox 3.6 spec.
 
 ## 8.1 Extra - General
 
+Server-side-decoration: Make rounded corners square on maximize.
+Server-side-decoration: Disable border on maximize
+
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 8.1.1     | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
-|  B+ |          | 8.1.2     | extra                           | Support png buttons                                     |
+|  B+ | complete | 8.1.2     | extra                           | Support png buttons                                     |
+|  B+ | complete | 8.1.3     | extra                           | Support svg buttons                                     |
 |  B  | complete | 8.2.1     | extra                           | `<snapping>`                                            |
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |
