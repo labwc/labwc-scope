@@ -6,10 +6,11 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.7.2.1   | window rule criteria            | `windowRule.identifier`                                 | EXTRA
 |  B  | complete | 2.7.2.2   | window rule criteria            | `windowRule.title`                                      | EXTRA
 |  B  | complete | 2.7.2.3   | window rule criteria            | `windowRule.matchOnce`                                  | EXTRA
-|  B  | complete | 2.7.3.1   | window rules                    | `windowRule.serverDecoration`                           | EXTRA
-|  B  | complete | 2.7.3.2   | window rules                    | `windowRule.skipTaskbar`                                | EXTRA
-|  B  | complete | 2.7.3.3   | window rules                    | `windowRule.skipWindowSwitcher`                         | EXTRA
-|  B  |          | 2.7.3.4   | window rules                    | `windowRule.allowFocusRequest`                          | EXTRA
+|  B  | complete | 2.7.3.1   | window rule property            | `windowRule.serverDecoration`                           | EXTRA
+|  B  | complete | 2.7.3.2   | window rule property            | `windowRule.skipTaskbar`                                | EXTRA
+|  B  | complete | 2.7.3.3   | window rule property            | `windowRule.skipWindowSwitcher`                         | EXTRA
+|  B  | complete | 2.7.3.4   | window rule property            | `windowRule.ignoreFocusRequest`                         | EXTRA
+|  B  | complete | 2.8.3.1   | keyboard                        | `keybind.layoutDependent`                               | EXTRA
 |  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
 |  B  | complete | 2.13.1    | core                            | `decoration`                                            | EXTRA
 |  B  | complete | 2.13.1    | core                            | `gap`                                                   | EXTRA
@@ -21,6 +22,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.13.4    | window switcher                 | `fields.field`                                          | EXTRA
 |  B  | complete | 2.13.5    | window switcher                 | `fields.field.content`                                  | EXTRA
 |  B  | complete | 2.13.6    | window switcher                 | `fields.field.width`                                    | EXTRA
+|  B  | complete | 3.6.1     | libinput                        |                                                         | EXTRA
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
 |  B  | complete | 3.2.4     | mouse binding                   | `default`                                               | EXTRA
 |  B  | complete | 3.3.21    | mouse context                   | `Title`                                                 | EXTRA

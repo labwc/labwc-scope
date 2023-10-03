@@ -116,7 +116,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.2.5     | focus                           | `followMouseRequiresMovement`                           | DEVIATION It is called `underMouse` in Openbox
 |  B  | complete | 2.2.6     | focus                           | `raiseOnFocus`                                          |
 |  B+ |          | 2.4.2     | theme                           | `titleLayout`                                           |
-|  B  |          | 2.4.4     | theme                           | `keepBorder`                                            |
+|  B  | complete | 2.4.4     | theme                           | `keepBorder`                                            | DEVIATION: gives ToggleDeocration 3 states
 |  B  |          | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  | complete | 2.4.9     | theme                           | `<font place="MenuItem">`                               |
@@ -128,18 +128,23 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.5.1     | desktop                         | `number`                                                |
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
+|  B  |          | 2.6.1     | resize                          | drawContents                                            |
+|  B  | complete | 2.6.2     | resize                          | popupShow                                               |
+|  B  |          | 2.6.3     | resize                          | popupPosition                                           |
+|  B  |          | 2.6.4     | resize                          | popupFixedposition                                      |
 |  B  | complete | 2.7.1     | window rules                    | `windowRule`                                            | EXTRA
 |  B  | complete | 2.7.2.1   | window rule criteria            | `windowRule.identifier`                                 | EXTRA
 |  B  | complete | 2.7.2.2   | window rule criteria            | `windowRule.title`                                      | EXTRA
 |  B  | complete | 2.7.2.3   | window rule criteria            | `windowRule.matchOnce`                                  | EXTRA
-|  B  | complete | 2.7.3.1   | window rules                    | `windowRule.serverDecoration`                           | EXTRA
-|  B  | complete | 2.7.3.2   | window rules                    | `windowRule.skipTaskbar`                                | EXTRA
-|  B  | complete | 2.7.3.3   | window rules                    | `windowRule.skipWindowSwitcher`                         | EXTRA
-|  B  |          | 2.7.3.4   | window rules                    | `windowRule.allowFocusRequest`                          | EXTRA
+|  B  | complete | 2.7.3.1   | window rule property            | `windowRule.serverDecoration`                           | EXTRA
+|  B  | complete | 2.7.3.2   | window rule property            | `windowRule.skipTaskbar`                                | EXTRA
+|  B  | complete | 2.7.3.3   | window rule property            | `windowRule.skipWindowSwitcher`                         | EXTRA
+|  B  | complete | 2.7.3.4   | window rule property            | `windowRule.ignoreFocusRequest`                         | EXTRA
+|  B  | complete | 2.8.3.1   | keyboard                        | `keybind.layoutDependent`                               | EXTRA
 |  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
 |  B  | complete | 2.10.1    | margins                         | `<margin>`                                              |
 |  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
-|  B  |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
+|  B+ |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
 |  B  | complete | 2.13.1    | core                            | `decoration`                                            | EXTRA
 |  B  | complete | 2.13.1    | core                            | `gap`                                                   | EXTRA
@@ -151,6 +156,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.13.4    | window switcher                 | `fields.field`                                          | EXTRA
 |  B  | complete | 2.13.5    | window switcher                 | `fields.field.content`                                  | EXTRA
 |  B  | complete | 2.13.6    | window switcher                 | `fields.field.width`                                    | EXTRA
+|  B  | complete | 3.6.1     | libinput                        |                                                         | EXTRA
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
 |  B  | complete | 3.2.4     | mouse binding                   | `default`                                               | EXTRA
 |  B  | complete | 3.3.1     | mouse context                   | `Frame`                                                 |
@@ -198,8 +204,11 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.9       | window action                   | `ToggleShade`                                           |
 |  B  |          | 5.10      | window action                   | `Shade`                                                 |
 |  B  |          | 5.11      | window action                   | `Unshade`                                               |
+|  B  |          | 5.13.1    | window action                   | `ToggleMaximize.direction`                              |
 |  B  | complete | 5.14      | window action                   | `Maximize`                                              |
+|  B  |          | 5.14.1    | window action                   | `Maximize.direction`                                    |
 |  B  |          | 5.15      | window action                   | `Unmaximize`                                            |
+|  B  |          | 5.15.1    | window action                   | `Unmaximize.direction`                                  |
 |  B  | complete | 5.16      | window action                   | `ToggleFullscreen`                                      |
 |  B  | complete | 5.17      | window action                   | `ToggleDecorations`                                     |
 |  B  |          | 5.18      | window action                   | `Decorate`                                              |
@@ -216,6 +225,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.27      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
 |  B  |          | 5.29      | window action                   | `ShrinkToEdge`                                          |
+|  B  | complete | 5.30      | window action                   | `If`                                                    |
+|  B  | complete | 5.31      | window action                   | `ForEach`                                               |
 |  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
 |  B  | complete | 5.34      | window action                   | `ToggleAlwaysOnBottom`                                  |
 |  B  | complete | 5.36      | window action                   | `SnapToEdge`                                            | EXTRA
@@ -290,11 +301,12 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              | EXTRA
 |  B  | complete | 7.0.1     | menu general                    | Parse menu.xml in accordance with Openbox 3.6 spec      |
 |  B  | complete | 7.0.2     | menu general                    | Handle pointer input                                    |
-|  B+ |          | 7.0.3     | menu general                    | Handle keyboard input                                   |
+|  B+ | complete | 7.0.3     | menu general                    | Handle keyboard input                                   |
 |  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
-|  B  |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
+|  B+ |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
 |  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text
-|  B+ |          | 8.1.2     | extra                           | Support png buttons                                     |
+|  B+ | complete | 8.1.2     | extra                           | Support png buttons                                     |
+|  B+ | complete | 8.1.3     | extra                           | Support svg buttons                                     |
 |  B  | complete | 8.2.1     | extra                           | `<snapping>`                                            |
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |

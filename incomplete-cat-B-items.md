@@ -3,8 +3,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B+ |          | 2.4.2     | theme                           | `titleLayout`                                           |
-|  B+ |          | 7.0.3     | menu general                    | Handle keyboard input                                   |
-|  B+ |          | 8.1.2     | extra                           | Support png buttons                                     |
+|  B+ |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
+|  B+ |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
 |  B  |          | 1.2.6     | wayland-protocol                | input-method-unstable-v1                                |
 |  B  |          | 1.2.7     | wayland-protocol                | input-timestamps-unstable-v1                            |
 |  B  |          | 1.2.8     | wayland-protocol                | keyboard-shortcuts-inhibit-unstable-v1                  | This is controversial [^3]
@@ -16,12 +16,12 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
-|  B  |          | 2.4.4     | theme                           | `keepBorder`                                            |
 |  B  |          | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
-|  B  |          | 2.7.3.4   | window rules                    | `windowRule.allowFocusRequest`                          | EXTRA
+|  B  |          | 2.6.1     | resize                          | drawContents                                            |
+|  B  |          | 2.6.3     | resize                          | popupPosition                                           |
+|  B  |          | 2.6.4     | resize                          | popupFixedposition                                      |
 |  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
-|  B  |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
 |  B  |          | 3.3.14    | mouse context                   | `Icon`                                                  |
 |  B  |          | 3.4.1     | mouse button                    | `Middle`                                                |
@@ -39,7 +39,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.9       | window action                   | `ToggleShade`                                           |
 |  B  |          | 5.10      | window action                   | `Shade`                                                 |
 |  B  |          | 5.11      | window action                   | `Unshade`                                               |
+|  B  |          | 5.13.1    | window action                   | `ToggleMaximize.direction`                              |
+|  B  |          | 5.14.1    | window action                   | `Maximize.direction`                                    |
 |  B  |          | 5.15      | window action                   | `Unmaximize`                                            |
+|  B  |          | 5.15.1    | window action                   | `Unmaximize.direction`                                  |
 |  B  |          | 5.18      | window action                   | `Decorate`                                              |
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            |
 |  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
@@ -99,5 +102,4 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.11.3    | osd colors                      | `osd.unhilight.bg.color`                                | for desktop osd only
 |  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
 |  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
-|  B  |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
 |  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text
