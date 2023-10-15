@@ -33,6 +33,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 4.20      | global action                   | `ToggleKeybinds`                                        | EXTRA
 |  B  | complete | 5.36      | window action                   | `SnapToEdge`                                            | EXTRA
 |  B  | complete | 5.37      | window action                   | `SnapToRegion`                                          | EXTRA
+|  B  | complete | 5.38      | window action                   | `MoveToCursor`                                          | EXTRA
 |  B  | complete | 6.1.15    | geometry                        | `menu.width.min`                                        | EXTRA
 |  B  | complete | 6.1.16    | geometry                        | `menu.width.max`                                        | EXTRA
 |  B  | complete | 6.1.17    | geometry                        | `menu.items.padding.x`                                  | EXTRA

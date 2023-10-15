@@ -550,6 +550,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  C  |          | 5.35      | window action                   | `SendToLayer`                                           |
 |  B  | complete | 5.36      | window action                   | `SnapToEdge`                                            | EXTRA
 |  B  | complete | 5.37      | window action                   | `SnapToRegion`                                          | EXTRA
+|  B  | complete | 5.38      | window action                   | `MoveToCursor`                                          | EXTRA
 
 ## 6.1 Theme - Geometry
 

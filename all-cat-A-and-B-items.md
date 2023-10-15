@@ -231,6 +231,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 5.34      | window action                   | `ToggleAlwaysOnBottom`                                  |
 |  B  | complete | 5.36      | window action                   | `SnapToEdge`                                            | EXTRA
 |  B  | complete | 5.37      | window action                   | `SnapToRegion`                                          | EXTRA
+|  B  | complete | 5.38      | window action                   | `MoveToCursor`                                          | EXTRA
 |  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
