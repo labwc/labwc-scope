@@ -46,9 +46,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.18      | window action                   | `Decorate`                                              |
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            |
 |  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
-|  B  |          | 5.27      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
-|  B  |          | 5.29      | window action                   | `ShrinkToEdge`                                          |
 |  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
 |  B  |          | 6.1.14    | geometry                        | `menu.overlap`                                          |

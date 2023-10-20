@@ -221,10 +221,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
 |  B  | complete | 5.24      | window action                   | `MoveRelative`                                          |
 |  B  | complete | 5.25      | window action                   | `ResizeRelative`                                        |
-|  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            |
-|  B  |          | 5.27      | window action                   | `GrowToEdge`                                            |
+|  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            | DEVIATION: Have `snapWindows` option
+|  B  | complete | 5.27      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
-|  B  |          | 5.29      | window action                   | `ShrinkToEdge`                                          |
+|  B  | complete | 5.29      | window action                   | `ShrinkToEdge`                                          |
 |  B  | complete | 5.30      | window action                   | `If`                                                    |
 |  B  | complete | 5.31      | window action                   | `ForEach`                                               |
 |  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
