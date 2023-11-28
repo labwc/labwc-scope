@@ -517,7 +517,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  |          | 5.9       | window action                   | `ToggleShade`                                           |
 |  B  |          | 5.10      | window action                   | `Shade`                                                 |
 |  B  |          | 5.11      | window action                   | `Unshade`                                               |
-|  C  |          | 5.12      | window action                   | `ToggleOmnipresent`                                     |
+|  B  | complete | 5.12      | window action                   | `ToggleOmnipresent`                                     | aka sticky
 |  A  | complete | 5.13      | window action                   | `ToggleMaximize`                                        |
 |  B  |          | 5.13.1    | window action                   | `ToggleMaximize.direction`                              |
 |  B  | complete | 5.14      | window action                   | `Maximize`                                              |
