@@ -204,6 +204,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.9       | window action                   | `ToggleShade`                                           |
 |  B  |          | 5.10      | window action                   | `Shade`                                                 |
 |  B  |          | 5.11      | window action                   | `Unshade`                                               |
+|  B  | complete | 5.12      | window action                   | `ToggleOmnipresent`                                     | aka sticky
 |  B  |          | 5.13.1    | window action                   | `ToggleMaximize.direction`                              |
 |  B  | complete | 5.14      | window action                   | `Maximize`                                              |
 |  B  |          | 5.14.1    | window action                   | `Maximize.direction`                                    |
