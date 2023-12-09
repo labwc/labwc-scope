@@ -117,7 +117,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.2.6     | focus                           | `raiseOnFocus`                                          |
 |  B+ |          | 2.4.2     | theme                           | `titleLayout`                                           |
 |  B  | complete | 2.4.4     | theme                           | `keepBorder`                                            | DEVIATION: gives ToggleDeocration 3 states
-|  B  |          | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
+|  B  | complete | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  | complete | 2.4.9     | theme                           | `<font place="MenuItem">`                               |
 |  B  | complete | 2.4.10    | theme                           | `<font place="OnScreenDisplay">`                        |

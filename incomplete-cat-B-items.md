@@ -16,7 +16,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
-|  B  |          | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  |          | 2.6.1     | resize                          | drawContents                                            |
 |  B  |          | 2.6.3     | resize                          | popupPosition                                           |

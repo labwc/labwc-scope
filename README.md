@@ -232,7 +232,7 @@ Requirements section below.
 |  B  | complete | 2.4.4     | theme                           | `keepBorder`                                            | DEVIATION: gives ToggleDeocration 3 states
 |  C  |          | 2.4.5     | theme                           | `animateIconify`                                        |
 |  A  | complete | 2.4.6     | theme                           | `<font place="ActiveWindow">`                           |
-|  B  |          | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
+|  B  | complete | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  | complete | 2.4.9     | theme                           | `<font place="MenuItem">`                               |
 |  B  | complete | 2.4.10    | theme                           | `<font place="OnScreenDisplay">`                        |
