@@ -323,6 +323,7 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 |  B  | complete | 2.7.3.2   | window rule property            | `windowRule.skipTaskbar`                                | EXTRA
 |  B  | complete | 2.7.3.3   | window rule property            | `windowRule.skipWindowSwitcher`                         | EXTRA
 |  B  | complete | 2.7.3.4   | window rule property            | `windowRule.ignoreFocusRequest`                         | EXTRA
+|  B  | complete | 2.7.3.5   | window rule property            | `windowRule.fixedPosition`                         | EXTRA
 
 ## 2.8 Configuration - Keyboard
 
@@ -330,8 +331,9 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  C  |          | 2.8.1     | keyboard                        | `rebindOnMappingNotify`                                 |
 |  C  |          | 2.8.2     | keyboard                        | `chainQuitKey`                                          |
-|  A  | complete | 2.8.3     | keyboard                        | `keybind`                                               |
-|  B  | complete | 2.8.3.1   | keyboard                        | `keybind.layoutDependent`                               | EXTRA
+|  A  | complete | 2.8.3     | keyboard                        | `keybind`                                               | See section 3.1
+|  B  | complete | 2.8.4     | keyboard                        | `numlock`                                               | EXTRA
+|  B  | complete | 2.8.5     | keyboard                        | `layoutScope`                                           | EXTRA
 
 ## 2.9 Configuration - Mouse
 
@@ -406,6 +408,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  A  | complete | 3.1.4     | keyboard keybind                | Support modifier keys                                   |
 |  C  |          | 3.1.5     | keyboard keybind                | Support key chains                                      |
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
+|  B  | complete | 3.1.7     | keyboard binding                | `lyoutDependent`                                        | EXTRA
 
 ## 3.2 Configuration - Mouse Binding
 
@@ -510,7 +513,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  A  | complete | 5.2       | window action                   | `Raise`                                                 |
 |  B  | complete | 5.3       | window action                   | `Lower`                                                 |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
-|  B  |          | 5.5       | window action                   | `UnFocus`                                               |
+|  B  | complete | 5.5       | window action                   | `Unfocus`                                               |
 |  B  |          | 5.6       | window action                   | `FocusToBottom`                                         |
 |  A  | complete | 5.7       | window action                   | `Iconify`                                               |
 |  A  | complete | 5.8       | window action                   | `Close`                                                 |
@@ -529,7 +532,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  |          | 5.18      | window action                   | `Decorate`                                              |
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            |
 |  B  | complete | 5.20      | window action                   | `SendToDesktop`                                         |
-|  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      |
+|  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      | EXTRA: support value 'current'
 |  B  | complete | 5.20.2    | window action                   | `SendToDesktop.follow`                                  |
 |  B  | complete | 5.20.3    | window action                   | `SendToDesktop.wrap`                                    |
 |  A  | complete | 5.21      | window action                   | `Move`                                                  |
@@ -538,7 +541,8 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
 |  B  | complete | 5.24      | window action                   | `MoveRelative`                                          |
 |  B  | complete | 5.25      | window action                   | `ResizeRelative`                                        |
-|  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            | DEVIATION: Have `snapWindows` option
+|  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            |
+|  B  | complete | 5.26.1    | window action                   | `MoveToEdge.snapWindows`                                | EXTRA
 |  B  | complete | 5.27      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
 |  B  | complete | 5.29      | window action                   | `ShrinkToEdge`                                          |
@@ -567,6 +571,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  C  |          | 6.1.9     | geometry                        | `window.handle.width`                                   | Handle not supported
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
 |  B  | complete | 6.1.11    | geometry                        | `padding.height`                                        |
+|  B  | complete | 6.1.11.1  | geometry                        | `titlebar.height`                                       | EXTRA
 |  B  | complete | 6.1.12    | geometry                        | `menu.overlap.x`                                        |
 |  B  | complete | 6.1.13    | geometry                        | `menu.overlap.y`                                        |
 |  B  |          | 6.1.14    | geometry                        | `menu.overlap`                                          |
@@ -574,11 +579,11 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 6.1.16    | geometry                        | `menu.width.max`                                        | EXTRA
 |  B  | complete | 6.1.17    | geometry                        | `menu.items.padding.x`                                  | EXTRA
 |  B  | complete | 6.1.18    | geometry                        | `menu.items.padding.y`                                  | EXTRA
-|  B  | complete | 6.1.19    | geometry                        | `osd.window-switcher.width`                             | EXTRA
-|  B  | complete | 6.1.20    | geometry                        | `osd.window-switcher.item.padding.x`                    | EXTRA
-|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.padding.y`                    | EXTRA
-|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.padding`                           | EXTRA
-|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.active.border.width`          | EXTRA
+|  B  | complete | 6.1.19.1  | geometry                        | `osd.window-switcher.width`                             | EXTRA
+|  B  | complete | 6.1.19.2  | geometry                        | `osd.window-switcher.item.padding.x`                    | EXTRA
+|  B  | complete | 6.1.19.3  | geometry                        | `osd.window-switcher.item.padding.y`                    | EXTRA
+|  B  | complete | 6.1.19.4  | geometry                        | `osd.window-switcher.padding`                           | EXTRA
+|  B  | complete | 6.1.19.5  | geometry                        | `osd.window-switcher.item.active.border.width`          | EXTRA
 
 ## 6.2 Theme - Border Colors
 
