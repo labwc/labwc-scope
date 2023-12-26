@@ -33,7 +33,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 4.13      | global action                   | `Restart`                                               |
 |  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
-|  B  |          | 5.5       | window action                   | `UnFocus`                                               |
 |  B  |          | 5.6       | window action                   | `FocusToBottom`                                         |
 |  B  |          | 5.9       | window action                   | `ToggleShade`                                           |
 |  B  |          | 5.10      | window action                   | `Shade`                                                 |
@@ -44,7 +43,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.15.1    | window action                   | `Unmaximize.direction`                                  |
 |  B  |          | 5.18      | window action                   | `Decorate`                                              |
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            |
-|  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
 |  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
@@ -98,5 +96,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.11.2    | osd colors                      | `osd.hilight.bg.color`                                  | for desktop osd only
 |  B  |          | 6.11.3    | osd colors                      | `osd.unhilight.bg.color`                                | for desktop osd only
 |  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
+|  B  |          | 6.15.1.9  | theme button base               | `bullet.xbm`                                            |
+|  B  |          | 6.15.2.2  | theme button variant            | `_pressed`                                              |
+|  B  |          | 6.15.2.3  | theme button variant            | `_disabled`                                             |
 |  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
 |  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text

@@ -49,6 +49,8 @@
     - [6.11 On-Screen-Display Colors](#611-theme---on-screen-display-colors)
     - [6.12 Text Justification](#612-theme---text-justification)
     - [6.13 Text Shadows](#613-theme---text-shadows)
+    - [6.14 Dialogs](#614-theme---dialogs)
+    - [6.15 Button Images](#615-theme---buttom-images)
   - [7 Menus](#7-menus)
   - [8 Extra](#8-extra)
 - [Appendix A - Terminology](#appendix-a---terminology)
@@ -174,6 +176,8 @@ Requirements section below.
 |  B  | complete | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
 |  B  | complete | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
 |  B  | complete | 1.2.24    | wayland-protocol                | single-pixel-buffer-v1                                  |
+|  B  | complete | 1.2.25    | wayland-protocol                | cursor-shape-v1                                         |
+|  B  | complete | 1.2.26    | wayland-protocol                | fractional-scale-v1                                     |
 
 [presentation-time]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/presentation-time
 [viewporter]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/viewporter
@@ -383,6 +387,9 @@ The `<core>` section is additional to openbox 3.6 spec.
 
 ## 2.14 Configuration - Window Switcher
 
+The window switcher can be cycled in reverse using shift-tab or up/left
+arrow whilst holding alt.
+
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  | complete | 2.13.1    | window switcher                 | `show`                                                  | EXTRA
@@ -504,6 +511,8 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 4.18      | global action                   | `Kill`                                                  | EXTRA Send SIGTERM
 |  B  | complete | 4.19      | global action                   | `FocusOutput`                                           | EXTRA
 |  B  | complete | 4.20      | global action                   | `ToggleKeybinds`                                        | EXTRA
+|  B  | complete | 4.21      | global action                   | `VirtualOutputAdd`                                      | EXTRA
+|  B  | complete | 4.22      | global action                   | `VirtualOutputRemove`                                   | EXTRA
 
 ## 5 Window Actions
 
@@ -538,7 +547,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  A  | complete | 5.21      | window action                   | `Move`                                                  |
 |  A  | complete | 5.22      | window action                   | `Resize`                                                |
 |  B  | complete | 5.23.1    | window action                   | `MoveTo`                                                | DEVIATION: `MoveResizeTo` in Openbox
-|  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
+|  B  | complete | 5.23.2    | window action                   | `ResizeTo`                                              |
 |  B  | complete | 5.24      | window action                   | `MoveRelative`                                          |
 |  B  | complete | 5.25      | window action                   | `ResizeRelative`                                        |
 |  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            |
@@ -584,6 +593,8 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 6.1.19.3  | geometry                        | `osd.window-switcher.item.padding.y`                    | EXTRA
 |  B  | complete | 6.1.19.4  | geometry                        | `osd.window-switcher.padding`                           | EXTRA
 |  B  | complete | 6.1.19.5  | geometry                        | `osd.window-switcher.item.active.border.width`          | EXTRA
+|  B  | complete | 6.1.20.1  | geometry                        | `osd.workspace-switcher.boxes.width`                    | EXTRA
+|  B  | complete | 6.1.20.2  | geometry                        | `osd.workspace-switcher.boxes.height`                   | EXTRA
 
 ## 6.2 Theme - Border Colors
 
@@ -719,11 +730,38 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  C  |          | 6.13.4    | text shadows                    | `menu.title.text.font`                                  |
 |  C  |          | 6.13.5    | text shadows                    | `osd.label.text.font`                                   |
 
-## 6.14 Theme - Button Images
+## 6.14 Theme - Dialogs
+
+Not yet supported.
+
+## 6.15 Theme - Button Images
+
+Parse svg, png and xbm icons.
+
+The following are referred to as 'base buttons': `max`, `max_toggled`,
+`iconify`, `close`, `desk`, `desk_toggled`, `shade`, `shade_toggled`,
+`bullet` and `menu`.
+
+In addition to the base buttons, the following variants exist:
+`_hover`, `_pressed` and `_disabled`
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              | EXTRA
+|  A  | complete | 6.15.1.1  | theme button base               | `max.xbm`                                               |
+|  B  | complete | 6.15.1.2  | theme button base               | `max_toggled.xbm`                                       |
+|  A  | complete | 6.15.1.3  | theme button base               | `iconify.xbm`                                           |
+|  A  | complete | 6.15.1.4  | theme button base               | `close.xbm`                                             |
+|  C  |          | 6.15.1.5  | theme button base               | `desk.xbm`                                              |
+|  C  |          | 6.15.1.6  | theme button base               | `desk_toggled.xbm`                                      |
+|  C  |          | 6.15.1.7  | theme button base               | `shade.xbm`                                             |
+|  C  |          | 6.15.1.8  | theme button base               | `shade_toggled.xbm`                                     |
+|  B  |          | 6.15.1.9  | theme button base               | `bullet.xbm`                                            |
+|  B  | complete | 6.15.1.1  | theme button base               | `menu.xbm`                                              | EXTRA
+|  B  | complete | 6.15.2.1  | theme button variant            | `_hover`                                                |
+|  B  |          | 6.15.2.2  | theme button variant            | `_pressed`                                              |
+|  B  |          | 6.15.2.3  | theme button variant            | `_disabled`                                             |
+|  B+ | complete | 6.15.3    | theme button png                | Support png buttons                                     | EXTRA
+|  B+ | complete | 6.15.4    | theme button svg                | Support svg buttons                                     | EXTRA
 
 ## 7 Menus
 
@@ -751,12 +789,9 @@ Server-side-decoration: Disable border on maximize
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 8.1.1     | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
-|  B+ | complete | 8.1.2     | extra                           | Support png buttons                                     |
-|  B+ | complete | 8.1.3     | extra                           | Support svg buttons                                     |
 |  B  | complete | 8.2.1     | extra                           | `<snapping>`                                            |
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |
-
 
 ## 9 Regions
 

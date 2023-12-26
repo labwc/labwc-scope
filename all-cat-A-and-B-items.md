@@ -24,7 +24,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 2.3.2     | placement                       | `center`                                                | No config - just do it
 |  A  | complete | 2.4.1     | theme                           | `name`                                                  |
 |  A  | complete | 2.4.6     | theme                           | `<font place="ActiveWindow">`                           |
-|  A  | complete | 2.8.3     | keyboard                        | `keybind`                                               |
+|  A  | complete | 2.8.3     | keyboard                        | `keybind`                                               | See section 3.1
 |  A  | complete | 2.9.2     | mouse                           | `doubleClickTime`                                       |
 |  A  | complete | 2.9.3     | mouse                           | `context`                                               |
 |  A  | complete | 3.1.1     | keyboard keybind                | `key`                                                   |
@@ -75,6 +75,9 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 6.9.2     | menu textures                   | `menu.items.active.bg`                                  |
 |  A  | complete | 6.10.1    | osd textures                    | `osd.bg`                                                | we only set the color
 |  A  | complete | 6.11.1    | osd colors                      | `osd.label.text.color`                                  |
+|  A  | complete | 6.15.1.1  | theme button base               | `max.xbm`                                               |
+|  A  | complete | 6.15.1.3  | theme button base               | `iconify.xbm`                                           |
+|  A  | complete | 6.15.1.4  | theme button base               | `close.xbm`                                             |
 |  A  | complete | 7.1.1     | menu syntax general             | `id`                                                    |
 |  A  | complete | 7.2.1     | menu syntax item                | `label`                                                 |
 |  A  | complete | 7.2.3     | menu syntax item                | `action`                                                |
@@ -103,6 +106,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.2.22    | wayland-protocol                | [ext-session-lock-v1]                                   | This is more secure [^1]
 |  B  | complete | 1.2.23    | wayland-protocol                | xdg-activation-v1                                       |
 |  B  | complete | 1.2.24    | wayland-protocol                | single-pixel-buffer-v1                                  |
+|  B  | complete | 1.2.25    | wayland-protocol                | cursor-shape-v1                                         |
+|  B  | complete | 1.2.26    | wayland-protocol                | fractional-scale-v1                                     |
 |  B  | complete | 1.3.1     | wlr-protocol                    | wlr-data-control-unstable-v1                            |
 |  B  | complete | 1.3.2     | wlr-protocol                    | wlr-export-dmabuf-unstable-v1                           |
 |  B  | complete | 1.3.4     | wlr-protocol                    | wlr-gamma-control-unstable-v1                           |
@@ -140,7 +145,9 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.7.3.2   | window rule property            | `windowRule.skipTaskbar`                                | EXTRA
 |  B  | complete | 2.7.3.3   | window rule property            | `windowRule.skipWindowSwitcher`                         | EXTRA
 |  B  | complete | 2.7.3.4   | window rule property            | `windowRule.ignoreFocusRequest`                         | EXTRA
-|  B  | complete | 2.8.3.1   | keyboard                        | `keybind.layoutDependent`                               | EXTRA
+|  B  | complete | 2.7.3.5   | window rule property            | `windowRule.fixedPosition`                         | EXTRA
+|  B  | complete | 2.8.4     | keyboard                        | `numlock`                                               | EXTRA
+|  B  | complete | 2.8.5     | keyboard                        | `layoutScope`                                           | EXTRA
 |  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
 |  B  | complete | 2.10.1    | margins                         | `<margin>`                                              |
 |  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
@@ -158,6 +165,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.13.6    | window switcher                 | `fields.field.width`                                    | EXTRA
 |  B  | complete | 3.6.1     | libinput                        |                                                         | EXTRA
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
+|  B  | complete | 3.1.7     | keyboard binding                | `lyoutDependent`                                        | EXTRA
 |  B  | complete | 3.2.4     | mouse binding                   | `default`                                               | EXTRA
 |  B  | complete | 3.3.1     | mouse context                   | `Frame`                                                 |
 |  B  | complete | 3.3.2     | mouse context                   | `Client`                                                |
@@ -197,9 +205,11 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 4.18      | global action                   | `Kill`                                                  | EXTRA Send SIGTERM
 |  B  | complete | 4.19      | global action                   | `FocusOutput`                                           | EXTRA
 |  B  | complete | 4.20      | global action                   | `ToggleKeybinds`                                        | EXTRA
+|  B  | complete | 4.21      | global action                   | `VirtualOutputAdd`                                      | EXTRA
+|  B  | complete | 4.22      | global action                   | `VirtualOutputRemove`                                   | EXTRA
 |  B  | complete | 5.3       | window action                   | `Lower`                                                 |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
-|  B  |          | 5.5       | window action                   | `UnFocus`                                               |
+|  B  | complete | 5.5       | window action                   | `Unfocus`                                               |
 |  B  |          | 5.6       | window action                   | `FocusToBottom`                                         |
 |  B  |          | 5.9       | window action                   | `ToggleShade`                                           |
 |  B  |          | 5.10      | window action                   | `Shade`                                                 |
@@ -215,14 +225,15 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.18      | window action                   | `Decorate`                                              |
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            |
 |  B  | complete | 5.20      | window action                   | `SendToDesktop`                                         |
-|  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      |
+|  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      | EXTRA: support value 'current'
 |  B  | complete | 5.20.2    | window action                   | `SendToDesktop.follow`                                  |
 |  B  | complete | 5.20.3    | window action                   | `SendToDesktop.wrap`                                    |
 |  B  | complete | 5.23.1    | window action                   | `MoveTo`                                                | DEVIATION: `MoveResizeTo` in Openbox
-|  B  |          | 5.23.2    | window action                   | `ResizeTo`                                              |
+|  B  | complete | 5.23.2    | window action                   | `ResizeTo`                                              |
 |  B  | complete | 5.24      | window action                   | `MoveRelative`                                          |
 |  B  | complete | 5.25      | window action                   | `ResizeRelative`                                        |
-|  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            | DEVIATION: Have `snapWindows` option
+|  B  | complete | 5.26      | window action                   | `MoveToEdge`                                            |
+|  B  | complete | 5.26.1    | window action                   | `MoveToEdge.snapWindows`                                | EXTRA
 |  B  | complete | 5.27      | window action                   | `GrowToEdge`                                            |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
 |  B  | complete | 5.29      | window action                   | `ShrinkToEdge`                                          |
@@ -238,6 +249,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
 |  B  | complete | 6.1.11    | geometry                        | `padding.height`                                        |
+|  B  | complete | 6.1.11.1  | geometry                        | `titlebar.height`                                       | EXTRA
 |  B  | complete | 6.1.12    | geometry                        | `menu.overlap.x`                                        |
 |  B  | complete | 6.1.13    | geometry                        | `menu.overlap.y`                                        |
 |  B  |          | 6.1.14    | geometry                        | `menu.overlap`                                          |
@@ -245,11 +257,13 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 6.1.16    | geometry                        | `menu.width.max`                                        | EXTRA
 |  B  | complete | 6.1.17    | geometry                        | `menu.items.padding.x`                                  | EXTRA
 |  B  | complete | 6.1.18    | geometry                        | `menu.items.padding.y`                                  | EXTRA
-|  B  | complete | 6.1.19    | geometry                        | `osd.window-switcher.width`                             | EXTRA
-|  B  | complete | 6.1.20    | geometry                        | `osd.window-switcher.item.padding.x`                    | EXTRA
-|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.padding.y`                    | EXTRA
-|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.padding`                           | EXTRA
-|  B  | complete | 6.1.21    | geometry                        | `osd.window-switcher.item.active.border.width`          | EXTRA
+|  B  | complete | 6.1.19.1  | geometry                        | `osd.window-switcher.width`                             | EXTRA
+|  B  | complete | 6.1.19.2  | geometry                        | `osd.window-switcher.item.padding.x`                    | EXTRA
+|  B  | complete | 6.1.19.3  | geometry                        | `osd.window-switcher.item.padding.y`                    | EXTRA
+|  B  | complete | 6.1.19.4  | geometry                        | `osd.window-switcher.padding`                           | EXTRA
+|  B  | complete | 6.1.19.5  | geometry                        | `osd.window-switcher.item.active.border.width`          | EXTRA
+|  B  | complete | 6.1.20.1  | geometry                        | `osd.workspace-switcher.boxes.width`                    | EXTRA
+|  B  | complete | 6.1.20.2  | geometry                        | `osd.workspace-switcher.boxes.height`                   | EXTRA
 |  B  |          | 6.2.2     | border colors                   | `window.active.title.separator.color`                   |
 |  B  |          | 6.2.4     | border colors                   | `window.inactive.title.separator.color`                 |
 |  B  |          | 6.2.6     | border colors                   | `window.active.client.color`                            |
@@ -300,15 +314,20 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.11.3    | osd colors                      | `osd.unhilight.bg.color`                                | for desktop osd only
 |  B  | complete | 6.12.1    | text justification              | `window.label.text.justify`                             |
 |  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
-|  B  | complete | 8.3.1     | extra                           | Read menu.xbm if it exists                              | EXTRA
+|  B  | complete | 6.15.1.2  | theme button base               | `max_toggled.xbm`                                       |
+|  B  |          | 6.15.1.9  | theme button base               | `bullet.xbm`                                            |
+|  B  | complete | 6.15.1.1  | theme button base               | `menu.xbm`                                              | EXTRA
+|  B  | complete | 6.15.2.1  | theme button variant            | `_hover`                                                |
+|  B  |          | 6.15.2.2  | theme button variant            | `_pressed`                                              |
+|  B  |          | 6.15.2.3  | theme button variant            | `_disabled`                                             |
+|  B+ | complete | 6.15.3    | theme button png                | Support png buttons                                     | EXTRA
+|  B+ | complete | 6.15.4    | theme button svg                | Support svg buttons                                     | EXTRA
 |  B  | complete | 7.0.1     | menu general                    | Parse menu.xml in accordance with Openbox 3.6 spec      |
 |  B  | complete | 7.0.2     | menu general                    | Handle pointer input                                    |
 |  B+ | complete | 7.0.3     | menu general                    | Handle keyboard input                                   |
 |  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
 |  B+ |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
 |  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text
-|  B+ | complete | 8.1.2     | extra                           | Support png buttons                                     |
-|  B+ | complete | 8.1.3     | extra                           | Support svg buttons                                     |
 |  B  | complete | 8.2.1     | extra                           | `<snapping>`                                            |
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |
