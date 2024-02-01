@@ -178,6 +178,7 @@ Requirements section below.
 |  B  | complete | 1.2.24    | wayland-protocol                | single-pixel-buffer-v1                                  |
 |  B  | complete | 1.2.25    | wayland-protocol                | cursor-shape-v1                                         |
 |  B  | complete | 1.2.26    | wayland-protocol                | fractional-scale-v1                                     |
+|  B  | complete | 1.2.27    | wayland-protocol                | tearing-control-manager-v1                              |
 
 [presentation-time]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/presentation-time
 [viewporter]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/viewporter
@@ -207,7 +208,8 @@ Requirements section below.
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
-|  A  | complete | 2.1.2     | resistance                      | `screen_edge_strength`                                  |
+|  A  | complete | 2.1.2     | resistance                      | `screen_edge_strength`                                  | DEVIATION Can be negative
+|  B  | complete | 2.1.3     | resistance                      | `window_edge_strength`                                  | EXTRA DEVIATION Can be negative
 
 ## 2.2 Configuration - Focus
 
@@ -222,10 +224,16 @@ Requirements section below.
 
 ## 2.3 Configuration - Placement
 
+```xml
+<placement>
+  <policy>center|automatic|cursor</policy>
+</placement>
+```
+
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  C  |          | 2.3.1     | placement                       | `policy`                                                |
-|  A  | complete | 2.3.2     | placement                       | `center`                                                | No config - just do it
+|  B  | complete | 2.3.1     | placement                       | `policy`                                                | DEVIATION: automatic is similar to smart
+|  C  |          | 2.3.2     | placement                       | `center`                                                | Covered by policy
 
 ## 2.4 Configuration - Theme
 
@@ -348,6 +356,35 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 |  C  |          | 2.9.3     | mouse                           | `screenEdgeWarpTime`                                    |
 |  A  | complete | 2.9.3     | mouse                           | `context`                                               |
 |  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
+
+## 2.9a Configuration - Touch
+
+```xml
+<touch deviceName="" mapToOutput=""/>
+```
+
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  B  | complete | 2.9a.1    | touch                           | `deviceName`                                            |
+|  B  | complete | 2.9a.2    | touch                           | `mapToOutput`                                           |
+
+## 2.9b Configuration - Tablet
+
+```xml
+  <tablet mapToOutput="" rotate="0">
+    <area top="0.0" left="0.0" width="0.0" height="0.0" />
+    <map button="Tip" to="Left" />
+    <map button="Stylus" to="Right" />
+    <map button="Stylus2" to="Middle" />
+  </tablet>
+```
+
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  B  | complete | 2.9b.1    | tablet                          | `mapToOutput`                                           |
+|  B  | complete | 2.9b.2    | tablet                          | `rotate`                                                |
+|  B  | complete | 2.9b.3    | tablet                          | `area`                                                  |
+|  B  | complete | 2.9b.4    | tablet                          | `map`                                                   |
 
 ## 2.10 Configuration - Margins
 
