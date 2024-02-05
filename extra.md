@@ -2,6 +2,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  B  | complete | 2.1.3     | resistance                      | `window_edge_strength`                                  | EXTRA DEVIATION Can be negative
 |  B  | complete | 2.7.1     | window rules                    | `windowRule`                                            | EXTRA
 |  B  | complete | 2.7.2.1   | window rule criteria            | `windowRule.identifier`                                 | EXTRA
 |  B  | complete | 2.7.2.2   | window rule criteria            | `windowRule.title`                                      | EXTRA

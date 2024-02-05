@@ -20,8 +20,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 1.3.3     | wlr-protocol                    | wlr-foreign-toplevel-management-unstable-v1             |
 |  A  | complete | 1.3.6     | wlr-protocol                    | wlr-layer-shell-unstable-v1                             |
 |  A  | complete | 1.3.7     | wlr-protocol                    | wlr-output-management-unstable-v1                       |
-|  A  | complete | 2.1.2     | resistance                      | `screen_edge_strength`                                  |
-|  A  | complete | 2.3.2     | placement                       | `center`                                                | No config - just do it
+|  A  | complete | 2.1.2     | resistance                      | `screen_edge_strength`                                  | DEVIATION Can be negative
 |  A  | complete | 2.4.1     | theme                           | `name`                                                  |
 |  A  | complete | 2.4.6     | theme                           | `<font place="ActiveWindow">`                           |
 |  A  | complete | 2.8.3     | keyboard                        | `keybind`                                               | See section 3.1
@@ -108,6 +107,12 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.2.24    | wayland-protocol                | single-pixel-buffer-v1                                  |
 |  B  | complete | 1.2.25    | wayland-protocol                | cursor-shape-v1                                         |
 |  B  | complete | 1.2.26    | wayland-protocol                | fractional-scale-v1                                     |
+|  B  | complete | 1.2.27    | wayland-protocol                | tearing-control-manager-v1                              |
+|  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
+|  B  | complete | 1.2.29    | wayland-protocol                | xwayland-shell-v1                                       |
+|  B  |          | 1.2.30    | wayland-protocol                | security-context-v1                                     |
+|  B  |          | 1.2.31    | wayland-protocol                |                                                         |
+|  B  |          | 1.2.32    | wayland-protocol                |                                                         |
 |  B  | complete | 1.3.1     | wlr-protocol                    | wlr-data-control-unstable-v1                            |
 |  B  | complete | 1.3.2     | wlr-protocol                    | wlr-export-dmabuf-unstable-v1                           |
 |  B  | complete | 1.3.4     | wlr-protocol                    | wlr-gamma-control-unstable-v1                           |
@@ -117,9 +122,11 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.3.10    | wlr-protocol                    | wlr-virtual-pointer-unstable-v1                         |
 |  B  | complete | 1.3.11    | wlr-protocol                    | [kde-server-decoration]                                 | xdg-decoration is preferable, but we support this until GTK move across
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
+|  B  | complete | 2.1.3     | resistance                      | `window_edge_strength`                                  | EXTRA DEVIATION Can be negative
 |  B  | complete | 2.2.3     | focus                           | `followMouse`                                           |
 |  B  | complete | 2.2.5     | focus                           | `followMouseRequiresMovement`                           | DEVIATION It is called `underMouse` in Openbox
 |  B  | complete | 2.2.6     | focus                           | `raiseOnFocus`                                          |
+|  B  | complete | 2.3.1     | placement                       | `policy`                                                | DEVIATION: automatic is similar to smart
 |  B+ |          | 2.4.2     | theme                           | `titleLayout`                                           |
 |  B  | complete | 2.4.4     | theme                           | `keepBorder`                                            | DEVIATION: gives ToggleDeocration 3 states
 |  B  | complete | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
@@ -149,6 +156,12 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.8.4     | keyboard                        | `numlock`                                               | EXTRA
 |  B  | complete | 2.8.5     | keyboard                        | `layoutScope`                                           | EXTRA
 |  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
+|  B  | complete | 2.9a.1    | touch                           | `deviceName`                                            |
+|  B  | complete | 2.9a.2    | touch                           | `mapToOutput`                                           |
+|  B  | complete | 2.9b.1    | tablet                          | `mapToOutput`                                           |
+|  B  | complete | 2.9b.2    | tablet                          | `rotate`                                                |
+|  B  | complete | 2.9b.3    | tablet                          | `area`                                                  |
+|  B  | complete | 2.9b.4    | tablet                          | `map`                                                   |
 |  B  | complete | 2.10.1    | margins                         | `<margin>`                                              |
 |  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
 |  B+ |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |

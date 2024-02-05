@@ -2,7 +2,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  A  | complete | 2.1.2     | resistance                      | `screen_edge_strength`                                  | DEVIATION Can be negative
+|  B  | complete | 2.1.3     | resistance                      | `window_edge_strength`                                  | EXTRA DEVIATION Can be negative
 |  B  | complete | 2.2.5     | focus                           | `followMouseRequiresMovement`                           | DEVIATION It is called `underMouse` in Openbox
+|  B  | complete | 2.3.1     | placement                       | `policy`                                                | DEVIATION: automatic is similar to smart
 |  B  | complete | 2.4.4     | theme                           | `keepBorder`                                            | DEVIATION: gives ToggleDeocration 3 states
 |  B  | complete | 3.3.4     | mouse context                   | `Root`                                                  | DEVIATION [^2]
 |  B  | complete | 3.5.6     | mouse event                     | `Scroll`                                                | DEVIATION: Scroll is used instead of Click for mouse-buttons Up/Down

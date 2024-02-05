@@ -15,6 +15,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.16    | wayland-protocol                | text-input-unstable-v3                                  |
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
+|  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
+|  B  |          | 1.2.30    | wayland-protocol                | security-context-v1                                     |
+|  B  |          | 1.2.31    | wayland-protocol                |                                                         |
+|  B  |          | 1.2.32    | wayland-protocol                |                                                         |
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  |          | 2.6.1     | resize                          | drawContents                                            |

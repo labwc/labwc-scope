@@ -179,6 +179,12 @@ Requirements section below.
 |  B  | complete | 1.2.25    | wayland-protocol                | cursor-shape-v1                                         |
 |  B  | complete | 1.2.26    | wayland-protocol                | fractional-scale-v1                                     |
 |  B  | complete | 1.2.27    | wayland-protocol                | tearing-control-manager-v1                              |
+|  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
+|  B  | complete | 1.2.29    | wayland-protocol                | xwayland-shell-v1                                       |
+|  B  |          | 1.2.30    | wayland-protocol                | security-context-v1                                     |
+|  B  |          | 1.2.31    | wayland-protocol                |                                                         |
+|  B  |          | 1.2.32    | wayland-protocol                |                                                         |
+
 
 [presentation-time]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/presentation-time
 [viewporter]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/viewporter
