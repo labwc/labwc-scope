@@ -16,11 +16,12 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 1.1.12    | general                         | Support on-screen display (osd)                         |
 |  A  | complete | 1.1.13    | general                         | Support libinput configuration                          |
 |  A  | complete | 1.1.14    | general                         | Support drag-n-drop                                     |
+|  A  | complete | 1.1.15    | general                         | Support input method editors (IME)                      |
 |  A  | complete | 1.2.3     | wayland-protocol                | [xdg-shell]                                             |
 |  A  | complete | 1.3.3     | wlr-protocol                    | wlr-foreign-toplevel-management-unstable-v1             |
 |  A  | complete | 1.3.6     | wlr-protocol                    | wlr-layer-shell-unstable-v1                             |
 |  A  | complete | 1.3.7     | wlr-protocol                    | wlr-output-management-unstable-v1                       |
-|  A  | complete | 2.1.2     | resistance                      | `screen_edge_strength`                                  | DEVIATION Can be negative
+|  A  | complete | 2.1.2     | resistance                      | `screenEdgeStrength`                                    | DEVIATION Can be negative
 |  A  | complete | 2.4.1     | theme                           | `name`                                                  |
 |  A  | complete | 2.4.6     | theme                           | `<font place="ActiveWindow">`                           |
 |  A  | complete | 2.8.3     | keyboard                        | `keybind`                                               | See section 3.1
@@ -43,7 +44,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 3.5.2     | mouse event                     | `Click`                                                 |
 |  A  | complete | 3.5.3     | mouse event                     | `DoubleClick`                                           |
 |  A  | complete | 4.1       | global action                   | `Execute`                                               |
-|  A  | complete | 4.2       | global action                   | `ShowMenu`                                              |
+|  A  | complete | 4.2.1     | global action                   | `ShowMenu`                                              |
 |  A  | complete | 4.3       | global action                   | `NextWindow`                                            |
 |  A  | complete | 4.12      | global action                   | `Reconfigure`                                           |
 |  A  | complete | 4.14      | global action                   | `Exit`                                                  |
@@ -66,7 +67,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 6.3.3     | titlebar colors                 | `window.active.button.unpressed.image.color`            |
 |  A  | complete | 6.3.11    | titlebar colors                 | `window.inactive.button.unpressed.image.color`          |
 |  A  | complete | 6.4.1     | active window textures          | `window.active.title.bg`                                |
-|  A  | complete | 6.5.1     | inactive window textures        | `window.inactive.title.bg`                              |
 |  A  | complete | 6.8.2     | menu colors                     | `menu.items.text.color`                                 |
 |  A  | complete | 6.8.4     | menu colors                     | `menu.items.active.text.color`                          |
 |  A  | complete | 6.8.6     | menu colors                     | `menu.separator.color`                                  |
@@ -82,11 +82,13 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 7.2.3     | menu syntax item                | `action`                                                |
 |  A  | complete | 7.3.1     | menu syntax separator           | `<separator />`                                         | For separator line only
 |  A  | complete | 8.1.1     | extra                           | Support rounded top window corners                      | rc.xml `<theme><cornerRadius>`
+|  B  | complete | 1.1.16    | general                         | Support `--session` option                              |
 |  B  | complete | 1.2.1     | wayland-protocol                | [presentation-time]                                     |
 |  B  | complete | 1.2.2     | wayland-protocol                | [viewporter]                                            |
 |  B  | complete | 1.2.4     | wayland-protocol                | fullscreen-shell-unstable-v1                            |
 |  B  | complete | 1.2.5     | wayland-protocol                | idle-inhibit-unstable-v1                                |
-|  B  |          | 1.2.6     | wayland-protocol                | input-method-unstable-v1                                |
+|  B  |          | 1.2.6.1   | wayland-protocol                | input-method-unstable-v1                                |
+|  B  | complete | 1.2.6.2   | wayland-protocol                | input-method-unstable-v2                                |
 |  B  |          | 1.2.7     | wayland-protocol                | input-timestamps-unstable-v1                            |
 |  B  |          | 1.2.8     | wayland-protocol                | keyboard-shortcuts-inhibit-unstable-v1                  | This is controversial [^3]
 |  B  |          | 1.2.9     | wayland-protocol                | linux-dmabuf-unstable-v1                                |
@@ -96,7 +98,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.2.13    | wayland-protocol                | primary-selection-unstable-v1                           |
 |  B  | complete | 1.2.14    | wayland-protocol                | relative-pointer-unstable-v1                            |
 |  B  |          | 1.2.15    | wayland-protocol                | tablet-unstable-v2                                      |
-|  B  |          | 1.2.16    | wayland-protocol                | text-input-unstable-v3                                  |
+|  B  | complete | 1.2.16    | wayland-protocol                | text-input-unstable-v3                                  |
 |  B  | complete | 1.2.17    | wayland-protocol                | xdg-decoration-unstable-v1                              |
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  | complete | 1.2.19    | wayland-protocol                | xdg-output-unstable-v1                                  |
@@ -122,7 +124,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.3.10    | wlr-protocol                    | wlr-virtual-pointer-unstable-v1                         |
 |  B  | complete | 1.3.11    | wlr-protocol                    | [kde-server-decoration]                                 | xdg-decoration is preferable, but we support this until GTK move across
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
-|  B  | complete | 2.1.3     | resistance                      | `window_edge_strength`                                  | EXTRA DEVIATION Can be negative
+|  B  | complete | 2.1.3     | resistance                      | `windowEdgeStrength`                                    | EXTRA
 |  B  | complete | 2.2.3     | focus                           | `followMouse`                                           |
 |  B  | complete | 2.2.5     | focus                           | `followMouseRequiresMovement`                           | DEVIATION It is called `underMouse` in Openbox
 |  B  | complete | 2.2.6     | focus                           | `raiseOnFocus`                                          |
@@ -133,13 +135,15 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  | complete | 2.4.9     | theme                           | `<font place="MenuItem">`                               |
 |  B  | complete | 2.4.10    | theme                           | `<font place="OnScreenDisplay">`                        |
-|  B  | complete | 2.4.11    | theme                           | `<font place=""><name>`                                 |
-|  B  | complete | 2.4.12    | theme                           | `<font place=""><size>`                                 |
-|  B  | complete | 2.4.13    | theme                           | `<font place=""><weight>`                               |
-|  B  | complete | 2.4.14    | theme                           | `<font place=""><slant>`                                |
+|  B  | complete | 2.4.11    | theme                           | `font.name`                                             |
+|  B  | complete | 2.4.12    | theme                           | `font.size`                                             |
+|  B  | complete | 2.4.13    | theme                           | `font.weight`                                           |
+|  B  | complete | 2.4.14    | theme                           | `font.slant`                                            |
+|  B  | complete | 2.4.15    | theme                           | `dropShadows`                                           | EXTRA
 |  B  | complete | 2.5.1     | desktop                         | `number`                                                |
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
+|  B  | complete | 2.5.5     | desktop                         | `prefix`                                                | EXTRA
 |  B  |          | 2.6.1     | resize                          | drawContents                                            |
 |  B  | complete | 2.6.2     | resize                          | popupShow                                               |
 |  B  |          | 2.6.3     | resize                          | popupPosition                                           |
@@ -152,7 +156,9 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.7.3.2   | window rule property            | `windowRule.skipTaskbar`                                | EXTRA
 |  B  | complete | 2.7.3.3   | window rule property            | `windowRule.skipWindowSwitcher`                         | EXTRA
 |  B  | complete | 2.7.3.4   | window rule property            | `windowRule.ignoreFocusRequest`                         | EXTRA
-|  B  | complete | 2.7.3.5   | window rule property            | `windowRule.fixedPosition`                         | EXTRA
+|  B  | complete | 2.7.3.5   | window rule property            | `windowRule.fixedPosition`                              | EXTRA
+|  B  | complete | 2.7.3.6   | window rule property            | `windowRule.ignoreConfigureRequest`                     | EXTRA
+|  B  | complete | 2.7.4     | window rule type                | `windowRule.type`                                       | EXTRA
 |  B  | complete | 2.8.4     | keyboard                        | `numlock`                                               | EXTRA
 |  B  | complete | 2.8.5     | keyboard                        | `layoutScope`                                           | EXTRA
 |  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
@@ -170,13 +176,25 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.13.1    | core                            | `gap`                                                   | EXTRA
 |  B  | complete | 2.13.1    | core                            | `adaptiveSync`                                          | EXTRA
 |  B  | complete | 2.13.1    | core                            | `reuseOutputMode`                                       | EXTRA
-|  B  | complete | 2.13.1    | window switcher                 | `show`                                                  | EXTRA
-|  B  | complete | 2.13.2    | window switcher                 | `preview`                                               | EXTRA
-|  B  | complete | 2.13.3    | window switcher                 | `outlines`                                              | EXTRA
-|  B  | complete | 2.13.4    | window switcher                 | `fields.field`                                          | EXTRA
-|  B  | complete | 2.13.5    | window switcher                 | `fields.field.content`                                  | EXTRA
-|  B  | complete | 2.13.6    | window switcher                 | `fields.field.width`                                    | EXTRA
-|  B  | complete | 3.6.1     | libinput                        |                                                         | EXTRA
+|  B  | complete | 2.14.1    | window switcher                 | `show`                                                  | EXTRA
+|  B  | complete | 2.14.2    | window switcher                 | `preview`                                               | EXTRA
+|  B  | complete | 2.14.3    | window switcher                 | `outlines`                                              | EXTRA
+|  B  | complete | 2.14.4.1  | window switcher                 | `fields.field.content`                                  | EXTRA
+|  B  | complete | 2.14.4.2  | window switcher                 | `fields.field.width`                                    | EXTRA
+|  B  | complete | 2.14.5    | window switcher                 | `allWorkspaces`                                         | EXTRA
+|  B  | complete | 3.6.1     | libinput                        | naturalScroll                                           | EXTRA
+|  B  | complete | 3.6.2     | libinput                        | leftHanded                                              | EXTRA
+|  B  | complete | 3.6.3     | libinput                        | pointerSpeed                                            | EXTRA
+|  B  | complete | 3.6.4     | libinput                        | accelProfile                                            | EXTRA
+|  B  | complete | 3.6.5     | libinput                        | tap                                                     | EXTRA
+|  B  | complete | 3.6.6     | libinput                        | tapButtonMap                                            | EXTRA
+|  B  | complete | 3.6.7     | libinput                        | tapAndDrag                                              | EXTRA
+|  B  | complete | 3.6.8     | libinput                        | dragLock                                                | EXTRA
+|  B  | complete | 3.6.9     | libinput                        | middleEmulation                                         | EXTRA
+|  B  | complete | 3.6.10    | libinput                        | disableWhiteTyping                                      | EXTRA
+|  B  | complete | 3.6.11    | libinput                        | clickMethod                                             | EXTRA
+|  B  | complete | 3.6.12    | libinput                        | sendEventsMode                                          | EXTRA
+|  B  | complete | 3.6.13    | libinput                        | calibrationMatrix                                       | EXTRA
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
 |  B  | complete | 3.1.7     | keyboard binding                | `lyoutDependent`                                        | EXTRA
 |  B  | complete | 3.2.4     | mouse binding                   | `default`                                               | EXTRA
@@ -200,6 +218,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 3.5.4     | mouse event                     | `Release`                                               |
 |  B  | complete | 3.5.5     | mouse event                     | `Drag`                                                  |
 |  B  | complete | 3.5.6     | mouse event                     | `Scroll`                                                | DEVIATION: Scroll is used instead of Click for mouse-buttons Up/Down
+|  B  | complete | 4.2.2     | global action                   | `ShowMenu.menu`                                         |
+|  B  | complete | 4.2.3     | global action                   | `ShowMenu.atCursor`                                     | EXTRA
 |  B  |          | 4.5       | global action                   | `DirectionalCycleWindows`                               |
 |  B  |          | 4.6       | global action                   | `DirectionalTargetWindows`                              |
 |  B  | complete | 4.7       | global action                   | `GoToDesktop`                                           |
@@ -211,8 +231,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 4.8       | global action                   | `AddDesktop`                                            |
 |  B  |          | 4.9       | global action                   | `RemoveDesktop`                                         |
 |  B  |          | 4.10      | global action                   | `ToggleShowDesktop`                                     |
-|  B  |          | 4.13      | global action                   | `Restart`                                               |
-|  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
 |  B  | complete | 4.16      | global action                   | `Debug`                                                 | EXTRA
 |  B  | complete | 4.17      | global action                   | `None`                                                  | EXTRA Removes other actions within mouse bindings
 |  B  | complete | 4.18      | global action                   | `Kill`                                                  | EXTRA Send SIGTERM
@@ -224,9 +242,9 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
 |  B  | complete | 5.5       | window action                   | `Unfocus`                                               |
 |  B  |          | 5.6       | window action                   | `FocusToBottom`                                         |
-|  B  |          | 5.9       | window action                   | `ToggleShade`                                           |
-|  B  |          | 5.10      | window action                   | `Shade`                                                 |
-|  B  |          | 5.11      | window action                   | `Unshade`                                               |
+|  B  | complete | 5.9       | window action                   | `ToggleShade`                                           |
+|  B  | complete | 5.10      | window action                   | `Shade`                                                 |
+|  B  | complete | 5.11      | window action                   | `Unshade`                                               |
 |  B  | complete | 5.12      | window action                   | `ToggleOmnipresent`                                     | aka sticky
 |  B  |          | 5.13.1    | window action                   | `ToggleMaximize.direction`                              |
 |  B  | complete | 5.14      | window action                   | `Maximize`                                              |
@@ -251,12 +269,15 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
 |  B  | complete | 5.29      | window action                   | `ShrinkToEdge`                                          |
 |  B  | complete | 5.30      | window action                   | `If`                                                    |
-|  B  | complete | 5.31      | window action                   | `ForEach`                                               |
+|  B  | complete | 5.31.1    | window action                   | `ForEach`                                               |
+|  B  | complete | 5.31.2    | window action                   | `ForEach.none`                                          | EXTRA
 |  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
 |  B  | complete | 5.34      | window action                   | `ToggleAlwaysOnBottom`                                  |
 |  B  | complete | 5.36      | window action                   | `SnapToEdge`                                            | EXTRA
 |  B  | complete | 5.37      | window action                   | `SnapToRegion`                                          | EXTRA
 |  B  | complete | 5.38      | window action                   | `MoveToCursor`                                          | EXTRA
+|  B  | complete | 5.39      | window action                   | `MoveToOutput`                                          | EXTRA
+|  B  | complete | 5.40      | window action                   | `AutoPlace`                                             | EXTRA
 |  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
@@ -298,9 +319,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.3.18    | titlebar colors                 | `window.inactive.button.toggled.image.color`            |
 |  B  |          | 6.4.2     | active window textures          | `window.active.label.bg`                                |
 |  B  |          | 6.4.4     | active window textures          | `window.active.grip.bg`                                 |
-|  B  |          | 6.5.2     | inactive window textures        | `window.inactive.label.bg`                              |
-|  B  |          | 6.5.3     | inactive window textures        | `window.inactive.handle.bg`                             |
-|  B  |          | 6.5.4     | inactive window textures        | `window.inactive.grip.bg`                               |
+|  B  | complete | 6.4.5     | active window textures          | `window.active.shadow.size`                             | EXTRA
+|  B  | complete | 6.4.6     | active window textures          | `window.active.shadow.color`                            | EXTRA
 |  B  |          | 6.6.1     | active window button textures   | `window.active.button.unpressed.bg`                     |
 |  B  |          | 6.6.2     | active window button textures   | `window.active.button.pressed.bg`                       |
 |  B  |          | 6.6.3     | active window button textures   | `window.active.button.hover.bg`                         |
@@ -335,13 +355,24 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.15.2.3  | theme button variant            | `_disabled`                                             |
 |  B+ | complete | 6.15.3    | theme button png                | Support png buttons                                     | EXTRA
 |  B+ | complete | 6.15.4    | theme button svg                | Support svg buttons                                     | EXTRA
+|  B  | complete | 6.16.1    | text window switcher            | `osd.window-switcher.width`                             | EXTRA
+|  B  | complete | 6.16.2    | text window switcher            | `osd.window-switcher.padding`                           | EXTRA
+|  B  | complete | 6.16.3    | text window switcher            | `osd.window-switcher.item.padding.x`                    | EXTRA
+|  B  | complete | 6.16.4    | text window switcher            | `osd.window-switcher.item.padding.y`                    | EXTRA
+|  B  | complete | 6.16.5    | text window switcher            | `osd.window-switcher.item.active.border.width`          | EXTRA
+|  B  | complete | 6.16.6    | text window switcher            | `osd.window-switcher.preview.border.width`              | EXTRA
+|  B  | complete | 6.16.7    | text window switcher            | `osd.window-switcher.preview.border.color`              | EXTRA
+|  B  | complete | 6.16.8    | text window switcher            | `osd.window-switcher.preview.boxes.width`               | EXTRA
+|  B  | complete | 6.16.9    | text window switcher            | `osd.window-switcher.preview.boxes.height`              | EXTRA
 |  B  | complete | 7.0.1     | menu general                    | Parse menu.xml in accordance with Openbox 3.6 spec      |
 |  B  | complete | 7.0.2     | menu general                    | Handle pointer input                                    |
 |  B+ | complete | 7.0.3     | menu general                    | Handle keyboard input                                   |
-|  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
-|  B+ |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
+|  B  | complete | 7.1.2     | menu syntax general             | `label`                                                 |
+|  B+ | complete | 7.1.4     | menu syntax general             | `execute`                                               | Pipe-menus
 |  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text
 |  B  | complete | 8.2.1     | extra                           | `<snapping>`                                            |
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |
+|  B  | complete | 8.2.4     | extra                           | `<snapping><notifyClient>`                              |
+|  B  | complete | 8.2.5     | extra                           | `<snapping><overlay>`                                   |
 |  B  | complete | 9.1.1     | Regions                         | `<regions><region>`                                     |

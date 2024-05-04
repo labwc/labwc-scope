@@ -9,7 +9,7 @@ set format x "%m/%y"
 set xlabel "Date"
 set ylabel "Requirements"
 set xrange ["2021-04-17":"$(date "+%Y-%m-%d")"]
-set yrange ["0":"255"]
+set yrange ["0":"350"]
 set output '../graph.png'
 plot \
 	'graph-data.txt' u 1:2 w lp t 'Completed Cat A', \

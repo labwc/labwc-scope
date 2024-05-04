@@ -4,15 +4,13 @@ This file has been auto-generated based on README.md. Do not edit it manually
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B+ |          | 2.4.2     | theme                           | `titleLayout`                                           |
 |  B+ |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
-|  B+ |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
-|  B  |          | 1.2.6     | wayland-protocol                | input-method-unstable-v1                                |
+|  B  |          | 1.2.6.1   | wayland-protocol                | input-method-unstable-v1                                |
 |  B  |          | 1.2.7     | wayland-protocol                | input-timestamps-unstable-v1                            |
 |  B  |          | 1.2.8     | wayland-protocol                | keyboard-shortcuts-inhibit-unstable-v1                  | This is controversial [^3]
 |  B  |          | 1.2.9     | wayland-protocol                | linux-dmabuf-unstable-v1                                |
 |  B  |          | 1.2.10    | wayland-protocol                | linux-explicit-synchronization-unstable-v1              |
 |  B  |          | 1.2.12    | wayland-protocol                | pointer-gestures-unstable-v1                            |
 |  B  |          | 1.2.15    | wayland-protocol                | tablet-unstable-v2                                      |
-|  B  |          | 1.2.16    | wayland-protocol                | text-input-unstable-v3                                  |
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
@@ -34,13 +32,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 4.8       | global action                   | `AddDesktop`                                            |
 |  B  |          | 4.9       | global action                   | `RemoveDesktop`                                         |
 |  B  |          | 4.10      | global action                   | `ToggleShowDesktop`                                     |
-|  B  |          | 4.13      | global action                   | `Restart`                                               |
-|  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
 |  B  |          | 5.6       | window action                   | `FocusToBottom`                                         |
-|  B  |          | 5.9       | window action                   | `ToggleShade`                                           |
-|  B  |          | 5.10      | window action                   | `Shade`                                                 |
-|  B  |          | 5.11      | window action                   | `Unshade`                                               |
 |  B  |          | 5.13.1    | window action                   | `ToggleMaximize.direction`                              |
 |  B  |          | 5.14.1    | window action                   | `Maximize.direction`                                    |
 |  B  |          | 5.15      | window action                   | `Unmaximize`                                            |
@@ -72,9 +65,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.3.18    | titlebar colors                 | `window.inactive.button.toggled.image.color`            |
 |  B  |          | 6.4.2     | active window textures          | `window.active.label.bg`                                |
 |  B  |          | 6.4.4     | active window textures          | `window.active.grip.bg`                                 |
-|  B  |          | 6.5.2     | inactive window textures        | `window.inactive.label.bg`                              |
-|  B  |          | 6.5.3     | inactive window textures        | `window.inactive.handle.bg`                             |
-|  B  |          | 6.5.4     | inactive window textures        | `window.inactive.grip.bg`                               |
 |  B  |          | 6.6.1     | active window button textures   | `window.active.button.unpressed.bg`                     |
 |  B  |          | 6.6.2     | active window button textures   | `window.active.button.pressed.bg`                       |
 |  B  |          | 6.6.3     | active window button textures   | `window.active.button.hover.bg`                         |
@@ -103,5 +93,4 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.15.1.9  | theme button base               | `bullet.xbm`                                            |
 |  B  |          | 6.15.2.2  | theme button variant            | `_pressed`                                              |
 |  B  |          | 6.15.2.3  | theme button variant            | `_disabled`                                             |
-|  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
 |  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text

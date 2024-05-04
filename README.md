@@ -51,6 +51,7 @@
     - [6.13 Text Shadows](#613-theme---text-shadows)
     - [6.14 Dialogs](#614-theme---dialogs)
     - [6.15 Button Images](#615-theme---buttom-images)
+    - [6.16 Window Switcher](#615-theme---window-switcher)
   - [7 Menus](#7-menus)
   - [8 Extra](#8-extra)
 - [Appendix A - Terminology](#appendix-a---terminology)
@@ -147,6 +148,8 @@ Requirements section below.
 |  A  | complete | 1.1.12    | general                         | Support on-screen display (osd)                         |
 |  A  | complete | 1.1.13    | general                         | Support libinput configuration                          |
 |  A  | complete | 1.1.14    | general                         | Support drag-n-drop                                     |
+|  A  | complete | 1.1.15    | general                         | Support input method editors (IME)                      |
+|  B  | complete | 1.1.16    | general                         | Support `--session` option                              |
 
 ## 1.2 Wayland Protocols
 
@@ -157,7 +160,8 @@ Requirements section below.
 |  A  | complete | 1.2.3     | wayland-protocol                | [xdg-shell]                                             |
 |  B  | complete | 1.2.4     | wayland-protocol                | fullscreen-shell-unstable-v1                            |
 |  B  | complete | 1.2.5     | wayland-protocol                | idle-inhibit-unstable-v1                                |
-|  B  |          | 1.2.6     | wayland-protocol                | input-method-unstable-v1                                |
+|  B  |          | 1.2.6.1   | wayland-protocol                | input-method-unstable-v1                                |
+|  B  | complete | 1.2.6.2   | wayland-protocol                | input-method-unstable-v2                                |
 |  B  |          | 1.2.7     | wayland-protocol                | input-timestamps-unstable-v1                            |
 |  B  |          | 1.2.8     | wayland-protocol                | keyboard-shortcuts-inhibit-unstable-v1                  | This is controversial [^3]
 |  B  |          | 1.2.9     | wayland-protocol                | linux-dmabuf-unstable-v1                                |
@@ -167,7 +171,7 @@ Requirements section below.
 |  B  | complete | 1.2.13    | wayland-protocol                | primary-selection-unstable-v1                           |
 |  B  | complete | 1.2.14    | wayland-protocol                | relative-pointer-unstable-v1                            |
 |  B  |          | 1.2.15    | wayland-protocol                | tablet-unstable-v2                                      |
-|  B  |          | 1.2.16    | wayland-protocol                | text-input-unstable-v3                                  |
+|  B  | complete | 1.2.16    | wayland-protocol                | text-input-unstable-v3                                  |
 |  B  | complete | 1.2.17    | wayland-protocol                | xdg-decoration-unstable-v1                              |
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  | complete | 1.2.19    | wayland-protocol                | xdg-output-unstable-v1                                  |
@@ -214,8 +218,8 @@ Requirements section below.
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
-|  A  | complete | 2.1.2     | resistance                      | `screen_edge_strength`                                  | DEVIATION Can be negative
-|  B  | complete | 2.1.3     | resistance                      | `window_edge_strength`                                  | EXTRA DEVIATION Can be negative
+|  A  | complete | 2.1.2     | resistance                      | `screenEdgeStrength`                                    | DEVIATION Can be negative
+|  B  | complete | 2.1.3     | resistance                      | `windowEdgeStrength`                                    | EXTRA
 
 ## 2.2 Configuration - Focus
 
@@ -254,10 +258,11 @@ Requirements section below.
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  | complete | 2.4.9     | theme                           | `<font place="MenuItem">`                               |
 |  B  | complete | 2.4.10    | theme                           | `<font place="OnScreenDisplay">`                        |
-|  B  | complete | 2.4.11    | theme                           | `<font place=""><name>`                                 |
-|  B  | complete | 2.4.12    | theme                           | `<font place=""><size>`                                 |
-|  B  | complete | 2.4.13    | theme                           | `<font place=""><weight>`                               |
-|  B  | complete | 2.4.14    | theme                           | `<font place=""><slant>`                                |
+|  B  | complete | 2.4.11    | theme                           | `font.name`                                             |
+|  B  | complete | 2.4.12    | theme                           | `font.size`                                             |
+|  B  | complete | 2.4.13    | theme                           | `font.weight`                                           |
+|  B  | complete | 2.4.14    | theme                           | `font.slant`                                            |
+|  B  | complete | 2.4.15    | theme                           | `dropShadows`                                           | EXTRA
 
 ## 2.5 Configuration - Desktop
 
@@ -279,6 +284,7 @@ The solution shall provide simple workspace setup as follows:
     <name>foo</name>
     <name>bar</name>
   </names>
+  <prefix/>
 <desktops>
 ```
 
@@ -294,6 +300,7 @@ It depends on what happens with:
 |  C  |          | 2.5.2     | desktop                         | `firstDesk`                                             | Use first `<name>`
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
+|  B  | complete | 2.5.5     | desktop                         | `prefix`                                                | EXTRA
 
 ## 2.6 Configuration - Resize
 
@@ -341,7 +348,9 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 |  B  | complete | 2.7.3.2   | window rule property            | `windowRule.skipTaskbar`                                | EXTRA
 |  B  | complete | 2.7.3.3   | window rule property            | `windowRule.skipWindowSwitcher`                         | EXTRA
 |  B  | complete | 2.7.3.4   | window rule property            | `windowRule.ignoreFocusRequest`                         | EXTRA
-|  B  | complete | 2.7.3.5   | window rule property            | `windowRule.fixedPosition`                         | EXTRA
+|  B  | complete | 2.7.3.5   | window rule property            | `windowRule.fixedPosition`                              | EXTRA
+|  B  | complete | 2.7.3.6   | window rule property            | `windowRule.ignoreConfigureRequest`                     | EXTRA
+|  B  | complete | 2.7.4     | window rule type                | `windowRule.type`                                       | EXTRA
 
 ## 2.8 Configuration - Keyboard
 
@@ -435,18 +444,30 @@ arrow whilst holding alt.
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  | complete | 2.13.1    | window switcher                 | `show`                                                  | EXTRA
-|  B  | complete | 2.13.2    | window switcher                 | `preview`                                               | EXTRA
-|  B  | complete | 2.13.3    | window switcher                 | `outlines`                                              | EXTRA
-|  B  | complete | 2.13.4    | window switcher                 | `fields.field`                                          | EXTRA
-|  B  | complete | 2.13.5    | window switcher                 | `fields.field.content`                                  | EXTRA
-|  B  | complete | 2.13.6    | window switcher                 | `fields.field.width`                                    | EXTRA
+|  B  | complete | 2.14.1    | window switcher                 | `show`                                                  | EXTRA
+|  B  | complete | 2.14.2    | window switcher                 | `preview`                                               | EXTRA
+|  B  | complete | 2.14.3    | window switcher                 | `outlines`                                              | EXTRA
+|  B  | complete | 2.14.4.1  | window switcher                 | `fields.field.content`                                  | EXTRA
+|  B  | complete | 2.14.4.2  | window switcher                 | `fields.field.width`                                    | EXTRA
+|  B  | complete | 2.14.5    | window switcher                 | `allWorkspaces`                                         | EXTRA
 
 ## 2.15 Configuration - Libinput
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  | complete | 3.6.1     | libinput                        |                                                         | EXTRA
+|  B  | complete | 3.6.1     | libinput                        | naturalScroll                                           | EXTRA
+|  B  | complete | 3.6.2     | libinput                        | leftHanded                                              | EXTRA
+|  B  | complete | 3.6.3     | libinput                        | pointerSpeed                                            | EXTRA
+|  B  | complete | 3.6.4     | libinput                        | accelProfile                                            | EXTRA
+|  B  | complete | 3.6.5     | libinput                        | tap                                                     | EXTRA
+|  B  | complete | 3.6.6     | libinput                        | tapButtonMap                                            | EXTRA
+|  B  | complete | 3.6.7     | libinput                        | tapAndDrag                                              | EXTRA
+|  B  | complete | 3.6.8     | libinput                        | dragLock                                                | EXTRA
+|  B  | complete | 3.6.9     | libinput                        | middleEmulation                                         | EXTRA
+|  B  | complete | 3.6.10    | libinput                        | disableWhiteTyping                                      | EXTRA
+|  B  | complete | 3.6.11    | libinput                        | clickMethod                                             | EXTRA
+|  B  | complete | 3.6.12    | libinput                        | sendEventsMode                                          | EXTRA
+|  B  | complete | 3.6.13    | libinput                        | calibrationMatrix                                       | EXTRA
 
 ## 3.1 Configuration - Keyboard Keybind
 
@@ -521,7 +542,9 @@ arrow whilst holding alt.
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 4.1       | global action                   | `Execute`                                               |
-|  A  | complete | 4.2       | global action                   | `ShowMenu`                                              |
+|  A  | complete | 4.2.1     | global action                   | `ShowMenu`                                              |
+|  B  | complete | 4.2.2     | global action                   | `ShowMenu.menu`                                         |
+|  B  | complete | 4.2.3     | global action                   | `ShowMenu.atCursor`                                     | EXTRA
 |  A  | complete | 4.3       | global action                   | `NextWindow`                                            |
 |  C  |          | 4.4       | global action                   | `PreviousWindow`                                        |
 |  B  |          | 4.5       | global action                   | `DirectionalCycleWindows`                               |
@@ -546,9 +569,9 @@ arrow whilst holding alt.
 |  B  |          | 4.10      | global action                   | `ToggleShowDesktop`                                     |
 |  C  |          | 4.11      | global action                   | `ToggleDockAutohide`                                    |
 |  A  | complete | 4.12      | global action                   | `Reconfigure`                                           |
-|  B  |          | 4.13      | global action                   | `Restart`                                               |
+|  C  |          | 4.13      | global action                   | `Restart`                                               |
 |  A  | complete | 4.14      | global action                   | `Exit`                                                  |
-|  B  |          | 4.15      | global action                   | `SessionLogout`                                         |
+|  C  |          | 4.15      | global action                   | `SessionLogout`                                         |
 |  B  | complete | 4.16      | global action                   | `Debug`                                                 | EXTRA
 |  B  | complete | 4.17      | global action                   | `None`                                                  | EXTRA Removes other actions within mouse bindings
 |  B  | complete | 4.18      | global action                   | `Kill`                                                  | EXTRA Send SIGTERM
@@ -569,9 +592,9 @@ arrow whilst holding alt.
 |  B  |          | 5.6       | window action                   | `FocusToBottom`                                         |
 |  A  | complete | 5.7       | window action                   | `Iconify`                                               |
 |  A  | complete | 5.8       | window action                   | `Close`                                                 |
-|  B  |          | 5.9       | window action                   | `ToggleShade`                                           |
-|  B  |          | 5.10      | window action                   | `Shade`                                                 |
-|  B  |          | 5.11      | window action                   | `Unshade`                                               |
+|  B  | complete | 5.9       | window action                   | `ToggleShade`                                           |
+|  B  | complete | 5.10      | window action                   | `Shade`                                                 |
+|  B  | complete | 5.11      | window action                   | `Unshade`                                               |
 |  B  | complete | 5.12      | window action                   | `ToggleOmnipresent`                                     | aka sticky
 |  A  | complete | 5.13      | window action                   | `ToggleMaximize`                                        |
 |  B  |          | 5.13.1    | window action                   | `ToggleMaximize.direction`                              |
@@ -599,7 +622,8 @@ arrow whilst holding alt.
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
 |  B  | complete | 5.29      | window action                   | `ShrinkToEdge`                                          |
 |  B  | complete | 5.30      | window action                   | `If`                                                    |
-|  B  | complete | 5.31      | window action                   | `ForEach`                                               |
+|  B  | complete | 5.31.1    | window action                   | `ForEach`                                               |
+|  B  | complete | 5.31.2    | window action                   | `ForEach.none`                                          | EXTRA
 |  C  |          | 5.32      | window action                   | `Stop`                                                  |
 |  B  | complete | 5.33      | window action                   | `ToggleAlwaysOnTop`                                     |
 |  B  | complete | 5.34      | window action                   | `ToggleAlwaysOnBottom`                                  |
@@ -607,6 +631,8 @@ arrow whilst holding alt.
 |  B  | complete | 5.36      | window action                   | `SnapToEdge`                                            | EXTRA
 |  B  | complete | 5.37      | window action                   | `SnapToRegion`                                          | EXTRA
 |  B  | complete | 5.38      | window action                   | `MoveToCursor`                                          | EXTRA
+|  B  | complete | 5.39      | window action                   | `MoveToOutput`                                          | EXTRA
+|  B  | complete | 5.40      | window action                   | `AutoPlace`                                             | EXTRA
 
 ## 6.1 Theme - Geometry
 
@@ -684,15 +710,12 @@ arrow whilst holding alt.
 |  B  |          | 6.4.2     | active window textures          | `window.active.label.bg`                                |
 |  C  |          | 6.4.3     | active window textures          | `window.active.handle.bg`                               | We don't support handle.
 |  B  |          | 6.4.4     | active window textures          | `window.active.grip.bg`                                 |
+|  B  | complete | 6.4.5     | active window textures          | `window.active.shadow.size`                             | EXTRA
+|  B  | complete | 6.4.6     | active window textures          | `window.active.shadow.color`                            | EXTRA
 
 ## 6.5 Theme - Inactive Window Textures
 
-| Cat | Status   | Reference | Category                        | Description                                             | Comment
-| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  A  | complete | 6.5.1     | inactive window textures        | `window.inactive.title.bg`                              |
-|  B  |          | 6.5.2     | inactive window textures        | `window.inactive.label.bg`                              |
-|  B  |          | 6.5.3     | inactive window textures        | `window.inactive.handle.bg`                             |
-|  B  |          | 6.5.4     | inactive window textures        | `window.inactive.grip.bg`                               |
+Same as 6.4, just replace `active` with `inactive`
 
 ## 6.6 Theme - Active Window Button Textures
 
@@ -806,6 +829,20 @@ In addition to the base buttons, the following variants exist:
 |  B+ | complete | 6.15.3    | theme button png                | Support png buttons                                     | EXTRA
 |  B+ | complete | 6.15.4    | theme button svg                | Support svg buttons                                     | EXTRA
 
+## 6.16 Theme - Window Switcher
+
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  B  | complete | 6.16.1    | text window switcher            | `osd.window-switcher.width`                             | EXTRA
+|  B  | complete | 6.16.2    | text window switcher            | `osd.window-switcher.padding`                           | EXTRA
+|  B  | complete | 6.16.3    | text window switcher            | `osd.window-switcher.item.padding.x`                    | EXTRA
+|  B  | complete | 6.16.4    | text window switcher            | `osd.window-switcher.item.padding.y`                    | EXTRA
+|  B  | complete | 6.16.5    | text window switcher            | `osd.window-switcher.item.active.border.width`          | EXTRA
+|  B  | complete | 6.16.6    | text window switcher            | `osd.window-switcher.preview.border.width`              | EXTRA
+|  B  | complete | 6.16.7    | text window switcher            | `osd.window-switcher.preview.border.color`              | EXTRA
+|  B  | complete | 6.16.8    | text window switcher            | `osd.window-switcher.preview.boxes.width`               | EXTRA
+|  B  | complete | 6.16.9    | text window switcher            | `osd.window-switcher.preview.boxes.height`              | EXTRA
+
 ## 7 Menus
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
@@ -814,9 +851,9 @@ In addition to the base buttons, the following variants exist:
 |  B  | complete | 7.0.2     | menu general                    | Handle pointer input                                    |
 |  B+ | complete | 7.0.3     | menu general                    | Handle keyboard input                                   |
 |  A  | complete | 7.1.1     | menu syntax general             | `id`                                                    |
-|  B  |          | 7.1.2     | menu syntax general             | `label`                                                 |
+|  B  | complete | 7.1.2     | menu syntax general             | `label`                                                 |
 |  C  |          | 7.1.3     | menu syntax general             | `icon`                                                  |
-|  B+ |          | 7.1.4     | menu syntax general             | `execute`                                               | aka pipe-menus
+|  B+ | complete | 7.1.4     | menu syntax general             | `execute`                                               | Pipe-menus
 |  C  |          | 7.1.5     | menu syntax general             | Menu keyboard shortcuts                                 |
 |  A  | complete | 7.2.1     | menu syntax item                | `label`                                                 |
 |  C  |          | 7.2.2     | menu syntax item                | `icon`                                                  |
@@ -835,6 +872,8 @@ Server-side-decoration: Disable border on maximize
 |  B  | complete | 8.2.1     | extra                           | `<snapping>`                                            |
 |  B  | complete | 8.2.2     | extra                           | `<snapping><range>`                                     |
 |  B  | complete | 8.2.3     | extra                           | `<snapping><topMaximize>`                               |
+|  B  | complete | 8.2.4     | extra                           | `<snapping><notifyClient>`                              |
+|  B  | complete | 8.2.5     | extra                           | `<snapping><overlay>`                                   |
 
 ## 9 Regions
 
