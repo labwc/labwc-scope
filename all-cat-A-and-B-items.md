@@ -17,7 +17,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  A  | complete | 1.1.13    | general                         | Support libinput configuration                          |
 |  A  | complete | 1.1.14    | general                         | Support drag-n-drop                                     |
 |  A  | complete | 1.1.15    | general                         | Support input method editors (IME)                      |
-|  A  | complete | 1.2.3     | wayland-protocol                | [xdg-shell]                                             |
+|  A  | complete | 1.2.3     | wayland-protocol                | [xdg-shell-v3]                                          |
 |  A  | complete | 1.3.3     | wlr-protocol                    | wlr-foreign-toplevel-management-unstable-v1             |
 |  A  | complete | 1.3.6     | wlr-protocol                    | wlr-layer-shell-unstable-v1                             |
 |  A  | complete | 1.3.7     | wlr-protocol                    | wlr-output-management-unstable-v1                       |
@@ -97,7 +97,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.12    | wayland-protocol                | pointer-gestures-unstable-v1                            |
 |  B  | complete | 1.2.13    | wayland-protocol                | primary-selection-unstable-v1                           |
 |  B  | complete | 1.2.14    | wayland-protocol                | relative-pointer-unstable-v1                            |
-|  B  |          | 1.2.15    | wayland-protocol                | tablet-unstable-v2                                      |
+|  B  | complete | 1.2.15    | wayland-protocol                | tablet-v2-manager                                       |
 |  B  | complete | 1.2.16    | wayland-protocol                | text-input-unstable-v3                                  |
 |  B  | complete | 1.2.17    | wayland-protocol                | xdg-decoration-unstable-v1                              |
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
@@ -112,7 +112,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.2.27    | wayland-protocol                | tearing-control-manager-v1                              |
 |  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
 |  B  | complete | 1.2.29    | wayland-protocol                | xwayland-shell-v1                                       |
-|  B  |          | 1.2.30    | wayland-protocol                | security-context-v1                                     |
+|  B  | complete | 1.2.30    | wayland-protocol                | security-context-v1                                     | Note: initial support only
 |  B  |          | 1.2.31    | wayland-protocol                |                                                         |
 |  B  |          | 1.2.32    | wayland-protocol                |                                                         |
 |  B  | complete | 1.3.1     | wlr-protocol                    | wlr-data-control-unstable-v1                            |
@@ -144,7 +144,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
 |  B  | complete | 2.5.5     | desktop                         | `prefix`                                                | EXTRA
-|  B  |          | 2.6.1     | resize                          | drawContents                                            |
+|  B  | complete | 2.6.1     | resize                          | drawContents                                            |
 |  B  | complete | 2.6.2     | resize                          | popupShow                                               |
 |  B  |          | 2.6.3     | resize                          | popupPosition                                           |
 |  B  |          | 2.6.4     | resize                          | popupFixedposition                                      |
@@ -169,13 +169,14 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.9b.3    | tablet                          | `area`                                                  |
 |  B  | complete | 2.9b.4    | tablet                          | `map`                                                   |
 |  B  | complete | 2.10.1    | margins                         | `<margin>`                                              |
-|  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
+|  B  | complete | 2.11.1    | menu                            | `ignoreButtonReleasePeriod`                             | DEVIATION: called `hideDelay` in openbox
 |  B+ |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
 |  B  | complete | 2.13.1    | core                            | `decoration`                                            | EXTRA
-|  B  | complete | 2.13.1    | core                            | `gap`                                                   | EXTRA
-|  B  | complete | 2.13.1    | core                            | `adaptiveSync`                                          | EXTRA
-|  B  | complete | 2.13.1    | core                            | `reuseOutputMode`                                       | EXTRA
+|  B  | complete | 2.13.2    | core                            | `gap`                                                   | EXTRA
+|  B  | complete | 2.13.3    | core                            | `adaptiveSync`                                          | EXTRA
+|  B  | complete | 2.13.4    | core                            | `reuseOutputMode`                                       | EXTRA
+|  B  | complete | 2.13.5    | core                            | `xwaylandPersistence`                                   | EXTRA
 |  B  | complete | 2.14.1    | window switcher                 | `show`                                                  | EXTRA
 |  B  | complete | 2.14.2    | window switcher                 | `preview`                                               | EXTRA
 |  B  | complete | 2.14.3    | window switcher                 | `outlines`                                              | EXTRA
@@ -196,7 +197,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 3.6.12    | libinput                        | sendEventsMode                                          | EXTRA
 |  B  | complete | 3.6.13    | libinput                        | calibrationMatrix                                       | EXTRA
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
-|  B  | complete | 3.1.7     | keyboard binding                | `lyoutDependent`                                        | EXTRA
+|  B  | complete | 3.1.7     | keyboard binding                | `layoutDependent`                                       | EXTRA
+|  B  | complete | 3.1.8     | keyboard binding                | `onRelease`                                             | EXTRA
 |  B  | complete | 3.2.4     | mouse binding                   | `default`                                               | EXTRA
 |  B  | complete | 3.3.1     | mouse context                   | `Frame`                                                 |
 |  B  | complete | 3.3.2     | mouse context                   | `Client`                                                |
@@ -238,6 +240,9 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 4.20      | global action                   | `ToggleKeybinds`                                        | EXTRA
 |  B  | complete | 4.21      | global action                   | `VirtualOutputAdd`                                      | EXTRA
 |  B  | complete | 4.22      | global action                   | `VirtualOutputRemove`                                   | EXTRA
+|  B  | complete | 4.23      | global action                   | `ToggleTabletMouseEmulation`                            | EXTRA
+|  B  | complete | 4.24      | global action                   | `ZoomIn`                                                | EXTRA
+|  B  | complete | 4.25      | global action                   | `ZoomOut`                                               | EXTRA
 |  B  | complete | 5.3       | window action                   | `Lower`                                                 |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
 |  B  | complete | 5.5       | window action                   | `Unfocus`                                               |
@@ -249,10 +254,11 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.13.1    | window action                   | `ToggleMaximize.direction`                              |
 |  B  | complete | 5.14      | window action                   | `Maximize`                                              |
 |  B  |          | 5.14.1    | window action                   | `Maximize.direction`                                    |
-|  B  |          | 5.15      | window action                   | `Unmaximize`                                            |
+|  B  | complete | 5.15      | window action                   | `Unmaximize`                                            |
 |  B  |          | 5.15.1    | window action                   | `Unmaximize.direction`                                  |
 |  B  | complete | 5.16      | window action                   | `ToggleFullscreen`                                      |
-|  B  | complete | 5.17      | window action                   | `ToggleDecorations`                                     |
+|  B  | complete | 5.17.1    | window action                   | `ToggleDecorations`                                     |
+|  B  | complete | 5.17.2    | window action                   | `SetDecorations`                                        | EXTRA
 |  B  |          | 5.18      | window action                   | `Decorate`                                              |
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            |
 |  B  | complete | 5.20      | window action                   | `SendToDesktop`                                         |

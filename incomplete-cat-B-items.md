@@ -10,19 +10,15 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.9     | wayland-protocol                | linux-dmabuf-unstable-v1                                |
 |  B  |          | 1.2.10    | wayland-protocol                | linux-explicit-synchronization-unstable-v1              |
 |  B  |          | 1.2.12    | wayland-protocol                | pointer-gestures-unstable-v1                            |
-|  B  |          | 1.2.15    | wayland-protocol                | tablet-unstable-v2                                      |
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
-|  B  |          | 1.2.30    | wayland-protocol                | security-context-v1                                     |
 |  B  |          | 1.2.31    | wayland-protocol                |                                                         |
 |  B  |          | 1.2.32    | wayland-protocol                |                                                         |
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
 |  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
-|  B  |          | 2.6.1     | resize                          | drawContents                                            |
 |  B  |          | 2.6.3     | resize                          | popupPosition                                           |
 |  B  |          | 2.6.4     | resize                          | popupFixedposition                                      |
-|  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
 |  B  |          | 3.3.14    | mouse context                   | `Icon`                                                  |
 |  B  |          | 3.4.1     | mouse button                    | `Middle`                                                |
@@ -36,7 +32,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.6       | window action                   | `FocusToBottom`                                         |
 |  B  |          | 5.13.1    | window action                   | `ToggleMaximize.direction`                              |
 |  B  |          | 5.14.1    | window action                   | `Maximize.direction`                                    |
-|  B  |          | 5.15      | window action                   | `Unmaximize`                                            |
 |  B  |          | 5.15.1    | window action                   | `Unmaximize.direction`                                  |
 |  B  |          | 5.18      | window action                   | `Decorate`                                              |
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            |

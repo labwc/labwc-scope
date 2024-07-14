@@ -157,7 +157,7 @@ Requirements section below.
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  | complete | 1.2.1     | wayland-protocol                | [presentation-time]                                     |
 |  B  | complete | 1.2.2     | wayland-protocol                | [viewporter]                                            |
-|  A  | complete | 1.2.3     | wayland-protocol                | [xdg-shell]                                             |
+|  A  | complete | 1.2.3     | wayland-protocol                | [xdg-shell-v3]                                          |
 |  B  | complete | 1.2.4     | wayland-protocol                | fullscreen-shell-unstable-v1                            |
 |  B  | complete | 1.2.5     | wayland-protocol                | idle-inhibit-unstable-v1                                |
 |  B  |          | 1.2.6.1   | wayland-protocol                | input-method-unstable-v1                                |
@@ -170,7 +170,7 @@ Requirements section below.
 |  B  |          | 1.2.12    | wayland-protocol                | pointer-gestures-unstable-v1                            |
 |  B  | complete | 1.2.13    | wayland-protocol                | primary-selection-unstable-v1                           |
 |  B  | complete | 1.2.14    | wayland-protocol                | relative-pointer-unstable-v1                            |
-|  B  |          | 1.2.15    | wayland-protocol                | tablet-unstable-v2                                      |
+|  B  | complete | 1.2.15    | wayland-protocol                | tablet-v2-manager                                       |
 |  B  | complete | 1.2.16    | wayland-protocol                | text-input-unstable-v3                                  |
 |  B  | complete | 1.2.17    | wayland-protocol                | xdg-decoration-unstable-v1                              |
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
@@ -185,14 +185,14 @@ Requirements section below.
 |  B  | complete | 1.2.27    | wayland-protocol                | tearing-control-manager-v1                              |
 |  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
 |  B  | complete | 1.2.29    | wayland-protocol                | xwayland-shell-v1                                       |
-|  B  |          | 1.2.30    | wayland-protocol                | security-context-v1                                     |
+|  B  | complete | 1.2.30    | wayland-protocol                | security-context-v1                                     | Note: initial support only
 |  B  |          | 1.2.31    | wayland-protocol                |                                                         |
 |  B  |          | 1.2.32    | wayland-protocol                |                                                         |
 
 
 [presentation-time]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/presentation-time
 [viewporter]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/viewporter
-[xdg-shell]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/xdg-shell
+[xdg-shell-v3]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/xdg-shell
 [ext-session-lock-v1]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/staging/ext-session-lock
 
 ## 1.3 wlroots Protocols
@@ -318,7 +318,7 @@ It depends on what happens with:
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  |          | 2.6.1     | resize                          | drawContents                                            |
+|  B  | complete | 2.6.1     | resize                          | drawContents                                            |
 |  B  | complete | 2.6.2     | resize                          | popupShow                                               |
 |  B  |          | 2.6.3     | resize                          | popupPosition                                           |
 |  B  |          | 2.6.4     | resize                          | popupFixedposition                                      |
@@ -413,7 +413,7 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  |          | 2.11.1    | menu                            | `hideDelay`                                             |
+|  B  | complete | 2.11.1    | menu                            | `ignoreButtonReleasePeriod`                             | DEVIATION: called `hideDelay` in openbox
 |  C  |          | 2.11.2    | menu                            | `middle`                                                |
 |  B+ |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
 |  C  |          | 2.11.4    | menu                            | `applicationIcons`                                      |
@@ -433,9 +433,10 @@ The `<core>` section is additional to openbox 3.6 spec.
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  | complete | 2.13.1    | core                            | `decoration`                                            | EXTRA
-|  B  | complete | 2.13.1    | core                            | `gap`                                                   | EXTRA
-|  B  | complete | 2.13.1    | core                            | `adaptiveSync`                                          | EXTRA
-|  B  | complete | 2.13.1    | core                            | `reuseOutputMode`                                       | EXTRA
+|  B  | complete | 2.13.2    | core                            | `gap`                                                   | EXTRA
+|  B  | complete | 2.13.3    | core                            | `adaptiveSync`                                          | EXTRA
+|  B  | complete | 2.13.4    | core                            | `reuseOutputMode`                                       | EXTRA
+|  B  | complete | 2.13.5    | core                            | `xwaylandPersistence`                                   | EXTRA
 
 ## 2.14 Configuration - Window Switcher
 
@@ -479,7 +480,8 @@ arrow whilst holding alt.
 |  A  | complete | 3.1.4     | keyboard keybind                | Support modifier keys                                   |
 |  C  |          | 3.1.5     | keyboard keybind                | Support key chains                                      |
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
-|  B  | complete | 3.1.7     | keyboard binding                | `lyoutDependent`                                        | EXTRA
+|  B  | complete | 3.1.7     | keyboard binding                | `layoutDependent`                                       | EXTRA
+|  B  | complete | 3.1.8     | keyboard binding                | `onRelease`                                             | EXTRA
 
 ## 3.2 Configuration - Mouse Binding
 
@@ -579,6 +581,9 @@ arrow whilst holding alt.
 |  B  | complete | 4.20      | global action                   | `ToggleKeybinds`                                        | EXTRA
 |  B  | complete | 4.21      | global action                   | `VirtualOutputAdd`                                      | EXTRA
 |  B  | complete | 4.22      | global action                   | `VirtualOutputRemove`                                   | EXTRA
+|  B  | complete | 4.23      | global action                   | `ToggleTabletMouseEmulation`                            | EXTRA
+|  B  | complete | 4.24      | global action                   | `ZoomIn`                                                | EXTRA
+|  B  | complete | 4.25      | global action                   | `ZoomOut`                                               | EXTRA
 
 ## 5 Window Actions
 
@@ -600,10 +605,11 @@ arrow whilst holding alt.
 |  B  |          | 5.13.1    | window action                   | `ToggleMaximize.direction`                              |
 |  B  | complete | 5.14      | window action                   | `Maximize`                                              |
 |  B  |          | 5.14.1    | window action                   | `Maximize.direction`                                    |
-|  B  |          | 5.15      | window action                   | `Unmaximize`                                            |
+|  B  | complete | 5.15      | window action                   | `Unmaximize`                                            |
 |  B  |          | 5.15.1    | window action                   | `Unmaximize.direction`                                  |
 |  B  | complete | 5.16      | window action                   | `ToggleFullscreen`                                      |
-|  B  | complete | 5.17      | window action                   | `ToggleDecorations`                                     |
+|  B  | complete | 5.17.1    | window action                   | `ToggleDecorations`                                     |
+|  B  | complete | 5.17.2    | window action                   | `SetDecorations`                                        | EXTRA
 |  B  |          | 5.18      | window action                   | `Decorate`                                              |
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            |
 |  B  | complete | 5.20      | window action                   | `SendToDesktop`                                         |

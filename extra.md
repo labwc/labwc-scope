@@ -20,9 +20,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.8.5     | keyboard                        | `layoutScope`                                           | EXTRA
 |  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
 |  B  | complete | 2.13.1    | core                            | `decoration`                                            | EXTRA
-|  B  | complete | 2.13.1    | core                            | `gap`                                                   | EXTRA
-|  B  | complete | 2.13.1    | core                            | `adaptiveSync`                                          | EXTRA
-|  B  | complete | 2.13.1    | core                            | `reuseOutputMode`                                       | EXTRA
+|  B  | complete | 2.13.2    | core                            | `gap`                                                   | EXTRA
+|  B  | complete | 2.13.3    | core                            | `adaptiveSync`                                          | EXTRA
+|  B  | complete | 2.13.4    | core                            | `reuseOutputMode`                                       | EXTRA
+|  B  | complete | 2.13.5    | core                            | `xwaylandPersistence`                                   | EXTRA
 |  B  | complete | 2.14.1    | window switcher                 | `show`                                                  | EXTRA
 |  B  | complete | 2.14.2    | window switcher                 | `preview`                                               | EXTRA
 |  B  | complete | 2.14.3    | window switcher                 | `outlines`                                              | EXTRA
@@ -43,7 +44,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 3.6.12    | libinput                        | sendEventsMode                                          | EXTRA
 |  B  | complete | 3.6.13    | libinput                        | calibrationMatrix                                       | EXTRA
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
-|  B  | complete | 3.1.7     | keyboard binding                | `lyoutDependent`                                        | EXTRA
+|  B  | complete | 3.1.7     | keyboard binding                | `layoutDependent`                                       | EXTRA
+|  B  | complete | 3.1.8     | keyboard binding                | `onRelease`                                             | EXTRA
 |  B  | complete | 3.2.4     | mouse binding                   | `default`                                               | EXTRA
 |  B  | complete | 3.3.21    | mouse context                   | `Title`                                                 | EXTRA
 |  B  | complete | 4.2.3     | global action                   | `ShowMenu.atCursor`                                     | EXTRA
@@ -54,6 +56,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 4.20      | global action                   | `ToggleKeybinds`                                        | EXTRA
 |  B  | complete | 4.21      | global action                   | `VirtualOutputAdd`                                      | EXTRA
 |  B  | complete | 4.22      | global action                   | `VirtualOutputRemove`                                   | EXTRA
+|  B  | complete | 4.23      | global action                   | `ToggleTabletMouseEmulation`                            | EXTRA
+|  B  | complete | 4.24      | global action                   | `ZoomIn`                                                | EXTRA
+|  B  | complete | 4.25      | global action                   | `ZoomOut`                                               | EXTRA
+|  B  | complete | 5.17.2    | window action                   | `SetDecorations`                                        | EXTRA
 |  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      | EXTRA: support value 'current'
 |  B  | complete | 5.26.1    | window action                   | `MoveToEdge.snapWindows`                                | EXTRA
 |  B  | complete | 5.31.2    | window action                   | `ForEach.none`                                          | EXTRA
