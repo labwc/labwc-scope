@@ -186,7 +186,7 @@ Requirements section below.
 |  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
 |  B  | complete | 1.2.29    | wayland-protocol                | xwayland-shell-v1                                       |
 |  B  | complete | 1.2.30    | wayland-protocol                | security-context-v1                                     | Note: initial support only
-|  B  |          | 1.2.31    | wayland-protocol                |                                                         |
+|  B  | complete | 1.2.31    | wayland-protocol                | cosmic-workspace-unstable-v1                            |
 |  B  |          | 1.2.32    | wayland-protocol                |                                                         |
 
 
@@ -221,6 +221,7 @@ Requirements section below.
 |  A  | complete | 2.1.2     | resistance                      | `screenEdgeStrength`                                    | DEVIATION Can be negative
 |  B  | complete | 2.1.3     | resistance                      | `windowEdgeStrength`                                    | EXTRA
 |  B  | complete | 2.1.4     | resistance                      | `unSnapThreshold`                                       | EXTRA
+|  B  | complete | 2.1.5     | resistance                      | `unMaximizeThreshold`                                   | EXTRA
 
 ## 2.2 Configuration - Focus
 
@@ -255,19 +256,24 @@ Requirements section below.
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 2.4.1     | theme                           | `name`                                                  |
-|  B+ |          | 2.4.2     | theme                           | `titleLayout`                                           |
+|  B+ | complete | 2.4.2.1   | theme                           | `<titlebar><layout>`                                    | DEVIATION: Replaces `titleLayout` in Openbox
+|  B+ | complete | 2.4.2.2   | theme                           | `<titlebar><showTitle>`                                 | DEVIATION: Replaces `titleLayout` in Openbox
 |  B  | complete | 2.4.4     | theme                           | `keepBorder`                                            | DEVIATION: gives ToggleDeocration 3 states
 |  C  |          | 2.4.5     | theme                           | `animateIconify`                                        |
 |  A  | complete | 2.4.6     | theme                           | `<font place="ActiveWindow">`                           |
 |  B  | complete | 2.4.7     | theme                           | `<font place="InactiveWindow">`                         |
-|  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
+|  B  | complete | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  | complete | 2.4.9     | theme                           | `<font place="MenuItem">`                               |
 |  B  | complete | 2.4.10    | theme                           | `<font place="OnScreenDisplay">`                        |
 |  B  | complete | 2.4.11    | theme                           | `font.name`                                             |
 |  B  | complete | 2.4.12    | theme                           | `font.size`                                             |
 |  B  | complete | 2.4.13    | theme                           | `font.weight`                                           |
 |  B  | complete | 2.4.14    | theme                           | `font.slant`                                            |
+|  B  | complete | 2.4.14.1  | theme                           | `font.slant: normal`                                    |
+|  B  | complete | 2.4.14.2  | theme                           | `font.slant: italic`                                    |
+|  B  | complete | 2.4.14.3  | theme                           | `font.slant: oblique`                                   | EXTRA
 |  B  | complete | 2.4.15    | theme                           | `dropShadows`                                           | EXTRA
+|  B  | complete | 2.4.16    | theme                           | `icon`                                                  | EXTRA
 
 ## 2.5 Configuration - Desktop
 
@@ -564,6 +570,7 @@ arrow whilst holding alt.
 |  A  | complete | 4.2.1     | global action                   | `ShowMenu`                                              |
 |  B  | complete | 4.2.2     | global action                   | `ShowMenu.menu`                                         |
 |  B  | complete | 4.2.3     | global action                   | `ShowMenu.atCursor`                                     | EXTRA
+|  B  | complete | 4.2.4     | global action                   | `ShowMenu.position`                                     |
 |  A  | complete | 4.3       | global action                   | `NextWindow`                                            |
 |  C  |          | 4.4       | global action                   | `PreviousWindow`                                        |
 |  B  |          | 4.5       | global action                   | `DirectionalCycleWindows`                               |
@@ -601,6 +608,8 @@ arrow whilst holding alt.
 |  B  | complete | 4.23      | global action                   | `ToggleTabletMouseEmulation`                            | EXTRA
 |  B  | complete | 4.24      | global action                   | `ZoomIn`                                                | EXTRA
 |  B  | complete | 4.25      | global action                   | `ZoomOut`                                               | EXTRA
+|  B  | complete | 4.26      | global action                   | `EnableTabletMouseEmulation`                            | EXTRA
+|  B  | complete | 4.27      | global action                   | `DisableTabletMouseEmulation`                           | EXTRA
 
 ## 5 Window Actions
 
@@ -656,6 +665,9 @@ arrow whilst holding alt.
 |  B  | complete | 5.38      | window action                   | `MoveToCursor`                                          | EXTRA
 |  B  | complete | 5.39      | window action                   | `MoveToOutput`                                          | EXTRA
 |  B  | complete | 5.40      | window action                   | `AutoPlace`                                             | EXTRA
+|  B  | complete | 5.41      | window action                   | `ToggleSnapToEdge`                                      | EXTRA
+|  B  | complete | 5.42      | window action                   | `ToggleSnapToRegion`                                    | EXTRA
+|  B  | complete | 5.43      | window action                   | `UnSnap`                                                | EXTRA
 
 ## 6.1 Theme - Geometry
 
@@ -688,6 +700,11 @@ arrow whilst holding alt.
 |  B  | complete | 6.1.20.1  | geometry                        | `osd.workspace-switcher.boxes.width`                    | EXTRA
 |  B  | complete | 6.1.20.2  | geometry                        | `osd.workspace-switcher.boxes.height`                   | EXTRA
 |  B  | complete | 6.1.21.1  | geometry                        | `window.button.width`                                   | EXTRA
+|  B  | complete | 6.1.21.2  | geometry                        | `window.button.height`                                  | EXTRA
+|  B  | complete | 6.1.21.3  | geometry                        | `window.button.spacing`                                 | EXTRA
+|  B  | complete | 6.1.21.3  | geometry                        | `window.button.hover.bg.corner-radius`                  | EXTRA
+|  B  | complete | 6.1.22.1  | geometry                        | `window.titlebar.padding.width`                         | EXTRA
+|  B  | complete | 6.1.22.2  | geometry                        | `window.titlebar.padding.height`                        | EXTRA
 
 ## 6.2 Theme - Border Colors
 
@@ -771,7 +788,7 @@ Same as 6.4, just replace `active` with `inactive`
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  |          | 6.8.1     | menu colors                     | `menu.title.text.color`                                 |
+|  B  | complete | 6.8.1     | menu colors                     | `menu.title.text.color`                                 |
 |  A  | complete | 6.8.2     | menu colors                     | `menu.items.text.color`                                 |
 |  B  |          | 6.8.3     | menu colors                     | `menu.items.disabled.text.color`                        |
 |  A  | complete | 6.8.4     | menu colors                     | `menu.items.active.text.color`                          |
@@ -784,7 +801,7 @@ Same as 6.4, just replace `active` with `inactive`
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 6.9.1     | menu textures                   | `menu.items.bg`                                         |
 |  A  | complete | 6.9.2     | menu textures                   | `menu.items.active.bg`                                  |
-|  B  |          | 6.9.3     | menu textures                   | `menu.title.bg`                                         |
+|  B  | complete | 6.9.3     | menu textures                   | `menu.title.bg`                                         |
 
 ## 6.10 Theme - On-Screen-Display Textures
 
@@ -808,7 +825,7 @@ Same as 6.4, just replace `active` with `inactive`
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  | complete | 6.12.1    | text justification              | `window.label.text.justify`                             |
-|  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
+|  B  | complete | 6.12.2    | text justification              | `menu.title.text.justify`                               |
 
 ## 6.13 Theme - Text Shadows
 
@@ -841,10 +858,10 @@ In addition to the base buttons, the following variants exist:
 |  B  | complete | 6.15.1.2  | theme button base               | `max_toggled.xbm`                                       |
 |  A  | complete | 6.15.1.3  | theme button base               | `iconify.xbm`                                           |
 |  A  | complete | 6.15.1.4  | theme button base               | `close.xbm`                                             |
-|  C  |          | 6.15.1.5  | theme button base               | `desk.xbm`                                              |
-|  C  |          | 6.15.1.6  | theme button base               | `desk_toggled.xbm`                                      |
-|  C  |          | 6.15.1.7  | theme button base               | `shade.xbm`                                             |
-|  C  |          | 6.15.1.8  | theme button base               | `shade_toggled.xbm`                                     |
+|  B  | complete | 6.15.1.5  | theme button base               | `desk.xbm`                                              |
+|  B  | complete | 6.15.1.6  | theme button base               | `desk_toggled.xbm`                                      |
+|  B  | complete | 6.15.1.7  | theme button base               | `shade.xbm`                                             |
+|  B  | complete | 6.15.1.8  | theme button base               | `shade_toggled.xbm`                                     |
 |  B  |          | 6.15.1.9  | theme button base               | `bullet.xbm`                                            |
 |  B  | complete | 6.15.1.1  | theme button base               | `menu.xbm`                                              | EXTRA
 |  B  | complete | 6.15.2.1  | theme button variant            | `_hover`                                                |
@@ -882,8 +899,14 @@ In addition to the base buttons, the following variants exist:
 |  A  | complete | 7.2.1     | menu syntax item                | `label`                                                 |
 |  C  |          | 7.2.2     | menu syntax item                | `icon`                                                  |
 |  A  | complete | 7.2.3     | menu syntax item                | `action`                                                |
-|  A  | complete | 7.3.1     | menu syntax separator           | `<separator />`                                         | For separator line only
-|  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text
+|  A  | complete | 7.3.1     | menu syntax separator           | `<separator/>`                                          | For separator line only
+|  B  | complete | 7.3.2     | menu syntax separator           | `<separator label=""/>`                                 | For separator with text
+|  B  | complete | 7.4.1     | menu builtin                    | `client-list-combined-menu`                             |
+|  C  |          | 7.4.2     | menu builtin                    | `client-list-menu`                                      |
+|  C  |          | 7.4.3     | menu builtin                    | `client-menu`                                           |
+|  B  | complete | 7.4.4     | menu builtin                    | `client-send-to-menu`                                   |
+|  C  | complete | 7.4.5     | menu builtin                    | `client-layer-menu`                                     |
+|  B  | complete | 7.4.6     | menu builtin                    | `root-menu`                                             |
 
 ## 8.1 Extra - General
 

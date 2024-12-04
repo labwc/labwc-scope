@@ -2,7 +2,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B+ |          | 2.4.2     | theme                           | `titleLayout`                                           |
 |  B+ |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
 |  B  |          | 1.2.6.1   | wayland-protocol                | input-method-unstable-v1                                |
 |  B  |          | 1.2.7     | wayland-protocol                | input-timestamps-unstable-v1                            |
@@ -13,10 +12,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
-|  B  |          | 1.2.31    | wayland-protocol                |                                                         |
 |  B  |          | 1.2.32    | wayland-protocol                |                                                         |
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
-|  B  |          | 2.4.8     | theme                           | `<font place="MenuHeader">`                             |
 |  B  |          | 2.6.3     | resize                          | popupPosition                                           |
 |  B  |          | 2.6.4     | resize                          | popupFixedposition                                      |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
@@ -76,16 +73,12 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.7.6     | inactive window button textures | `window.inactive.button.toggled.pressed.bg`             |
 |  B  |          | 6.7.7     | inactive window button textures | `window.inactive.button.toggled.hover.bg`               |
 |  B  |          | 6.7.8     | inactive window button textures | `window.inactive.button.toggled.bg`                     |
-|  B  |          | 6.8.1     | menu colors                     | `menu.title.text.color`                                 |
 |  B  |          | 6.8.3     | menu colors                     | `menu.items.disabled.text.color`                        |
 |  B  |          | 6.8.5     | menu colors                     | `menu.items.active.disabled.text.color`                 |
-|  B  |          | 6.9.3     | menu textures                   | `menu.title.bg`                                         |
 |  B  |          | 6.10.3    | osd textures                    | `osd.hilight.bg`                                        | for desktop osd only
 |  B  |          | 6.10.4    | osd textures                    | `osd.unhilight.bg`                                      | for desktop osd only
 |  B  |          | 6.11.2    | osd colors                      | `osd.hilight.bg.color`                                  | for desktop osd only
 |  B  |          | 6.11.3    | osd colors                      | `osd.unhilight.bg.color`                                | for desktop osd only
-|  B  |          | 6.12.2    | text justification              | `menu.title.text.justify`                               |
 |  B  |          | 6.15.1.9  | theme button base               | `bullet.xbm`                                            |
 |  B  |          | 6.15.2.2  | theme button variant            | `_pressed`                                              |
 |  B  |          | 6.15.2.3  | theme button variant            | `_disabled`                                             |
-|  B  |          | 7.3.2     | menu syntax separator           | `<separator label="" />`                                | For separator with text
