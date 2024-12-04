@@ -3,7 +3,13 @@ This file has been auto-generated based on README.md. Do not edit it manually
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  B  | complete | 2.1.3     | resistance                      | `windowEdgeStrength`                                    | EXTRA
+|  B  | complete | 2.1.4     | resistance                      | `unSnapThreshold`                                       | EXTRA
+|  B  | complete | 2.1.5     | resistance                      | `unMaximizeThreshold`                                   | EXTRA
+|  B  | complete | 2.3.1.3   | placement                       | `<policy>center</policy>`                               | EXTRA
+|  B  | complete | 2.3.1.4   | placement                       | `<policy>cascade</policy>`                              | EXTRA
+|  B  | complete | 2.4.14.3  | theme                           | `font.slant: oblique`                                   | EXTRA
 |  B  | complete | 2.4.15    | theme                           | `dropShadows`                                           | EXTRA
+|  B  | complete | 2.4.16    | theme                           | `icon`                                                  | EXTRA
 |  B  | complete | 2.5.5     | desktop                         | `prefix`                                                | EXTRA
 |  B  | complete | 2.7.1     | window rules                    | `windowRule`                                            | EXTRA
 |  B  | complete | 2.7.2.1   | window rule criteria            | `windowRule.identifier`                                 | EXTRA
@@ -19,11 +25,19 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.8.4     | keyboard                        | `numlock`                                               | EXTRA
 |  B  | complete | 2.8.5     | keyboard                        | `layoutScope`                                           | EXTRA
 |  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
+|  B  | complete | 2.9a.1    | touch                           | `deviceName`                                            | EXTRA
+|  B  | complete | 2.9a.2    | touch                           | `mapToOutput`                                           | EXTRA
+|  B  | complete | 2.9b.1    | tablet                          | `mapToOutput`                                           | EXTRA
+|  B  | complete | 2.9b.2    | tablet                          | `rotate`                                                | EXTRA
+|  B  | complete | 2.9b.3    | tablet                          | `area`                                                  | EXTRA
+|  B  | complete | 2.9b.4    | tablet                          | `map`                                                   | EXTRA
+|  B  | complete | 2.9c.1    | tablet tool                     | `tabletTool`                                            | EXTRA
 |  B  | complete | 2.13.1    | core                            | `decoration`                                            | EXTRA
 |  B  | complete | 2.13.2    | core                            | `gap`                                                   | EXTRA
 |  B  | complete | 2.13.3    | core                            | `adaptiveSync`                                          | EXTRA
 |  B  | complete | 2.13.4    | core                            | `reuseOutputMode`                                       | EXTRA
 |  B  | complete | 2.13.5    | core                            | `xwaylandPersistence`                                   | EXTRA
+|  B  | complete | 2.13.6    | core                            | `allowTearing`                                          | EXTRA
 |  B  | complete | 2.14.1    | window switcher                 | `show`                                                  | EXTRA
 |  B  | complete | 2.14.2    | window switcher                 | `preview`                                               | EXTRA
 |  B  | complete | 2.14.3    | window switcher                 | `outlines`                                              | EXTRA
@@ -46,6 +60,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
 |  B  | complete | 3.1.7     | keyboard binding                | `layoutDependent`                                       | EXTRA
 |  B  | complete | 3.1.8     | keyboard binding                | `onRelease`                                             | EXTRA
+|  B  | complete | 3.1.9     | keyboard binding                | `allowWhenLocked`                                       | EXTRA
 |  B  | complete | 3.2.4     | mouse binding                   | `default`                                               | EXTRA
 |  B  | complete | 3.3.21    | mouse context                   | `Title`                                                 | EXTRA
 |  B  | complete | 4.2.3     | global action                   | `ShowMenu.atCursor`                                     | EXTRA
@@ -59,6 +74,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 4.23      | global action                   | `ToggleTabletMouseEmulation`                            | EXTRA
 |  B  | complete | 4.24      | global action                   | `ZoomIn`                                                | EXTRA
 |  B  | complete | 4.25      | global action                   | `ZoomOut`                                               | EXTRA
+|  B  | complete | 4.26      | global action                   | `EnableTabletMouseEmulation`                            | EXTRA
+|  B  | complete | 4.27      | global action                   | `DisableTabletMouseEmulation`                           | EXTRA
 |  B  | complete | 5.17.2    | window action                   | `SetDecorations`                                        | EXTRA
 |  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      | EXTRA: support value 'current'
 |  B  | complete | 5.26.1    | window action                   | `MoveToEdge.snapWindows`                                | EXTRA
@@ -68,6 +85,9 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 5.38      | window action                   | `MoveToCursor`                                          | EXTRA
 |  B  | complete | 5.39      | window action                   | `MoveToOutput`                                          | EXTRA
 |  B  | complete | 5.40      | window action                   | `AutoPlace`                                             | EXTRA
+|  B  | complete | 5.41      | window action                   | `ToggleSnapToEdge`                                      | EXTRA
+|  B  | complete | 5.42      | window action                   | `ToggleSnapToRegion`                                    | EXTRA
+|  B  | complete | 5.43      | window action                   | `UnSnap`                                                | EXTRA
 |  B  | complete | 6.1.11.1  | geometry                        | `titlebar.height`                                       | EXTRA
 |  B  | complete | 6.1.15    | geometry                        | `menu.width.min`                                        | EXTRA
 |  B  | complete | 6.1.16    | geometry                        | `menu.width.max`                                        | EXTRA
@@ -80,6 +100,12 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 6.1.19.5  | geometry                        | `osd.window-switcher.item.active.border.width`          | EXTRA
 |  B  | complete | 6.1.20.1  | geometry                        | `osd.workspace-switcher.boxes.width`                    | EXTRA
 |  B  | complete | 6.1.20.2  | geometry                        | `osd.workspace-switcher.boxes.height`                   | EXTRA
+|  B  | complete | 6.1.21.1  | geometry                        | `window.button.width`                                   | EXTRA
+|  B  | complete | 6.1.21.2  | geometry                        | `window.button.height`                                  | EXTRA
+|  B  | complete | 6.1.21.3  | geometry                        | `window.button.spacing`                                 | EXTRA
+|  B  | complete | 6.1.21.3  | geometry                        | `window.button.hover.bg.corner-radius`                  | EXTRA
+|  B  | complete | 6.1.22.1  | geometry                        | `window.titlebar.padding.width`                         | EXTRA
+|  B  | complete | 6.1.22.2  | geometry                        | `window.titlebar.padding.height`                        | EXTRA
 |  B  | complete | 6.4.5     | active window textures          | `window.active.shadow.size`                             | EXTRA
 |  B  | complete | 6.4.6     | active window textures          | `window.active.shadow.color`                            | EXTRA
 |  B  | complete | 6.15.1.1  | theme button base               | `menu.xbm`                                              | EXTRA
