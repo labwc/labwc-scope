@@ -114,7 +114,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.2.29    | wayland-protocol                | xwayland-shell-v1                                       |
 |  B  | complete | 1.2.30    | wayland-protocol                | security-context-v1                                     | Note: initial support only
 |  B  | complete | 1.2.31    | wayland-protocol                | cosmic-workspace-unstable-v1                            |
-|  B  |          | 1.2.32    | wayland-protocol                |                                                         |
+|  B  | complete | 1.2.32    | wayland-protocol                | ext-foreign-toplevel-list protocol                      |
 |  B  | complete | 1.3.1     | wlr-protocol                    | wlr-data-control-unstable-v1                            |
 |  B  | complete | 1.3.2     | wlr-protocol                    | wlr-export-dmabuf-unstable-v1                           |
 |  B  | complete | 1.3.4     | wlr-protocol                    | wlr-gamma-control-unstable-v1                           |
@@ -169,7 +169,9 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.7.3.4   | window rule property            | `windowRule.ignoreFocusRequest`                         | EXTRA
 |  B  | complete | 2.7.3.5   | window rule property            | `windowRule.fixedPosition`                              | EXTRA
 |  B  | complete | 2.7.3.6   | window rule property            | `windowRule.ignoreConfigureRequest`                     | EXTRA
+|  B  | complete | 2.7.3.7   | window rule property            | `windowRule.wantAbsorbedModifierReleaseEvents`          | EXTRA
 |  B  | complete | 2.7.4     | window rule type                | `windowRule.type`                                       | EXTRA
+|  B  | complete | 2.7.5.1   | window rule condition           | `windowRule.type`                                       | EXTRA
 |  B  | complete | 2.8.4     | keyboard                        | `numlock`                                               | EXTRA
 |  B  | complete | 2.8.5     | keyboard                        | `layoutScope`                                           | EXTRA
 |  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
@@ -304,7 +306,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 5.41      | window action                   | `ToggleSnapToEdge`                                      | EXTRA
 |  B  | complete | 5.42      | window action                   | `ToggleSnapToRegion`                                    | EXTRA
 |  B  | complete | 5.43      | window action                   | `UnSnap`                                                | EXTRA
-|  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
+|  B  | complete | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
@@ -334,7 +336,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 6.2.4     | border colors                   | `window.inactive.title.separator.color`                 |
 |  B  |          | 6.2.6     | border colors                   | `window.active.client.color`                            |
 |  B  |          | 6.2.7     | border colors                   | `window.inactive.client.color`                          |
-|  B  |          | 6.2.8     | border colors                   | `menu.border.color`                                     |
+|  B  | complete | 6.2.8     | border colors                   | `menu.border.color`                                     |
 |  B  |          | 6.3.4     | titlebar colors                 | `window.active.button.pressed.image.color`              |
 |  B  |          | 6.3.5     | titlebar colors                 | `window.active.button.disabled.image.color`             |
 |  B  |          | 6.3.6     | titlebar colors                 | `window.active.button.hover.image.color`                |

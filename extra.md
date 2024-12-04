@@ -21,7 +21,9 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.7.3.4   | window rule property            | `windowRule.ignoreFocusRequest`                         | EXTRA
 |  B  | complete | 2.7.3.5   | window rule property            | `windowRule.fixedPosition`                              | EXTRA
 |  B  | complete | 2.7.3.6   | window rule property            | `windowRule.ignoreConfigureRequest`                     | EXTRA
+|  B  | complete | 2.7.3.7   | window rule property            | `windowRule.wantAbsorbedModifierReleaseEvents`          | EXTRA
 |  B  | complete | 2.7.4     | window rule type                | `windowRule.type`                                       | EXTRA
+|  B  | complete | 2.7.5.1   | window rule condition           | `windowRule.type`                                       | EXTRA
 |  B  | complete | 2.8.4     | keyboard                        | `numlock`                                               | EXTRA
 |  B  | complete | 2.8.5     | keyboard                        | `layoutScope`                                           | EXTRA
 |  B  | complete | 2.9.4     | mouse                           | `scrollFactor`                                          | EXTRA
