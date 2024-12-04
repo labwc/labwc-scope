@@ -12,7 +12,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
-|  B  |          | 1.2.32    | wayland-protocol                |                                                         |
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
 |  B  |          | 2.6.3     | resize                          | popupPosition                                           |
 |  B  |          | 2.6.4     | resize                          | popupFixedposition                                      |
@@ -33,14 +32,12 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 5.18      | window action                   | `Decorate`                                              |
 |  B  |          | 5.19      | window action                   | `Undecorate`                                            |
 |  B  |          | 5.28      | window action                   | `GrowToFill`                                            |
-|  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  B  |          | 6.1.10    | geometry                        | `padding.width`                                         |
 |  B  |          | 6.1.14    | geometry                        | `menu.overlap`                                          |
 |  B  |          | 6.2.2     | border colors                   | `window.active.title.separator.color`                   |
 |  B  |          | 6.2.4     | border colors                   | `window.inactive.title.separator.color`                 |
 |  B  |          | 6.2.6     | border colors                   | `window.active.client.color`                            |
 |  B  |          | 6.2.7     | border colors                   | `window.inactive.client.color`                          |
-|  B  |          | 6.2.8     | border colors                   | `menu.border.color`                                     |
 |  B  |          | 6.3.4     | titlebar colors                 | `window.active.button.pressed.image.color`              |
 |  B  |          | 6.3.5     | titlebar colors                 | `window.active.button.disabled.image.color`             |
 |  B  |          | 6.3.6     | titlebar colors                 | `window.active.button.hover.image.color`                |

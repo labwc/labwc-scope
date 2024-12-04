@@ -187,8 +187,7 @@ Requirements section below.
 |  B  | complete | 1.2.29    | wayland-protocol                | xwayland-shell-v1                                       |
 |  B  | complete | 1.2.30    | wayland-protocol                | security-context-v1                                     | Note: initial support only
 |  B  | complete | 1.2.31    | wayland-protocol                | cosmic-workspace-unstable-v1                            |
-|  B  |          | 1.2.32    | wayland-protocol                |                                                         |
-
+|  B  | complete | 1.2.32    | wayland-protocol                | ext-foreign-toplevel-list protocol                      |
 
 [presentation-time]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/presentation-time
 [viewporter]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/viewporter
@@ -361,7 +360,9 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 |  B  | complete | 2.7.3.4   | window rule property            | `windowRule.ignoreFocusRequest`                         | EXTRA
 |  B  | complete | 2.7.3.5   | window rule property            | `windowRule.fixedPosition`                              | EXTRA
 |  B  | complete | 2.7.3.6   | window rule property            | `windowRule.ignoreConfigureRequest`                     | EXTRA
+|  B  | complete | 2.7.3.7   | window rule property            | `windowRule.wantAbsorbedModifierReleaseEvents`          | EXTRA
 |  B  | complete | 2.7.4     | window rule type                | `windowRule.type`                                       | EXTRA
+|  B  | complete | 2.7.5.1   | window rule condition           | `windowRule.type`                                       | EXTRA
 
 ## 2.8 Configuration - Keyboard
 
@@ -674,7 +675,7 @@ arrow whilst holding alt.
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
 |  A  | complete | 6.1.1     | geometry                        | `border.width`                                          |
-|  B  |          | 6.1.2     | geometry                        | `menu.border.width`                                     |
+|  B  | complete | 6.1.2     | geometry                        | `menu.border.width`                                     |
 |  A  | complete | 6.1.3     | geometry                        | `menu.separator.width`                                  |
 |  B  | complete | 6.1.4     | geometry                        | `menu.separator.padding.width`                          |
 |  B  | complete | 6.1.5     | geometry                        | `menu.separator.padding.height`                         |
@@ -717,7 +718,7 @@ arrow whilst holding alt.
 |  A  | complete | 6.2.5     | border colors                   | `border.color`                                          |
 |  B  |          | 6.2.6     | border colors                   | `window.active.client.color`                            |
 |  B  |          | 6.2.7     | border colors                   | `window.inactive.client.color`                          |
-|  B  |          | 6.2.8     | border colors                   | `menu.border.color`                                     |
+|  B  | complete | 6.2.8     | border colors                   | `menu.border.color`                                     |
 |  A  | complete | 6.2.9     | border colors                   | `osd.border.color`                                      |
 
 ## 6.3 Theme - Titlebar Colors
