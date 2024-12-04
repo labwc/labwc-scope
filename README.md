@@ -220,6 +220,7 @@ Requirements section below.
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
 |  A  | complete | 2.1.2     | resistance                      | `screenEdgeStrength`                                    | DEVIATION Can be negative
 |  B  | complete | 2.1.3     | resistance                      | `windowEdgeStrength`                                    | EXTRA
+|  B  | complete | 2.1.4     | resistance                      | `unSnapThreshold`                                       | EXTRA
 
 ## 2.2 Configuration - Focus
 
@@ -236,14 +237,18 @@ Requirements section below.
 
 ```xml
 <placement>
-  <policy>center|automatic|cursor</policy>
+  <policy>cascade|center|automatic|cursor</policy>
 </placement>
 ```
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  | complete | 2.3.1     | placement                       | `policy`                                                | DEVIATION: automatic is similar to smart
-|  C  |          | 2.3.2     | placement                       | `center`                                                | Covered by policy
+|  B  | complete | 2.3.1     | placement                       | `policy`                                                |
+|  B  | complete | 2.3.1.1   | placement                       | `<policy>automatic</policy>`                            | DEVIATION: similar to Openbox's `Smart`
+|  B  | complete | 2.3.1.2   | placement                       | `<policy>cursor</policy>`                               | DEVIATION: like Openbox's `UnderMouse`
+|  B  | complete | 2.3.1.3   | placement                       | `<policy>center</policy>`                               | EXTRA
+|  B  | complete | 2.3.1.4   | placement                       | `<policy>cascade</policy>`                              | EXTRA
+|  C  |          | 2.3.2     | placement                       | `center`                                                | Covered by `<policy>center</policy>`
 
 ## 2.4 Configuration - Theme
 
@@ -380,8 +385,8 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  | complete | 2.9a.1    | touch                           | `deviceName`                                            |
-|  B  | complete | 2.9a.2    | touch                           | `mapToOutput`                                           |
+|  B  | complete | 2.9a.1    | touch                           | `deviceName`                                            | EXTRA
+|  B  | complete | 2.9a.2    | touch                           | `mapToOutput`                                           | EXTRA
 
 ## 2.9b Configuration - Tablet
 
@@ -396,10 +401,20 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 
 | Cat | Status   | Reference | Category                        | Description                                             | Comment
 | --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
-|  B  | complete | 2.9b.1    | tablet                          | `mapToOutput`                                           |
-|  B  | complete | 2.9b.2    | tablet                          | `rotate`                                                |
-|  B  | complete | 2.9b.3    | tablet                          | `area`                                                  |
-|  B  | complete | 2.9b.4    | tablet                          | `map`                                                   |
+|  B  | complete | 2.9b.1    | tablet                          | `mapToOutput`                                           | EXTRA
+|  B  | complete | 2.9b.2    | tablet                          | `rotate`                                                | EXTRA
+|  B  | complete | 2.9b.3    | tablet                          | `area`                                                  | EXTRA
+|  B  | complete | 2.9b.4    | tablet                          | `map`                                                   | EXTRA
+
+## 2.9c Configuration - TabletTool
+
+```xml
+  <tabletTool motion="absolute|relative" relativeMotionSensitivity="1.0"/>
+```
+
+| Cat | Status   | Reference | Category                        | Description                                             | Comment
+| --- | -------- | --------- | ------------------------------- | ------------------------------------------------------- | -------
+|  B  | complete | 2.9c.1    | tablet tool                     | `tabletTool`                                            | EXTRA
 
 ## 2.10 Configuration - Margins
 
@@ -437,6 +452,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 2.13.3    | core                            | `adaptiveSync`                                          | EXTRA
 |  B  | complete | 2.13.4    | core                            | `reuseOutputMode`                                       | EXTRA
 |  B  | complete | 2.13.5    | core                            | `xwaylandPersistence`                                   | EXTRA
+|  B  | complete | 2.13.6    | core                            | `allowTearing`                                          | EXTRA
 
 ## 2.14 Configuration - Window Switcher
 
@@ -482,6 +498,7 @@ arrow whilst holding alt.
 |  B  | complete | 3.1.6     | keyboard binding                | `default`                                               | EXTRA
 |  B  | complete | 3.1.7     | keyboard binding                | `layoutDependent`                                       | EXTRA
 |  B  | complete | 3.1.8     | keyboard binding                | `onRelease`                                             | EXTRA
+|  B  | complete | 3.1.9     | keyboard binding                | `allowWhenLocked`                                       | EXTRA
 
 ## 3.2 Configuration - Mouse Binding
 
@@ -670,6 +687,7 @@ arrow whilst holding alt.
 |  B  | complete | 6.1.19.5  | geometry                        | `osd.window-switcher.item.active.border.width`          | EXTRA
 |  B  | complete | 6.1.20.1  | geometry                        | `osd.workspace-switcher.boxes.width`                    | EXTRA
 |  B  | complete | 6.1.20.2  | geometry                        | `osd.workspace-switcher.boxes.height`                   | EXTRA
+|  B  | complete | 6.1.21.1  | geometry                        | `window.button.width`                                   | EXTRA
 
 ## 6.2 Theme - Border Colors
 
