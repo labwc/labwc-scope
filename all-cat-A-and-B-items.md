@@ -114,8 +114,9 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
 |  B  | complete | 1.2.29    | wayland-protocol                | xwayland-shell-v1                                       |
 |  B  | complete | 1.2.30    | wayland-protocol                | security-context-v1                                     | Note: initial support only
-|  B  | complete | 1.2.31    | wayland-protocol                | cosmic-workspace-unstable-v1                            |
-|  B  | complete | 1.2.32    | wayland-protocol                | ext-foreign-toplevel-list protocol                      |
+|  B  | complete | 1.2.31    | wayland-protocol                | cosmic-workspace                                        |
+|  B  | complete | 1.2.32    | wayland-protocol                | ext-workspace                                           |
+|  B  | complete | 1.2.33    | wayland-protocol                | ext-foreign-toplevel-list                               |
 |  B  | complete | 1.3.1     | wlr-protocol                    | wlr-data-control-unstable-v1                            |
 |  B  | complete | 1.3.2     | wlr-protocol                    | wlr-export-dmabuf-unstable-v1                           |
 |  B  | complete | 1.3.4     | wlr-protocol                    | wlr-gamma-control-unstable-v1                           |
@@ -152,6 +153,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.4.14.3  | theme                           | `font.slant: oblique`                                   | EXTRA
 |  B  | complete | 2.4.15    | theme                           | `dropShadows`                                           | EXTRA
 |  B  | complete | 2.4.16    | theme                           | `icon`                                                  | EXTRA
+|  B  | complete | 2.4.17    | theme                           | `fallbackAppIcon`                                       | EXTRA
 |  B  | complete | 2.5.1     | desktop                         | `number`                                                |
 |  B  | complete | 2.5.3     | desktop                         | `popupTime`                                             |
 |  B  | complete | 2.5.4     | desktop                         | `names`                                                 |
@@ -160,6 +162,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.6.2     | resize                          | popupShow                                               |
 |  B  |          | 2.6.3     | resize                          | popupPosition                                           |
 |  B  |          | 2.6.4     | resize                          | popupFixedposition                                      |
+|  B  |          | 2.6.5     | resize                          | cornerRange                                             | EXTRA
+|  B  |          | 2.6.6     | resize                          | minimumArea                                             | EXTRA
 |  B  | complete | 2.7.1     | window rules                    | `windowRule`                                            | EXTRA
 |  B  | complete | 2.7.2.1   | window rule criteria            | `windowRule.identifier`                                 | EXTRA
 |  B  | complete | 2.7.2.2   | window rule criteria            | `windowRule.title`                                      | EXTRA
@@ -186,6 +190,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.10.1    | margins                         | `<margin>`                                              |
 |  B  | complete | 2.11.1    | menu                            | `ignoreButtonReleasePeriod`                             | DEVIATION: called `hideDelay` in openbox
 |  B+ |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
+|  B  | complete | 2.11.4    | menu                            | `showIcons`                                             | DEVIATION: called `applicationIcons` in Openbox
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
 |  B  | complete | 2.13.1    | core                            | `decoration`                                            | EXTRA
 |  B  | complete | 2.13.2    | core                            | `gap`                                                   | EXTRA
@@ -193,6 +198,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.13.4    | core                            | `reuseOutputMode`                                       | EXTRA
 |  B  | complete | 2.13.5    | core                            | `xwaylandPersistence`                                   | EXTRA
 |  B  | complete | 2.13.6    | core                            | `allowTearing`                                          | EXTRA
+|  B  | complete | 2.13.7    | core                            | `autoEnableOutputs`                                     | EXTRA
 |  B  | complete | 2.14.1    | window switcher                 | `show`                                                  | EXTRA
 |  B  | complete | 2.14.2    | window switcher                 | `preview`                                               | EXTRA
 |  B  | complete | 2.14.3    | window switcher                 | `outlines`                                              | EXTRA
@@ -263,6 +269,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 4.25      | global action                   | `ZoomOut`                                               | EXTRA
 |  B  | complete | 4.26      | global action                   | `EnableTabletMouseEmulation`                            | EXTRA
 |  B  | complete | 4.27      | global action                   | `DisableTabletMouseEmulation`                           | EXTRA
+|  B  | complete | 4.28      | global action                   | `WarpCursor`                                            | EXTRA
 |  B  | complete | 5.3       | window action                   | `Lower`                                                 |
 |  B  |          | 5.4       | window action                   | `RaiseLower`                                            |
 |  B  | complete | 5.5       | window action                   | `Unfocus`                                               |

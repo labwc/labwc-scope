@@ -187,8 +187,9 @@ Requirements section below.
 |  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
 |  B  | complete | 1.2.29    | wayland-protocol                | xwayland-shell-v1                                       |
 |  B  | complete | 1.2.30    | wayland-protocol                | security-context-v1                                     | Note: initial support only
-|  B  | complete | 1.2.31    | wayland-protocol                | cosmic-workspace-unstable-v1                            |
-|  B  | complete | 1.2.32    | wayland-protocol                | ext-foreign-toplevel-list protocol                      |
+|  B  | complete | 1.2.31    | wayland-protocol                | cosmic-workspace                                        |
+|  B  | complete | 1.2.32    | wayland-protocol                | ext-workspace                                           |
+|  B  | complete | 1.2.33    | wayland-protocol                | ext-foreign-toplevel-list                               |
 
 [presentation-time]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/presentation-time
 [viewporter]: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tree/main/stable/viewporter
@@ -274,6 +275,7 @@ Requirements section below.
 |  B  | complete | 2.4.14.3  | theme                           | `font.slant: oblique`                                   | EXTRA
 |  B  | complete | 2.4.15    | theme                           | `dropShadows`                                           | EXTRA
 |  B  | complete | 2.4.16    | theme                           | `icon`                                                  | EXTRA
+|  B  | complete | 2.4.17    | theme                           | `fallbackAppIcon`                                       | EXTRA
 
 ## 2.5 Configuration - Desktop
 
@@ -333,6 +335,9 @@ It depends on what happens with:
 |  B  | complete | 2.6.2     | resize                          | popupShow                                               |
 |  B  |          | 2.6.3     | resize                          | popupPosition                                           |
 |  B  |          | 2.6.4     | resize                          | popupFixedposition                                      |
+|  B  |          | 2.6.5     | resize                          | cornerRange                                             | EXTRA
+|  B  |          | 2.6.6     | resize                          | minimumArea                                             | EXTRA
+
 
 ## 2.7 Configuration - Window Rules
 
@@ -439,7 +444,7 @@ and covers the following settings: `decor` `shade` `position` `size` `focus`
 |  B  | complete | 2.11.1    | menu                            | `ignoreButtonReleasePeriod`                             | DEVIATION: called `hideDelay` in openbox
 |  C  |          | 2.11.2    | menu                            | `middle`                                                |
 |  B+ |          | 2.11.3    | menu                            | `submenuShowDelay`                                      |
-|  C  |          | 2.11.4    | menu                            | `applicationIcons`                                      |
+|  B  | complete | 2.11.4    | menu                            | `showIcons`                                             | DEVIATION: called `applicationIcons` in Openbox
 |  C  |          | 2.11.5    | menu                            | `manageDesktops`                                        |
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
 
@@ -461,6 +466,7 @@ The `<core>` section is additional to openbox 3.6 spec.
 |  B  | complete | 2.13.4    | core                            | `reuseOutputMode`                                       | EXTRA
 |  B  | complete | 2.13.5    | core                            | `xwaylandPersistence`                                   | EXTRA
 |  B  | complete | 2.13.6    | core                            | `allowTearing`                                          | EXTRA
+|  B  | complete | 2.13.7    | core                            | `autoEnableOutputs`                                     | EXTRA
 
 ## 2.14 Configuration - Window Switcher
 
@@ -612,6 +618,7 @@ arrow whilst holding alt.
 |  B  | complete | 4.25      | global action                   | `ZoomOut`                                               | EXTRA
 |  B  | complete | 4.26      | global action                   | `EnableTabletMouseEmulation`                            | EXTRA
 |  B  | complete | 4.27      | global action                   | `DisableTabletMouseEmulation`                           | EXTRA
+|  B  | complete | 4.28      | global action                   | `WarpCursor`                                            | EXTRA
 
 ## 5 Window Actions
 

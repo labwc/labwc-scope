@@ -10,7 +10,10 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.4.14.3  | theme                           | `font.slant: oblique`                                   | EXTRA
 |  B  | complete | 2.4.15    | theme                           | `dropShadows`                                           | EXTRA
 |  B  | complete | 2.4.16    | theme                           | `icon`                                                  | EXTRA
+|  B  | complete | 2.4.17    | theme                           | `fallbackAppIcon`                                       | EXTRA
 |  B  | complete | 2.5.5     | desktop                         | `prefix`                                                | EXTRA
+|  B  |          | 2.6.5     | resize                          | cornerRange                                             | EXTRA
+|  B  |          | 2.6.6     | resize                          | minimumArea                                             | EXTRA
 |  B  | complete | 2.7.1     | window rules                    | `windowRule`                                            | EXTRA
 |  B  | complete | 2.7.2.1   | window rule criteria            | `windowRule.identifier`                                 | EXTRA
 |  B  | complete | 2.7.2.2   | window rule criteria            | `windowRule.title`                                      | EXTRA
@@ -40,6 +43,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 2.13.4    | core                            | `reuseOutputMode`                                       | EXTRA
 |  B  | complete | 2.13.5    | core                            | `xwaylandPersistence`                                   | EXTRA
 |  B  | complete | 2.13.6    | core                            | `allowTearing`                                          | EXTRA
+|  B  | complete | 2.13.7    | core                            | `autoEnableOutputs`                                     | EXTRA
 |  B  | complete | 2.14.1    | window switcher                 | `show`                                                  | EXTRA
 |  B  | complete | 2.14.2    | window switcher                 | `preview`                                               | EXTRA
 |  B  | complete | 2.14.3    | window switcher                 | `outlines`                                              | EXTRA
@@ -78,6 +82,7 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 4.25      | global action                   | `ZoomOut`                                               | EXTRA
 |  B  | complete | 4.26      | global action                   | `EnableTabletMouseEmulation`                            | EXTRA
 |  B  | complete | 4.27      | global action                   | `DisableTabletMouseEmulation`                           | EXTRA
+|  B  | complete | 4.28      | global action                   | `WarpCursor`                                            | EXTRA
 |  B  | complete | 5.17.2    | window action                   | `SetDecorations`                                        | EXTRA
 |  B  | complete | 5.20.1    | window action                   | `SendToDesktop.to`                                      | EXTRA: support value 'current'
 |  B  | complete | 5.26.1    | window action                   | `MoveToEdge.snapWindows`                                | EXTRA

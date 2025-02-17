@@ -14,6 +14,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
 |  B  |          | 2.6.3     | resize                          | popupPosition                                           |
 |  B  |          | 2.6.4     | resize                          | popupFixedposition                                      |
+|  B  |          | 2.6.5     | resize                          | cornerRange                                             | EXTRA
+|  B  |          | 2.6.6     | resize                          | minimumArea                                             | EXTRA
 |  B  |          | 2.11.6    | menu                            | `file`                                                  | TODO: is this supported already?
 |  B  |          | 3.3.14    | mouse context                   | `Icon`                                                  |
 |  B  |          | 3.4.1     | mouse button                    | `Middle`                                                |
