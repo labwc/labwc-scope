@@ -100,7 +100,8 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  | complete | 1.2.15    | wayland-protocol                | tablet-v2-manager                                       |
 |  B  | complete | 1.2.16    | wayland-protocol                | text-input-unstable-v3                                  |
 |  B  | complete | 1.2.17    | wayland-protocol                | xdg-decoration-unstable-v1                              |
-|  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
+|  B  | complete | 1.2.18.1  | wayland-protocol                | xdg-foreign-v1                                          |
+|  B  | complete | 1.2.18.2  | wayland-protocol                | xdg-foreign-v2                                          |
 |  B  | complete | 1.2.19    | wayland-protocol                | xdg-output-unstable-v1                                  |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  | complete | 1.2.21    | wayland-protocol                | drm-lease-v1                                            |

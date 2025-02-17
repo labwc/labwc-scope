@@ -9,7 +9,6 @@ This file has been auto-generated based on README.md. Do not edit it manually
 |  B  |          | 1.2.9     | wayland-protocol                | linux-dmabuf-unstable-v1                                |
 |  B  |          | 1.2.10    | wayland-protocol                | linux-explicit-synchronization-unstable-v1              |
 |  B  |          | 1.2.12    | wayland-protocol                | pointer-gestures-unstable-v1                            |
-|  B  |          | 1.2.18    | wayland-protocol                | xdg-foreign-unstable-v2                                 |
 |  B  |          | 1.2.20    | wayland-protocol                | xwayland-keyboard-grab-unstable-v1                      |
 |  B  |          | 1.2.28    | wayland-protocol                | content-type-v1                                         |
 |  B  |          | 2.1.1     | resistance                      | `strength`                                              | If we implement, consider a better name
