@@ -619,6 +619,7 @@ arrow whilst holding alt.
 |  B  | complete | 4.26      | global action                   | `EnableTabletMouseEmulation`                            | EXTRA
 |  B  | complete | 4.27      | global action                   | `DisableTabletMouseEmulation`                           | EXTRA
 |  B  | complete | 4.28      | global action                   | `WarpCursor`                                            | EXTRA
+|  B  | complete | 4.29      | global action                   | `HideCursor`                                            | EXTRA
 
 ## 5 Window Actions
 
@@ -706,8 +707,10 @@ arrow whilst holding alt.
 |  B  | complete | 6.1.19.3  | geometry                        | `osd.window-switcher.item.padding.y`                    | EXTRA
 |  B  | complete | 6.1.19.4  | geometry                        | `osd.window-switcher.padding`                           | EXTRA
 |  B  | complete | 6.1.19.5  | geometry                        | `osd.window-switcher.item.active.border.width`          | EXTRA
+|  B  | complete | 6.1.19.6  | geometry                        | `osd.window-switcher.item.icon.size`                    | EXTRA
 |  B  | complete | 6.1.20.1  | geometry                        | `osd.workspace-switcher.boxes.width`                    | EXTRA
 |  B  | complete | 6.1.20.2  | geometry                        | `osd.workspace-switcher.boxes.height`                   | EXTRA
+|  B  | complete | 6.1.20.3  | geometry                        | `osd.workspace-switcher.boxes.border.width`             | EXTRA
 |  B  | complete | 6.1.21.1  | geometry                        | `window.button.width`                                   | EXTRA
 |  B  | complete | 6.1.21.2  | geometry                        | `window.button.height`                                  | EXTRA
 |  B  | complete | 6.1.21.3  | geometry                        | `window.button.spacing`                                 | EXTRA
